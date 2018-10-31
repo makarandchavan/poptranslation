@@ -1,0 +1,125 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 5px 20px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 50px;
+    margin-left: 50px;
+    font-weight: lighter;
+}
+
+.closebtn:hover {
+    text-decoration: none;
+}
+
+.open {
+    font-size:50px;
+    cursor:pointer;
+    max-width: 45px;
+}
+
+.open span {
+    width: 45px;
+    height: 2px;
+    background-color: #000;
+    margin: 8px 0;
+    display: block;
+}
+
+.header-top {
+    padding: 35px 0;
+}
+
+.hero-area {
+    background-color: #f8d448;
+    padding: 95px 55px; 
+}
+
+.dark-grey {
+    background-color: #a9a9a9;
+    padding: 95px 55px;
+}
+
+.light-grey {
+    background-color: #d6d6d6;
+    padding: 95px 55px;
+}
+
+.white-area {
+    background-color: #fff;
+    padding: 95px 55px;
+}
+
+.quote-form-wrapper {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.list-group-item {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+}
+
+.list-group-item:first-child {
+    font-weight: bold;
+}
+
+.wip {
+        text-align: center;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .footer > .row {
+        margin-left: 50%;
+    }
+
+    .wip {
+        text-align: right;
+    }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    
+
+}
