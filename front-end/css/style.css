@@ -1,6 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    font-weight: lighter;
     color: #000;
 }
 
@@ -48,13 +49,14 @@ body {
     font-size:50px;
     cursor:pointer;
     max-width: 45px;
+    margin-left: 15px;
 }
 
 .open span {
-    width: 45px;
+    width: 35px;
     height: 2px;
     background-color: #000;
-    margin: 8px 0;
+    margin: 6px 0;
     display: block;
 }
 
@@ -99,7 +101,55 @@ body {
 }
 
 .wip {
-        text-align: center;
+    text-align: center;
+}
+
+.logo img{
+    width: 100px;
+}
+
+.lang {
+    text-align: left;
+}
+
+.lang img{
+    width: 30px;
+}
+
+.native {
+    background: url(../img/native.png) no-repeat left top;
+    background-size: contain;
+    height: 500px;
+}
+
+.native p {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.rate {
+    background: url(../img/5_rates.png) no-repeat left top;
+    background-size: contain;
+    height: 500px;
+}
+
+.delivery {
+    background: url(../img/delivery.png) no-repeat left top;
+    background-size: contain;
+    height: 500px;
+}
+
+.footer {
+    margin-top: 50px;
+}
+
+.banner img {
+    width: 80%;
+}
+
+.banner {
+    text-align: right;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -114,6 +164,23 @@ body {
     }
 
     .wip {
+        text-align: right;
+    }
+
+    .logo img{
+        width: 162px;
+    }
+
+    .open {
+        margin-left: 0;
+    }
+
+    .open span {
+        width: 45px;
+        margin: 8px 0;
+    }
+
+    .lang {
         text-align: right;
     }
 }
