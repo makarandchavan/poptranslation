@@ -12,24 +12,25 @@ body {
     z-index: 1;
     top: 0;
     left: -250px;
-    background-color: #111;
+    background-color: #000;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
 }
 
 .sidenav a {
-    padding: 5px 20px;
+    padding: 15px 20px;
     text-decoration: none;
     font-size: 15px;
     color: #fff;
     display: block;
-    transition: 0.3s;
+    transition: 0.5s;
     text-transform: capitalize;
 }
 
 .sidenav a:hover {
-    color: #f1f1f1;
+    color: #fff;
+    background-color: #4f4f4f;
 }
 
 .sidenav .closebtn {
@@ -41,8 +42,10 @@ body {
     font-weight: lighter;
 }
 
-.closebtn:hover {
+a.closebtn:hover {
     text-decoration: none;
+    color: #4f4f4f;
+    background-color: transparent;
 }
 
 .open {
@@ -64,30 +67,36 @@ body {
     padding: 35px 0;
 }
 
+.inner {
+    padding: 30px 15px;
+}
+
 .hero-area {
     background-color: #f8d448;
-    padding: 95px 55px; 
+    padding: 30px 15px; 
 }
 
 .dark-grey {
     background-color: #a9a9a9;
-    padding: 95px 55px;
 }
 
 .light-grey {
     background-color: #d6d6d6;
-    padding: 95px 55px;
 }
 
 .white-area {
     background-color: #fff;
-    padding: 95px 55px;
 }
 
 .quote-form-wrapper {
     background-color: #fff;
     border-radius: 15px;
     padding: 25px;
+    margin-bottom: 30px;
+}
+
+.calc {
+    margin-bottom: 30px;
 }
 
 .list-group-item {
@@ -116,32 +125,33 @@ body {
     width: 30px;
 }
 
-.native {
-    background: url(../img/native.png) no-repeat left top;
-    background-size: contain;
-    height: 500px;
+.lang a {
+    display: inline-block;
+    margin-left: 10px;
 }
 
-.native p {
-    text-align: center;
-    text-transform: uppercase;
-    color: #fff;
-}
-
-.rate {
-    background: url(../img/5_rates.png) no-repeat left top;
-    background-size: contain;
-    height: 500px;
-}
-
-.delivery {
-    background: url(../img/delivery.png) no-repeat left top;
-    background-size: contain;
-    height: 500px;
+.services h3 {
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
 .footer {
-    margin-top: 50px;
+    /*margin-top: 50px;*/
+}
+
+.footer a {
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    padding-bottom: 50px;
 }
 
 .banner img {
@@ -149,12 +159,40 @@ body {
 }
 
 .banner {
-    text-align: right;
+    text-align: center;
 }
+
+.why-us .row {
+    margin-bottom: 30px;
+}
+
+.why-us p{
+    margin-bottom: 0;
+}
+
+.list-group-item {
+    padding-left: 0;
+}
+
+.features {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    
+    .features img {
+        margin: 0 auto;
+    }
+
+    .inner {
+        padding: 30px 15px;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -183,10 +221,49 @@ body {
     .lang {
         text-align: right;
     }
+
+    .inner {
+        padding: 45px 0;
+    }
+
+    .quote-form-wrapper,
+    .calc {
+        margin-bottom: 0
+    }
+
+    .calc img {
+        margin: 0 auto;
+    }
+
+    .banner {
+        text-align: right;
+    }
+
+    .why-us .row {
+        margin-bottom: 30px;
+    }
+
+    .list-group-item {
+        padding-left: 15px;
+    }
+
+    .features {
+        margin-bottom: 0;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    
+    .why-us .row {
+        margin-bottom: 0;
+    }
+
+    .inner {
+        padding: 95px 0;
+    }
+
+    .services .inner {
+        padding-top: 0;
+    }
 
 }
