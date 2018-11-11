@@ -101,6 +101,10 @@ a.closebtn:hover {
     margin-bottom: 30px;
 }
 
+.quote-form-wrapper form {
+    text-align: center;
+}
+
 .calc {
     margin-bottom: 30px;
 }
@@ -184,7 +188,102 @@ a.closebtn:hover {
     margin-bottom: 30px;
 }
 
+.popover-title {
+    display: none;
+}
 
+.popover.right {
+    width: 70%;
+}
+
+.submit-info {
+    padding: 10px;
+    border-radius: 50%;
+    border: 2px solid #8acbee;
+    background-color: transparent;
+    color: #8acbee;
+}
+
+.submit-info:hover {
+    background-color: transparent;
+    color: #8acbee;
+    border-color: #8acbee;
+}
+
+.submit-info:focus,
+.submit-info:active {
+    outline: none!important;
+    box-shadow: none;
+    border: 2px solid #8acbee;
+}
+
+.fileinput-button {
+    padding: 10px 12px;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: table-cell;
+}
+
+.fileinput-button .ti-plus {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.fileinput-button input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    -ms-filter: 'alpha(opacity=0)';
+    font-size: 200px !important;
+    direction: ltr;
+    cursor: pointer;
+}
+
+.file-attach {
+    text-align: left;
+    margin-bottom: 30px;
+    border: 2px dashed #5bc0de;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.attach-info {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
+}
+
+.quote-form-wrapper h4 {
+    margin-bottom: 30px;
+}
+
+.quote-form-wrapper .form-control {
+    height: 45px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-radius: 0;
+    color: #000;
+    box-shadow: none; 
+}
+
+.quote-form-wrapper .more-info {
+    text-align: left;
+}
+
+.quote-form-wrapper .btn[type='submit'] {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border-width: 2px;
+}
+
+.quote-form-wrapper .form-group:last-child {
+    margin-bottom: 0;
+    margin-top: 51px;
+}
 
 
 
