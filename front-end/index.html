@@ -17,7 +17,8 @@
     <link rel="stylesheet" type="text/css" href="css/slick.css">
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/themify-icons.css">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/dropzone.css" type="text/css" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet">
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -30,6 +31,12 @@
 </head>
 
 <body>
+    <div class="dzone">
+        <div class="inner">
+            <h3>Drop it like it’s hot</h3>
+            <h4>Add your files by dropping them anywhere in this window</h4>
+        </div>
+    </div>
     <div class="container-fluid header-top">
         <div class="container">
             <div class="row">
@@ -70,11 +77,45 @@
             <div class="row inner">
                 <div class="col-lg-4 col-xs-12 col-md-4">
                     <div class="quote-form-wrapper">
-                        <form action="">
+                        <form action="/file-upload" class="" id="">
+                            <!--  -->
+                            <div class="table table-striped" class="files" id="previews">
+                                <div id="template" class="file-row">
+                                    <!-- This is used as the file preview template -->
+                                    <div>
+                                        <span class="preview"><img data-dz-thumbnail /></span>
+                                    </div>
+                                    <div>
+                                        <p class="name" data-dz-name></p>
+                                        <strong class="error text-danger" data-dz-errormessage></strong>
+                                    </div>
+                                    <div>
+                                        <p class="size" data-dz-size></p>
+                                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                            <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-primary start">
+                                            <i class="glyphicon glyphicon-upload"></i>
+                                            <span>Start</span>
+                                        </button>
+                                        <button data-dz-remove class="btn btn-warning cancel">
+                                            <i class="glyphicon glyphicon-ban-circle"></i>
+                                            <span>Cancel</span>
+                                        </button>
+                                        <button data-dz-remove class="btn btn-danger delete">
+                                            <i class="glyphicon glyphicon-trash"></i>
+                                            <span>Delete</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
                             <div class="file-attach">
                                 <span class="btn btn-info fileinput-button">
                                     <span class="ti-plus"></span>
-                                    <input type="file" name="files[]" multiple="">
+                                    <!-- <input type="file" name="file" multiple=""> -->
                                 </span>
 
                                 <span class="attach-info">Ajoutez vos fichiers (jusqu’à 20 Mo)</span>
@@ -89,7 +130,7 @@
                                 <input type="text" class="form-control" id="" placeholder="Votre entreprise">
                             </div>
                             <div class="form-group">
-                                <p class="more-info">Donnez-nous plus d'informations sur votre projet</p>
+                                <textarea class="form-control" rows="3" placeholder="Donnez-nous plus d'informations sur votre projet"></textarea>
                             </div>
 
                             <div class="form-group">
@@ -112,11 +153,18 @@
                         </form>
                     </div>
                 </div>
-                <div class="col-lg-4 col-xs-12 col-md-4 text-center calc">
-                    <img src="img/cal.gif" class="img-responsive" alt="">
+                <div class="col-lg-5 col-xs-12 col-md-5 text-center calc">
+                    <img src="img/cal.png" class="img-responsive" alt="">
                 </div>
-                <div class="col-lg-4 col-xs-12 col-md-4 banner">
-                    <img src="img/circle_banner.png" alt="">
+                <div class="col-lg-3 col-xs-12 col-md-3">
+                    <div class="banner">
+                        <p>
+                            <span>AGENCE DE</span>
+                            <span>TRADUCTION</span>
+                            <span>EXPERTE</span>
+                            <span>+33 1 46 42 01 43</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -126,16 +174,39 @@
         <div class="container">
             <div class="row inner">
                 <div class="col-lg-3 col-md-3">
-                    <div class="features"><img class="img-responsive" src="img/native.png" alt=""></div>
+                    <div class="features native">
+                        <p>
+                            <span class="t1">ONLY</span>
+                            <span class="t1">NATIVE</span>
+                            <span class="t2">TRANSLATORS</span>
+                        </p>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-3">
-                    <div class="features"><img class="img-responsive" src="img/delivery_on.png" alt=""></div>
+                    <div class="features delivery-on">
+                        <p>
+                            <span class="t1">99%</span>
+                            <span class="t2">DELIVERED</span>
+                            <span class="t2">ON TIME</span>
+                        </p>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-3">
-                    <div class="features"><img class="img-responsive" src="img/delivery.png" alt=""></div>
+                    <div class="features delivery">
+                        <p>
+                            <span class="t1">DAY</span>
+                            <span class="t1">AFTER</span>
+                            <span class="t2">DELIVERY</span>
+                        </p>
+                    </div>
                 </div>
                 <div class="col-lg-3 col-md-3">
-                    <div class="features"><img class="img-responsive" src="img/5_rates.png" alt=""></div>
+                    <div class="features rates">
+                        <p>
+                            <span class="t1">5 STARS</span>
+                            <span class="t2">RATING</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -240,6 +311,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/dropzone.js"></script>
     <script src="js/script.js"></script>
 
 </body>

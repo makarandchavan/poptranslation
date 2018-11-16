@@ -4,7 +4,12 @@ $(function(){
 	var openNav = $('.open'),
 		closeNav = $('.closebtn'),
 		navPanel = $('#mySidenav'),
-		parters = $('.logo-slider');
+		parters = $('.logo-slider'),
+		dropzone = $('#dropzone');
+
+	// $(dropzone).dropzone({ 
+	// 	url: "/file/post" 
+	// });
 
 	$('[data-toggle="popover"]').popover();
 	
@@ -52,3 +57,24 @@ $(function(){
 	}
 
 });
+
+// File Upload with Dropzone
+
+var previewNode = document.querySelector("#template");
+	previewNode.id = "";
+
+var previewTemplate = previewNode.parentNode.innerHTML;
+	previewNode.parentNode.removeChild(previewNode);
+
+var myDropzone = new Dropzone(document.body, {
+  url: "/target-url", // Set the url
+  thumbnailWidth: 40,
+  thumbnailHeight: 40,
+  parallelUploads: 20,
+  previewTemplate: previewTemplate,
+  //autoQueue: false, // Make sure the files aren't queued until manually added
+  previewsContainer: "#previews", // Define the container to display the previews
+  clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+});
+
+
