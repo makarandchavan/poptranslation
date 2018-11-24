@@ -288,8 +288,11 @@ a.closebtn:hover {
 
 .quote-form-wrapper h4 {
     margin-bottom: 30px;
-    margin-top: 30px;
     font-size: 20px;
+}
+
+.quote h4 {
+    margin-top: 30px;
 }
 
 .quote-form-wrapper .form-control {
@@ -486,6 +489,45 @@ a.closebtn:hover {
     height: auto;
 }
 
+.legal {
+    color: #fff;
+}
+
+.legal h2 {
+    text-align: center;
+    font-weight: 100;
+    margin-bottom: 50px;
+}
+
+.legal .list-group-item:first-child {
+    font-weight: 100;
+}
+
+.bot-space {
+    margin-bottom: 30px;
+}
+
+.left-space {
+    padding-left: 30px;
+}
+
+.legal .left {
+    border-right: 2px solid #fff;
+}
+
+.legal .right {
+    padding-left: 30px;
+}
+
+.contact {
+    background: url(../img/contact.png) no-repeat center center;
+    background-size: 30%;
+}
+
+
+
+
+
 
 
 /* Small devices (tablets, 768px and up) */
@@ -569,7 +611,8 @@ a.closebtn:hover {
 
     .hero-area,
     .white-area,
-    .light-grey {
+    .light-grey,
+    .dark-grey {
         padding: 0 90px; 
     }
 
@@ -601,7 +644,7 @@ a.closebtn:hover {
         display: block;
     }
 
-    .hero-area .inner {
+    .quote .inner {
         padding-bottom: 0;
     }
 
