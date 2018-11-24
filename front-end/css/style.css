@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
-    font-weight: lighter;
+    font-weight: 100;
     color: #000;
 }
 
@@ -70,7 +70,7 @@ a.closebtn:hover {
 }
 
 .header-top {
-    padding: 35px 0;
+    padding: 20px 15px;
 }
 
 .inner {
@@ -79,7 +79,6 @@ a.closebtn:hover {
 
 .hero-area {
     background-color: #ffd401;
-    padding: 30px 15px; 
 }
 
 .dark-grey {
@@ -94,11 +93,17 @@ a.closebtn:hover {
     background-color: #fff;
 }
 
+.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+    opacity: 1;
+}
+
 .quote-form-wrapper {
     background-color: #fff;
     border-radius: 25px;
     padding: 25px;
     margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
     width: 321px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
     -moz-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
@@ -152,6 +157,10 @@ a.closebtn:hover {
     margin-top: 0;
     margin-bottom: 30px;
     font-weight: 100;
+}
+
+.services p {
+    padding-right: 150px;
 }
 
 .footer {
@@ -262,6 +271,7 @@ a.closebtn:hover {
 .file-attach {
     text-align: left;
     margin-bottom: 30px;
+    display: table-row;
 }
 
 .attach-info {
@@ -271,8 +281,14 @@ a.closebtn:hover {
     font-size: 18px;
 }
 
+.attach-info span {
+    font-size: 15px;
+    display: block;
+}
+
 .quote-form-wrapper h4 {
     margin-bottom: 30px;
+    margin-top: 30px;
     font-size: 20px;
 }
 
@@ -299,9 +315,10 @@ a.closebtn:hover {
     padding: 10px 30px;
     border-radius: 30px;
     border-width: 2px;
-    background-color: #929292;
-    border-color: #929292;
+    background-color: #dcdde0;
+    border-color: #dcdde0;
     color: #000;
+    font-weight: bold;
 }
 
 .quote-form-wrapper .form-group:last-child {
@@ -316,6 +333,11 @@ a.closebtn:hover {
     float: none;
     margin: 0 auto;
     position: relative;
+    display: none;
+}
+
+.banners {
+    display: none;
 }
 
 .banner p {
@@ -436,6 +458,33 @@ a.closebtn:hover {
     transform: translate(-50%, -50%);
 }
 
+.privacy-alert.alert-info {
+    background-color: #f3f3f5;
+    border: none;
+}
+
+.privacy-alert.alert {
+    border-radius: 0;
+    color: #000;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
+}
+
+.privacy-alert .close {
+    font-size: 12px;
+    background: #89caf1;
+    opacity: 1;
+    text-shadow: none;
+    padding: 8px 16px;
+    border-radius: 15px;
+    color: #fff;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
 
 
 
@@ -447,6 +496,11 @@ a.closebtn:hover {
 
     .inner {
         padding: 30px 15px;
+    }
+
+    .banner,
+    .banners {
+        display: block;
     }
 }
 
@@ -473,6 +527,10 @@ a.closebtn:hover {
         margin: 8px 0;
     }
 
+    .open span:last-child {
+        margin-bottom: 0;
+    }
+
     .lang {
         text-align: right;
     }
@@ -483,7 +541,9 @@ a.closebtn:hover {
 
     .quote-form-wrapper,
     .calc {
-        margin-bottom: 0
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .calc img {
@@ -504,6 +564,17 @@ a.closebtn:hover {
 
     .banner {
         float: right;
+        display: block;
+    }
+
+    .hero-area,
+    .white-area,
+    .light-grey {
+        padding: 0 90px; 
+    }
+
+    .services.white-area {
+        padding: 0 100px;
     }
 }
 
@@ -523,6 +594,15 @@ a.closebtn:hover {
 
     .services .inner {
         padding-top: 0;
+    }
+
+    .banner,
+    .banners {
+        display: block;
+    }
+
+    .hero-area .inner {
+        padding-bottom: 0;
     }
 
 }

@@ -5,6 +5,7 @@ $(function(){
 		closeNav = $('.closebtn'),
 		navPanel = $('#mySidenav'),
 		parters = $('.logo-slider'),
+		bannerSlider= $('.banners'),
 		dropzone = $('#dropzone');
 
 	// $(dropzone).dropzone({ 
@@ -23,10 +24,20 @@ $(function(){
 		$(navPanel).css('left', '-250px');
 	});
 
+	if (bannerSlider.length) {
+		bannerSlider.slick({
+			arrows: false,
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			autoplay: true,
+  			autoplaySpeed: 3000,
+		});
+	}
+
 	if (parters.length) {
 		parters.slick({
 			arrows: false,
-			slidesToShow: 3,
+			slidesToShow: 2,
 			slidesToScroll: 1,
 			autoplay: true,
   			autoplaySpeed: 1000,
@@ -34,15 +45,15 @@ $(function(){
 			    {
 			      breakpoint: 1024,
 			      settings: {
-			        slidesToShow: 3,
-			        slidesToScroll: 3
+			        slidesToShow: 2,
+			        slidesToScroll: 1
 			      }
 			    },
 			    {
 			      breakpoint: 600,
 			      settings: {
 			        slidesToShow: 2,
-			        slidesToScroll: 2
+			        slidesToScroll: 1
 			      }
 			    },
 			    {
@@ -71,6 +82,7 @@ var myDropzone = new Dropzone(document.body, {
   thumbnailWidth: 40,
   thumbnailHeight: 40,
   parallelUploads: 20,
+  maxFilesize: 20, // MB
   previewTemplate: previewTemplate,
   //autoQueue: false, // Make sure the files aren't queued until manually added
   previewsContainer: "#previews", // Define the container to display the previews
