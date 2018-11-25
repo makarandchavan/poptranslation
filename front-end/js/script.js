@@ -71,22 +71,27 @@ $(function(){
 
 // File Upload with Dropzone
 
-var previewNode = document.querySelector("#template");
-	previewNode.id = "";
+var dropWrapper = document.getElementsByClassName("dzone");
 
-var previewTemplate = previewNode.parentNode.innerHTML;
-	previewNode.parentNode.removeChild(previewNode);
+if (dropWrapper.length) {
+	
+	var previewNode = document.querySelector("#template");
+		previewNode.id = "";
 
-var myDropzone = new Dropzone(document.body, {
-  url: "/target-url", // Set the url
-  thumbnailWidth: 40,
-  thumbnailHeight: 40,
-  parallelUploads: 20,
-  maxFilesize: 20, // MB
-  previewTemplate: previewTemplate,
-  //autoQueue: false, // Make sure the files aren't queued until manually added
-  previewsContainer: "#previews", // Define the container to display the previews
-  clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-});
+	var previewTemplate = previewNode.parentNode.innerHTML;
+		previewNode.parentNode.removeChild(previewNode);
 
+	var myDropzone = new Dropzone(document.body, {
+	  url: "/target-url", // Set the url
+	  thumbnailWidth: 40,
+	  thumbnailHeight: 40,
+	  parallelUploads: 20,
+	  maxFilesize: 20, // MB
+	  previewTemplate: previewTemplate,
+	  //autoQueue: false, // Make sure the files aren't queued until manually added
+	  previewsContainer: "#previews", // Define the container to display the previews
+	  clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+	});
+
+}
 

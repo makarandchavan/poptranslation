@@ -524,6 +524,11 @@ a.closebtn:hover {
     background-size: 30%;
 }
 
+.progress {
+    height: 2px;
+    box-shadow: none;
+}
+
 
 
 
