@@ -29,7 +29,8 @@ body {
     border-left: 2px solid #000;
 }
 
-.sidenav a:hover {
+.sidenav a:hover,
+.sidenav a.active {
     color: #fff;
     background-color: #4f4f4f;
     border-left: 2px solid #fff;
@@ -524,12 +525,114 @@ a.closebtn:hover {
     background-size: 30%;
 }
 
+.about {
+    /*background: url(../img/about.png) no-repeat center center;
+    background-size: 30%;*/
+}
+
 .progress {
     height: 2px;
     box-shadow: none;
 }
 
+.quick-link a {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    color: #000;
+    margin-right: 15px;
+}
 
+.quick-link span {
+    display: block;
+    text-align: center;
+    font-size: 11px;
+    margin-top: 10px;
+}
+
+.circle_banner img {
+    display: none;
+}
+
+.about .inner {
+    padding-bottom: 0;
+}
+
+.ic-1,
+.ic-2 {
+    padding: 30px;
+    height: 230px;
+}
+
+.ic-1 div,
+.ic-2 div {
+    text-align: center;
+}
+
+.ic-1 {
+    background-color: #8bcaef;
+}
+
+.ic-2 {
+    background-color: #ffd401;
+}
+
+.ic-1 img,
+.ic-2 img {
+    display: block;
+    margin: 0 auto;
+}
+
+.ic-1 span,
+.ic-2 span {
+    display: block;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+}
+
+.block-about .wrapper {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.block-about .wrapper.last {
+    padding-bottom: 50px;
+}
+
+.block-about h3 {
+    font-weight: 100;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.hero-img img {
+    margin: 0 auto; 
+}
+
+.block-2 {
+    background-color: #8bcaef;
+    border-radius: 20px;
+    padding-bottom: 25px;
+}
+
+.block-2 h3 {
+    background-color: #ffd401;
+    border-radius: 20px 20px 0 0;
+    margin: 0 0 25px 0;
+    padding: 15px;
+    border-bottom: 20px solid #f1525b;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    font-style: italic;
+    font-weight: bold;
+    padding: 20px;
+}
 
 
 
@@ -546,7 +649,8 @@ a.closebtn:hover {
     }
 
     .banner,
-    .banners {
+    .banners,
+    .circle_banner img {
         display: block;
     }
 }
@@ -624,6 +728,11 @@ a.closebtn:hover {
     .services.white-area {
         padding: 0 100px;
     }
+
+    .circle_banner img {
+        float: right;
+        display: block;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -649,8 +758,14 @@ a.closebtn:hover {
         display: block;
     }
 
-    .quote .inner {
+    .quote .inner,
+    .about .inner {
         padding-bottom: 0;
+    }
+
+    .circle_banner img {
+        float: right;
+        display: block;
     }
 
 }

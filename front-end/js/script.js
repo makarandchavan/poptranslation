@@ -7,10 +7,7 @@ $(function(){
 		parters = $('.logo-slider'),
 		bannerSlider= $('.banners'),
 		dropzone = $('#dropzone');
-
-	// $(dropzone).dropzone({ 
-	// 	url: "/file/post" 
-	// });
+		
 
 	$('[data-toggle="popover"]').popover();
 	
