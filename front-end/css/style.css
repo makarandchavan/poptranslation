@@ -660,7 +660,7 @@ a.closebtn:hover {
 }
 
 .block-3 .list-group-item:first-child {
-    font-weight: 100;
+    font-weight: 500;
 }
 
 .block-2 .list-group-item {
@@ -674,7 +674,7 @@ a.closebtn:hover {
     background: url(../img/ic_tick.png) no-repeat right center;
     padding-left: 20px;
     color: #fff;
-    font-weight: 100;
+    font-weight: 500;
     text-align: left;
     font-size: 12px;
     padding: 5px 20px;
