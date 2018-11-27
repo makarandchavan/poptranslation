@@ -608,6 +608,7 @@ a.closebtn:hover {
     font-weight: 100;
     text-transform: uppercase;
     margin-bottom: 30px;
+    min-height: 55px;
 }
 
 .hero-img img {
@@ -620,6 +621,14 @@ a.closebtn:hover {
     padding-bottom: 25px;
     margin-bottom: 30px;
     min-height: 370px;
+}
+
+.block-3 {
+    background-color: #8bcaef;
+    border-radius: 20px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
+    overflow: hidden;
 }
 
 .block-2 h3 {
@@ -636,8 +645,22 @@ a.closebtn:hover {
     padding: 20px;
 }
 
-.block-2 .list-group-item:first-child {
+.block-3 h3 {
+    margin: 0 0 25px 0;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
     font-weight: bold;
+    padding: 20px;
+}
+
+.block-2 .list-group-item:first-child{
+    font-weight: bold;
+}
+
+.block-3 .list-group-item:first-child {
+    font-weight: 100;
 }
 
 .block-2 .list-group-item {
@@ -647,10 +670,94 @@ a.closebtn:hover {
     font-weight: bold;
 }
 
-.block-2 .list-group {
-    margin-bottom: 0;
+.block-3 .list-group-item {
+    background: url(../img/ic_tick.png) no-repeat right center;
+    padding-left: 20px;
+    color: #fff;
+    font-weight: 100;
+    text-align: left;
+    font-size: 12px;
+    padding: 5px 20px;
 }
 
+.block-2 .list-group,
+.block-3 .list-group {
+    margin-bottom: 0;
+    float: left;
+    width: 50%;
+}
+
+.block-4 {
+    background-color: #ffd401;
+    padding: 50px 30px;
+    border-radius: 20px 0 0 20px;
+}
+
+.block-4 p {
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.block-5 .t1 {
+    font-size: 120px;
+    color: #8bcaef;
+    font-weight: 100;
+    display: block;
+    line-height: 1;
+    text-align: center;
+}
+
+.block-5 .t2 {
+    font-size: 40px;
+    line-height: 1;
+    color: #000;
+    font-weight: 100;
+    display: block;
+    text-align: center;
+}
+
+.block-5 .t3 {
+    font-size: 17px;
+    line-height: 1;
+    color: #000;
+    font-weight: 100;
+    display: block;
+    text-align: center;
+}
+
+.block-5 .t4 {
+    font-size: 120px;
+    line-height: 1;
+    color: #000;
+    font-weight: 100;
+    display: block;
+    text-align: center;
+}
+
+.transcription {
+    background: url(../img/transcription.png) no-repeat center bottom;
+    background-size: 80%;
+    min-height: 350px; 
+}
+
+.translations {
+    background: url(../img/translation.png) no-repeat center center;
+    background-size: 45%;
+    min-height: 350px;
+}
+
+.st {
+    background: url(../img/st.png) no-repeat center center;
+    background-size: 75%;
+    min-height: 350px;
+}
+
+.chat {
+    position: absolute;
+    right: -303px;
+    top: 540px;
+}
 
 
 
@@ -794,5 +901,11 @@ a.closebtn:hover {
     
     .block-2 {
         margin-bottom: 0;
+    }
+
+    .transcription,
+    .translations,
+    .st {
+        min-height: 750px; 
     }
 }
