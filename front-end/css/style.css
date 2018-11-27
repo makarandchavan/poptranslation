@@ -680,7 +680,10 @@ a.closebtn:hover {
     padding: 5px 20px;
 }
 
-.block-2 .list-group,
+.block-2 .list-group {
+    margin-bottom: 0;
+}
+
 .block-3 .list-group {
     margin-bottom: 0;
     float: left;
