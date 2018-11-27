@@ -618,6 +618,8 @@ a.closebtn:hover {
     background-color: #8bcaef;
     border-radius: 20px;
     padding-bottom: 25px;
+    margin-bottom: 30px;
+    min-height: 370px;
 }
 
 .block-2 h3 {
@@ -634,6 +636,20 @@ a.closebtn:hover {
     padding: 20px;
 }
 
+.block-2 .list-group-item:first-child {
+    font-weight: bold;
+}
+
+.block-2 .list-group-item {
+    background: url(../img/ic_tick.png) no-repeat right center;
+    padding-left: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.block-2 .list-group {
+    margin-bottom: 0;
+}
 
 
 
@@ -652,6 +668,10 @@ a.closebtn:hover {
     .banners,
     .circle_banner img {
         display: block;
+    }
+
+    .block-2 {
+        margin-bottom: 0;
     }
 }
 
@@ -733,6 +753,10 @@ a.closebtn:hover {
         float: right;
         display: block;
     }
+
+    .block-2 {
+        margin-bottom: 0;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -767,5 +791,8 @@ a.closebtn:hover {
         float: right;
         display: block;
     }
-
+    
+    .block-2 {
+        margin-bottom: 0;
+    }
 }
