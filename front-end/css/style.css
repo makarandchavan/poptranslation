@@ -762,6 +762,12 @@ a.closebtn:hover {
     top: 540px;
 }
 
+.map {
+    height: 370px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
 
 
 /* Small devices (tablets, 768px and up) */
