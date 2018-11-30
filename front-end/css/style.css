@@ -837,6 +837,23 @@ a.closebtn:hover {
     padding-top: 0;
 }
 
+.pretty{
+    float: left;
+    clear: left;
+    margin-bottom: 15px;
+}
+
+.wizard > .actions a, 
+.wizard > .actions a:hover, 
+.wizard > .actions a:active {
+    background: #fff;
+    border: 1px solid #929292;
+    border-radius: 20px;
+    color: #929292;
+}
+
+
+
 
 
 /* Small devices (tablets, 768px and up) */
