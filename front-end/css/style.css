@@ -800,14 +800,18 @@ a.closebtn:hover {
 }
 
 .wizard {
-    border-top: 1px solid #929292;
-    padding-top: 50px;
     padding-left: 3%;
     padding-right: 3%;
 }
 
 .intro {
     padding: 0 3%;
+}
+
+.wizard > .content > #wizard-p-0 .intro h2 {
+    padding-top: 0;
+    padding-left: 0;
+    border: none; 
 }
 
 .wizard > .steps {
@@ -817,6 +821,7 @@ a.closebtn:hover {
 .wizard > .content {
     background: #fff;
     margin: 0;
+    min-height: 60em;
 }
 
 .wizard > .content > .body {
@@ -826,6 +831,18 @@ a.closebtn:hover {
 .wizard > .content > .body h2 {
     margin-top: 0;
     margin-bottom: 50px;
+}
+
+.wizard > .content > .body h4 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+
+.wizard > .content > #wizard-p-0 h2 {
+    padding-left: 10px;
+    padding-top: 50px;
+    border-top: 1px solid #929292;
 }
 
 .wizard > .content > .body label {
