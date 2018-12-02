@@ -5,6 +5,11 @@ body {
     color: #000;
 }
 
+.btn-default.focus, 
+.btn-default:focus {
+    outline: none;
+}
+
 .sidenav {
     height: 100%;
     width: 250px;
@@ -424,7 +429,8 @@ a.closebtn:hover {
     font-size: 32px;
 }
 
-.dzone {
+.dzone,
+.cv-dzone {
     visibility:hidden; 
     opacity:0;
     position: fixed;
@@ -441,21 +447,25 @@ a.closebtn:hover {
     text-align: center;
 }
 
-.dz-drag-hover .dzone {
+.dz-drag-hover .dzone,
+.dz-drag-hover .cv-dzone {
     visibility: visible;
     opacity: 1;
 }
 
-.dzone h3 {
+.dzone h3,
+.cv-dzone h3 {
     font-size: 55px;
     font-weight: bold;
 }
 
-.dzone h4 {
+.dzone h4,
+.cv-dzone h4 {
     font-size: 17px;
 }
 
-.dzone .inner {
+.dzone .inner,
+.cv-dzone .inner {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -860,6 +870,13 @@ a.closebtn:hover {
     margin-bottom: 15px;
 }
 
+#wizard-p-3 .pretty,
+#wizard-p-4 .pretty,
+#wizard-p-5 .pretty {
+    float: none;
+    margin-bottom: 0;
+}
+
 .wizard > .actions a, 
 .wizard > .actions a:hover, 
 .wizard > .actions a:active {
@@ -867,6 +884,40 @@ a.closebtn:hover {
     border: 1px solid #929292;
     border-radius: 20px;
     color: #929292;
+}
+
+.cv-upload {
+    padding: 50px 50px;
+    border: 1px dashed #929292;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 26.5%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.cv-upload span {
+    display: block;
+    text-align: center;
+}
+
+.thankyou {
+    text-align: center;
+    padding: 0 24%;
+}
+
+.thankyou img {
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+.thankyou p {
+    margin: 10px 0;
+}
+
+.thankyou p:last-child {
+    margin-top: 50px;
+    text-align: right;
 }
 
 
@@ -952,8 +1003,9 @@ a.closebtn:hover {
         margin-bottom: 0;
     }
 
-    .banner {
-        float: right;
+    .banner,
+    .banners {
+        /*float: right;*/
         display: block;
     }
 

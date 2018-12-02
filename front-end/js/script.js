@@ -25,7 +25,28 @@ $(function(){
 		$('#wizard').steps({
 	        headerTag: 'h3',
 	        bodyTag: 'section',
-	        transitionEffect: 'slideLeft'
+	        transitionEffect: 'slideLeft',
+	        onStepChanged: function (event, currentIndex, priorIndex){
+		        if (currentIndex === 5) {
+		        	var previewNode = document.querySelector("#template");
+		previewNode.id = "";
+
+	var previewTemplate = previewNode.parentNode.innerHTML;
+		previewNode.parentNode.removeChild(previewNode);
+
+	var myDropzone = new Dropzone(document.body, {
+	  url: "/target-url", // Set the url
+	  thumbnailWidth: 40,
+	  thumbnailHeight: 40,
+	  parallelUploads: 20,
+	  maxFilesize: 20, // MB
+	  previewTemplate: previewTemplate,
+	  //autoQueue: false, // Make sure the files aren't queued until manually added
+	  previewsContainer: "#previews" // Define the container to display the previews
+	  // clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+	});
+		        }
+		    }
 	    });
 	}
 	
@@ -100,6 +121,28 @@ if (dropWrapper.length) {
 	});
 
 }
+
+// if (cvUpload.length) {
+	
+// 	var previewNode = document.querySelector("#template");
+// 		previewNode.id = "";
+
+// 	var previewTemplate = previewNode.parentNode.innerHTML;
+// 		previewNode.parentNode.removeChild(previewNode);
+
+// 	var myDropzone = new Dropzone(document.body, {
+// 	  url: "/target-url", // Set the url
+// 	  thumbnailWidth: 40,
+// 	  thumbnailHeight: 40,
+// 	  parallelUploads: 20,
+// 	  maxFilesize: 20, // MB
+// 	  previewTemplate: previewTemplate,
+// 	  //autoQueue: false, // Make sure the files aren't queued until manually added
+// 	  previewsContainer: "#previews" // Define the container to display the previews
+// 	  // clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+// 	});
+
+// }
 
 
 
