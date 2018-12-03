@@ -929,6 +929,75 @@ a.closebtn:hover {
     float: right;
 }
 
+.margin-bot-30 {
+    margin-bottom: 30px;
+}
+
+.margin-top-bot-30 {
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.type-1 {
+    background: #ffd401;
+    min-height: 500px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.type-2 {
+    background: #ffd401;
+    min-height: 235px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.type-3 {
+    background: #ffd401;
+    min-height: 235px;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog {
+    padding-bottom: 50px;
+}
+
+.blog p {
+    font-size: 2em;
+    color: #000;
+    position: absolute;
+    bottom: 30px;
+    margin: 0;
+    left: 0;
+    right: 0;
+}
+
+.blog img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
+
+.blog img.potrait {
+    height: 100%;
+    width: auto;
+}
+
+.mob-margin {
+    margin-bottom: 30px;
+}
 
 
 /* Small devices (tablets, 768px and up) */
@@ -1043,6 +1112,10 @@ a.closebtn:hover {
     .wizard > .content {
         min-height: 60em;
     }
+
+    .mob-margin {
+        margin-bottom: 0;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -1094,5 +1167,9 @@ a.closebtn:hover {
 
     .wizard > .content {
         min-height: 60em;
+    }
+
+    .mob-margin {
+        margin-bottom: 0;
     }
 }
