@@ -750,7 +750,7 @@ a.closebtn:hover {
 
 .transcription {
     background: url(../img/transcription.png) no-repeat center bottom;
-    background-size: 80%;
+    background-size: 70%;
     min-height: 350px; 
 }
 
@@ -762,7 +762,7 @@ a.closebtn:hover {
 
 .st {
     background: url(../img/st.png) no-repeat center center;
-    background-size: 75%;
+    background-size: 65%;
     min-height: 350px;
 }
 
@@ -814,10 +814,6 @@ a.closebtn:hover {
     padding-right: 3%;
 }
 
-.intro {
-    padding: 0 3%;
-}
-
 .wizard > .content > #wizard-p-0 .intro h2 {
     padding-top: 0;
     padding-left: 0;
@@ -831,7 +827,7 @@ a.closebtn:hover {
 .wizard > .content {
     background: #fff;
     margin: 0;
-    min-height: 60em;
+    min-height: 80em;
 }
 
 .wizard > .content > .body {
@@ -920,7 +916,18 @@ a.closebtn:hover {
     text-align: right;
 }
 
+#wizard-p-6 .actions {
+    display: none;
+}
 
+.wizard > .actions > ul {
+    width: 100%;
+    padding: 0 5%;
+}
+
+.wizard > .actions > ul > li:nth-child(2) {
+    float: right;
+}
 
 
 
@@ -1028,6 +1035,14 @@ a.closebtn:hover {
     .block-2 {
         margin-bottom: 0;
     }
+
+    .intro {
+        padding: 0 3%;
+    }
+
+    .wizard > .content {
+        min-height: 60em;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -1071,5 +1086,13 @@ a.closebtn:hover {
     .translations,
     .st {
         min-height: 750px; 
+    }
+
+    .intro {
+        padding: 0 3%;
+    }
+
+    .wizard > .content {
+        min-height: 60em;
     }
 }
