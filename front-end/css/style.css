@@ -1101,8 +1101,8 @@ a.closebtn:hover {
 }
 
 .hot-topic .slick-slide img {
-    width: auto;
-    height: auto;
+    width: 80px;
+    height: 80px;
     border-radius: 8px;
 }
 
