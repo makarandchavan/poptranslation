@@ -6,7 +6,8 @@ $(function(){
 		navPanel = $('#mySidenav'),
 		parters = $('.logo-slider'),
 		bannerSlider= $('.banners'),
-		dropzone = $('#dropzone');
+		dropzone = $('#dropzone'),
+		topicSlider = $('.topics');
 		
 
 	$('[data-toggle="popover"]').popover();
@@ -54,6 +55,15 @@ $(function(){
 	    });
 	}
 	
+	if (topicSlider.length) {
+		topicSlider.slick({
+			slidesToShow: 1,
+			slidesToScroll: 1,
+			infinite: false,
+			nextArrow: '<button type="button" class="slick-next ti-arrow-circle-right"></button>',
+			prevArrow: '<button type="button" class="slick-prev ti-arrow-circle-left"></button>'
+		});
+	}
 
 	if (bannerSlider.length) {
 		bannerSlider.slick({
@@ -61,7 +71,7 @@ $(function(){
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: true,
-  			autoplaySpeed: 3000,
+  			autoplaySpeed: 3000
 		});
 	}
 

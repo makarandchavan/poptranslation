@@ -977,6 +977,7 @@ a.closebtn:hover {
     margin: 0;
     left: 0;
     right: 0;
+    padding: 0 5%;
 }
 
 .blog img {
@@ -998,6 +999,115 @@ a.closebtn:hover {
 .mob-margin {
     margin-bottom: 30px;
 }
+
+.blog-social a {
+    padding: 10px 3px 3px 3px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    color: #000;
+}
+
+.blog-social a:hover {
+    text-decoration: none;
+}
+
+.blog-social .list-group {
+    padding: 0;
+}
+
+.blog-social .list-group-item {
+    padding: 0;
+    margin-bottom: 10px;
+}
+
+.details .content {
+    margin-bottom: 50px;
+}
+
+.details .content h6 {
+    font-weight: 100;
+    margin-top: 0;
+}
+
+.details .content h2 {
+    font-weight: 100;
+    margin-top: 10px;
+}
+
+.details .content p:first-of-type:first-letter {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 10px 30px;
+    float: left;
+}
+
+.details .content h5 {
+    margin: 15px 0;
+}
+
+.details .content ol {
+    list-style-type: disc;
+}
+
+.post-details img {
+    border-radius: 4px;
+    margin-right: 5px;
+    width: 30px;
+    height: 30px;
+}
+
+.post-details {
+    font-size: 12px;
+    color: #929292;
+    margin-bottom: 30px;
+}
+
+.post-details .view,
+.post-details .comment {
+    margin-left: 3px;
+}
+
+.hot-topic .list-group-item {
+    font-weight: 100;
+}
+
+.hot-topic h3 {
+    font-weight: 100;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+}
+
+.hot-topic .slick-prev:before, 
+.hot-topic .slick-next:before {
+    font-size: 20px;
+}
+
+.hot-topic .slick-prev, 
+.hot-topic .slick-next {
+    top: -45px;
+}
+
+.hot-topic  .slick-prev {
+    right: 30px;
+    left: auto;
+}
+
+.hot-topic  .slick-next {
+    right: 0;
+}
+
+.hot-topic .slick-slide img {
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+
+
 
 
 /* Small devices (tablets, 768px and up) */
