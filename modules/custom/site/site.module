@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file
+ * Implements hook_form_alter().
+ */
+
+function site_form_alter(&$form, $form_state, $form_id) {
+  // Look for any form provided by the contact module.
+  if (strpos($form_id, 'contact_message_') !== FALSE) {
+    // Disables preview button.
+    $form['actions']['preview']['#access'] = FALSE;
+    $form['actions']['submit']['#value'] = t('Envoi');
+    $form['mail']['#title'] = t('Email');
+  }
+}

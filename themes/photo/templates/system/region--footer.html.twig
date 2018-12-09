@@ -1,0 +1,26 @@
+
+{#
+/**
+ * @file
+ * Default theme implementation to display a region.
+ *
+ * Available variables:
+ * - content: The content for this region, typically blocks.
+ * - attributes: HTML attributes for the region div.
+ * - region: The name of the region variable as defined in the theme's
+ *   .info.yml file.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_region()
+ */
+#}
+{% if content %}
+  <div class="row">
+    <div class="col-lg-12">
+      {{ content }}
+    </div>
+    {% set dateTime = date("now") %}
+    <div class="col-lg-12"><p class="copyright text-center">All rights reserved © Alexandre Morelli {{ dateTime|date("Y") }}-{{ dateTime|date_modify("+1 year")|date("Y") }}</p></div>
+  </div>
+{% endif %}

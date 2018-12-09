@@ -1,0 +1,15 @@
+[28-Nov-2018 04:46:29 UTC] Uncaught PHP Exception Drupal\Core\Database\DatabaseExceptionWrapper: "SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'cache_dynamic_page_cache' already exists: CREATE TABLE {cache_dynamic_page_cache} (
+`cid` VARCHAR(255) CHARACTER SET ascii BINARY NOT NULL DEFAULT '' COMMENT 'Primary Key: Unique cache ID.', 
+`data` LONGBLOB NULL DEFAULT NULL COMMENT 'A collection of data to cache.', 
+`expire` INT NOT NULL DEFAULT 0 COMMENT 'A Unix timestamp indicating when the cache entry should expire, or -1 for never.', 
+`created` DECIMAL(14, 3) NOT NULL DEFAULT 0 COMMENT 'A timestamp with millisecond precision indicating when the cache entry was created.', 
+`serialized` SMALLINT NOT NULL DEFAULT 0 COMMENT 'A flag to indicate whether content is serialized (1) or not (0).', 
+`tags` LONGTEXT NULL DEFAULT NULL COMMENT 'Space-separated list of cache tags for this entry.', 
+`checksum` VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci NOT NULL COMMENT 'The tag invalidation checksum when this entry was saved.', 
+PRIMARY KEY (`cid`), 
+INDEX `expire` (`expire`), 
+INDEX `created` (`created`)
+) ENGINE = InnoDB DEFAULT CHARACTER SET utf8mb4 COMMENT 'Storage for the cache API.'; Array
+(
+)
+" at /home/cmakib3e/public_html/pt/core/lib/Drupal/Core/Database/Connection.php line 686

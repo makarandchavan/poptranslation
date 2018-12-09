@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * @file
+ * Install/uninstall and update functions.
+ */
+
+/**
+ * Implements hook_requirements().
+ */
+function ip_language_negotiation_requirements($phase) {
+  $requirements = array();
+
+  if ($phase == 'runtime') {
+    $requirements['ip_language_negotiation'] = array(
+      'title' => t('IP Language Negotiation'),
+      'value' => t('Properly configured'),
+    );
+
+    $enabled_providers = \Drupal::config('language.types')->get('negotiation') ?: array();
+
+    $countries = \Drupal::config('ip_language_negotiation.settings')->get('ip_language_negotiation_countries') ?: array();
+    $pos_of_url_method = array_search('locale-url', array_keys($enabled_providers));
+    $pos_of_ip_method = array_search('ip_language_negotiation', array_keys($enabled_providers));
+
+    if (!isset($enabled_providers['locale-url'])) {
+      $link = \Drupal\Core\Url::fromRoute('language.negotiation')->toString();
+      $requirements['ip_language_negotiation']['value'] = t('You need to <a href="@link">enable the URL language detection method</a> for the IP Language Negotiation method to work.', array('@link' => $link));
+      $requirements['ip_language_negotiation']['severity'] = REQUIREMENT_ERROR;
+    }
+    elseif ($pos_of_url_method >= $pos_of_ip_method) {
+      $link = \Drupal\Core\Url::fromRoute('language.negotiation')->toString();
+      $requirements['ip_language_negotiation']['value'] = t('You need to <a href="@link">position the URL language detection method</a> before the IP Language Negotiation method to work.', array('@link' => $link));
+
+      $requirements['ip_language_negotiation']['severity'] = REQUIREMENT_ERROR;
+    }
+    elseif (empty($countries)) {
+      $link = \Drupal\Core\Url::fromRoute('ip_language_negotiation.form')->toString();
+      $requirements['ip_language_negotiation']['value'] = t('You need to <a href="@link">set default the language per country</a> for the IP Language Negotiation method to work.', array('@link' => $link));
+
+      $requirements['ip_language_negotiation']['severity'] = REQUIREMENT_WARNING;
+    }
+  }
+
+  return $requirements;
+}
+
+/**
+ * Implements hook_uninstall().
+ */
+function ip_language_negotiation_uninstall() {
+  $config = \Drupal::configFactory()->getEditable('ip_language_negotiation.settings');
+  $config->clear('ip_language_negotiation_countries');
+  $config->save();
+}
