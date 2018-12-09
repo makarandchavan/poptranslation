@@ -51,8 +51,6 @@
  * @see html.html.twig
  */
 #}
-{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
-
 {# Main #}
 {% block main %}
   {# Header #}
@@ -63,12 +61,28 @@
     {% endblock %}
   {% endif %}
 
+  {# Quote #}
+  {% if page.hero %}
+    {% block hero %}
+      <!-- Page Content -->
+        {{ page.hero }}
+    {% endblock %}
+  {% endif %}
+
   {# Content #}
   {% block content %}
     {{ page.content }}
   {% endblock %}
 {% endblock %}
 
+{# services #}
+{% if page.services %}
+  {% block services %}
+    {{ page.services }}
+  {% endblock %}
+{% endif %}
+
+{# footer #}
 {% if page.footer %}
   {% block footer %}
     {{ page.footer }}
