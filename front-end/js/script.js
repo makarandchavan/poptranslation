@@ -8,7 +8,23 @@ $(function(){
 		bannerSlider= $('.banners'),
 		dropzone = $('#dropzone'),
 		topicSlider = $('.topics');
-		
+
+	// Quote page validation -
+	$('#quote').validate({
+		rules: {
+			email: 'required',
+			entreprise: 'required'
+		}
+	});
+	// 
+
+	$('.form-control').on("blur", function(){
+		if ($('#quote').valid()) {
+			$('#submit-quote').removeAttr('disabled');
+		} else {
+			$('#submit-quote').attr("disabled", "disabled");
+		}
+	 });
 
 	$('[data-toggle="popover"]').popover();
 	
@@ -134,6 +150,25 @@ if (dropWrapper.length) {
 	  clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
 	});
 
+	// File size -
+	var totalSizeLimit = 20*1024*1024; // 20MB
+	myDropzone.on("uploadprogress", function(file, progress, bytesSent) {
+		var alreadyUploadedTotalSize = getTotalPreviousUploadedFilesSize();
+
+	    if((alreadyUploadedTotalSize + bytesSent) > totalSizeLimit) {
+	      this.disable();
+	    }
+	});
+
+	function getTotalPreviousUploadedFilesSize(){
+	   var totalSize = 0;
+	   myDropzone.getFilesWithStatus(Dropzone.SUCCESS).forEach(function(file){
+	      totalSize = totalSize + file.size;
+	   });
+	   console.log(totalSize);
+	   return totalSize;
+	}
+	// 
 }
 
 // if (cvUpload.length) {

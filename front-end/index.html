@@ -80,7 +80,7 @@
         <div class="row inner">
             <div class="col-lg-3 col-xs-12 col-md-4">
                 <div class="quote-form-wrapper">
-                    <form action="/file-upload" class="" id="">
+                    <form action="/file-upload" class="" id="quote">
                         <!--  -->
                         <div class="table table-striped" class="files" id="previews">
                             <div id="template" class="file-row">
@@ -114,17 +114,17 @@
                         <h4>DEMANDER UN DEVIS</h4>
 
                         <div class="form-group">
-                            <input type="email" class="form-control" id="" placeholder="Votre email">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre email">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" id="" placeholder="Votre entreprise">
+                            <input type="text" class="form-control" id="entreprise" name="entreprise" placeholder="Votre entreprise">
                         </div>
                         <div class="form-group">
                             <textarea class="form-control" rows="3" placeholder="Donnez-nous plus d'informations sur votre projet"></textarea>
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-default" disabled="disabled">Envoyer</button>
+                            <button type="submit" class="btn btn-default" disabled="disabled" id="submit-quote">Envoyer</button>
 
                             <a tabindex="0" 
                                 class="btn btn-lg btn-info ti-more-alt submit-info" 
@@ -307,6 +307,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.validate.js"></script>
     <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/dropzone.js"></script>
     <script src="js/script.js"></script>

@@ -324,8 +324,8 @@ a.closebtn:hover {
     padding: 10px 30px;
     border-radius: 30px;
     border-width: 2px;
-    background-color: #dcdde0;
-    border-color: #dcdde0;
+    background-color: #8acbee;
+    border-color: #8acbee;
     color: #000;
     font-weight: bold;
 }
@@ -1106,6 +1106,11 @@ a.closebtn:hover {
     border-radius: 8px;
 }
 
+.quote-form-wrapper .btn[disabled] {
+    background-color: #dcdde0;
+    border-color: #dcdde0;
+    color: #000;
+}
 
 
 
