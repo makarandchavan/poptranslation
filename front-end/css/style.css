@@ -1112,7 +1112,41 @@ a.closebtn:hover {
     color: #000;
 }
 
+.quote-form-wrapper .form-group {
+    position: relative;
+}
 
+div.error {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 15px;
+    color: #fff;
+    z-index: 99;
+    background: #7c7c7c;
+    border-radius: .4em;
+    font-size: 14px;
+    text-align: center;
+}
+
+div.error:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 0.344em solid transparent;
+    border-right-color: #7c7c7c;
+    border-left: 0;
+    margin-top: -0.344em;
+    margin-left: -0.344em;
+}
+div.error .ti-alert {
+    font-size: 60px;
+    display: block;
+    margin-bottom: 20px;
+}
 
 
 /* Small devices (tablets, 768px and up) */

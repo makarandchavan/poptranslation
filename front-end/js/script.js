@@ -16,15 +16,17 @@ $(function(){
 			entreprise: 'required'
 		}
 	});
-	// 
+	 
 
 	$('.form-control').on("blur", function(){
 		if ($('#quote').valid()) {
 			$('#submit-quote').removeAttr('disabled');
 		} else {
 			$('#submit-quote').attr("disabled", "disabled");
+			$('<span class="ti-alert"></span>').prependTo('div.error');
 		}
 	 });
+	// 
 
 	$('[data-toggle="popover"]').popover();
 	
@@ -165,7 +167,7 @@ if (dropWrapper.length) {
 	   myDropzone.getFilesWithStatus(Dropzone.SUCCESS).forEach(function(file){
 	      totalSize = totalSize + file.size;
 	   });
-	   console.log(totalSize);
+	   console.log('TOTAL FILE SIZE', totalSize);
 	   return totalSize;
 	}
 	// 
