@@ -10,7 +10,25 @@ var Drupal = Drupal || {};
 		bannerSlider= $('.banners'),
 		dropzone = $('#dropzone'),
 		topicSlider = $('.topics');
-		
+
+	// Quote page validation -
+	$('#quote').validate({
+		rules: {
+			email: 'required',
+			entreprise: 'required'
+		}
+	});
+	 
+
+	$('.form-control').on("blur", function(){
+		if ($('#quote').valid()) {
+			$('#submit-quote').removeAttr('disabled');
+		} else {
+			$('#submit-quote').attr("disabled", "disabled");
+			$('<span class="ti-alert"></span>').prependTo('div.error');
+		}
+	 });
+	// 
 
 	$('[data-toggle="popover"]').popover();
 	
@@ -110,34 +128,76 @@ var Drupal = Drupal || {};
 		});
 	}
 
+// File Upload with Dropzone
 
-	// File Upload with Dropzone
+var dropWrapper = document.getElementsByClassName("dzone");
 
-	var dropWrapper = document.getElementsByClassName("dzone");
+if (dropWrapper.length) {
+	
+	var previewNode = document.querySelector("#template");
+		previewNode.id = "";
 
-	if (dropWrapper.length) {
-		
-		var previewNode = document.querySelector("#template");
-			previewNode.id = "";
+	var previewTemplate = previewNode.parentNode.innerHTML;
+		previewNode.parentNode.removeChild(previewNode);
 
-		var previewTemplate = previewNode.parentNode.innerHTML;
-			previewNode.parentNode.removeChild(previewNode);
+	var myDropzone = new Dropzone(document.body, {
+	  url: "/uploadfile", // Set the url
+	  thumbnailWidth: 40,
+	  thumbnailHeight: 40,
+	  parallelUploads: 20,
+	  maxFilesize: 20, // MB
+	  previewTemplate: previewTemplate,
+	  //autoQueue: false, // Make sure the files aren't queued until manually added
+	  previewsContainer: "#previews", // Define the container to display the previews
+	  clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+	});
 
-		var myDropzone = new Dropzone(document.body, {
-		  url: "/sites/default/files", // Set the url
-		  thumbnailWidth: 40,
-		  thumbnailHeight: 40,
-		  parallelUploads: 20,
-		  maxFilesize: 20, // MB
-		  previewTemplate: previewTemplate,
-		  //autoQueue: false, // Make sure the files aren't queued until manually added
-		  previewsContainer: "#previews", // Define the container to display the previews
-		  clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
-		});
+	// File size -
+	var totalSizeLimit = 20*1024*1024; // 20MB
+	myDropzone.on("uploadprogress", function(file, progress, bytesSent) {
+		var alreadyUploadedTotalSize = getTotalPreviousUploadedFilesSize();
 
+	    if((alreadyUploadedTotalSize + bytesSent) > totalSizeLimit) {
+	      this.disable();
+	    }
+	});
+
+	function getTotalPreviousUploadedFilesSize(){
+	   var totalSize = 0;
+	   myDropzone.getFilesWithStatus(Dropzone.SUCCESS).forEach(function(file){
+	      totalSize = totalSize + file.size;
+	   });
+	   console.log('TOTAL FILE SIZE', totalSize);
+	   return totalSize;
 	}
+	// 
+}
 
-	// Slide In Panel
+// if (cvUpload.length) {
+	
+// 	var previewNode = document.querySelector("#template");
+// 		previewNode.id = "";
+
+// 	var previewTemplate = previewNode.parentNode.innerHTML;
+// 		previewNode.parentNode.removeChild(previewNode);
+
+// 	var myDropzone = new Dropzone(document.body, {
+// 	  url: "/target-url", // Set the url
+// 	  thumbnailWidth: 40,
+// 	  thumbnailHeight: 40,
+// 	  parallelUploads: 20,
+// 	  maxFilesize: 20, // MB
+// 	  previewTemplate: previewTemplate,
+// 	  //autoQueue: false, // Make sure the files aren't queued until manually added
+// 	  previewsContainer: "#previews" // Define the container to display the previews
+// 	  // clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+// 	});
+
+// }
+
+
+
+// Slide In Panel
 	
 	var panelTriggers = document.getElementsByClassName('js-cd-panel-trigger');
 	if( panelTriggers.length > 0 ) {

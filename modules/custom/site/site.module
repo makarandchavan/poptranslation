@@ -14,3 +14,34 @@ function site_form_alter(&$form, $form_state, $form_id) {
     $form['mail']['#title'] = t('Email');
   }
 }
+
+/**
+* Implements hook_mail().
+*/
+function site_mail($key, &$message, $params) {
+ $options = array(
+   'langcode' => $message['langcode'],
+ );
+  switch ($key) {
+    case 'quote_mail_admin':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['headers']['Reply-To'] = 'no-reply@poptranslation.com';
+      $message['subject'] = t('Quote request recevied', array(), $options);
+      $message['body'][] = $params['message'];
+      // Add attachment when available.
+	  if (isset($params['attachment'])) {
+	    $message['params']['attachments'][] = $params['attachment'];
+	  }
+    break;
+    case 'quote_mail':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['headers']['Reply-To'] = 'no-reply@poptranslation.com';
+      $message['subject'] = t('Thank you', array(), $options);
+      $message['body'][] = $params['message'];
+      // Add attachment when available.
+	  if (isset($params['attachment'])) {
+	    $message['params']['attachments'][] = $params['attachment'];
+	  }
+    break;
+  }
+}

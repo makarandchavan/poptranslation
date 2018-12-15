@@ -11,4 +11,5 @@ global-styling:
   js:
     js/slick.min.js: {}
     js/dropzone.js: {}
+    js/jquery.validate.js: {}
     js/script.js: {}

@@ -1,0 +1,15 @@
+site.home_form: # This is a route name.
+  path: '/submit/quote'
+  defaults:
+    _controller: '\Drupal\site\Controller\SiteController::handleQuote'
+    _title: 'Thank You'
+  requirements:
+    _permission: 'access content'
+
+site.upload: # This is a route name.
+  path: '/uploadfile'
+  defaults:
+    _controller: '\Drupal\site\Controller\SiteController::uploadFile'
+    _title: ''
+  requirements:
+    _permission: 'access content'
