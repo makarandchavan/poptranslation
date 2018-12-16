@@ -3,6 +3,8 @@
 namespace Drupal\site\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use \Drupal\node\Entity\Node;
+use \Drupal\file\Entity\File;
 
 /**
  * Controller routines for site example routes.
@@ -20,6 +22,24 @@ class SiteController extends ControllerBase {
    * Quote form handle.
    */
   public function handleQuote() {
+    // Insert a record.
+    // Create file object from remote URL.
+    global $base_url;
+    $data = file_get_contents($base_url . '/sites/default/files/' . $_POST['uploadedfile']);
+    $file = file_save_data($data, 'public://' . $_POST['uploadedfile'], FILE_EXISTS_REPLACE);
+
+    // Create node object with attached file.
+    $node = Node::create([
+      'type'        => 'quote_enquiry',
+      'title'       => 'Quote request received',
+      'field_display_title' => $_POST['email'],
+      'field_entreprise' => $_POST['entreprise'],
+      'body' => $_POST['information'],
+      'field_attached_files' => ['target_id' => $file->id()],
+    ]);
+    $node->save();
+
+    // Send mails.
     $mailManager = \Drupal::service('plugin.manager.mail');
     // send mail to user.
     $module = 'site';
@@ -34,7 +54,7 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'quote_mail_admin';
-    $to = 'cmak2008@gmail.com';
+    $to = \Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Quote received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br> Email: @usrmail<br>Entreprise: @usrent<br>Information: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrmail' => $_POST['email'], '@usrent' => $_POST['entreprise'], '@usrinfo' => $_POST['information']));
     $attachment = array(
