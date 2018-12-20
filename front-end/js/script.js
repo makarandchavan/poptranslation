@@ -1,4 +1,6 @@
-$(function(){
+var Drupal = Drupal || {};
+
+(function ($, Drupal, Bootstrap) {
 	"use strict";
 
 	var openNav = $('.open'),
@@ -16,7 +18,22 @@ $(function(){
 			entreprise: 'required'
 		}
 	});
-	 
+
+	$('#submit-quote').on('click', function(e){
+		$(this).attr('disabled', 'disabled');
+		e.preventDefault();
+		$.ajax({
+	        url: "/submit/quote",      // Url to which the request is send
+	        type: "POST",                   // Type of request to be send, called as method
+	        data:  {uploadedfile:$('.uploaded-file').val(),email:$('#email').val(),entreprise:$('#entreprise').val(),information:$('#information').val()},
+	        cache: false,
+	        success: function(data)         // A function to be called if request succeeds
+	        {
+	        	$('form#quote').html('<div class="tahnk-you">Thank You. Your message has been sent successfully.</div>');
+	        }
+	    });
+	    return false;
+	});
 
 	$('.form-control').on("blur", function(){
 		if ($('#quote').valid()) {
@@ -72,6 +89,8 @@ $(function(){
 		    }
 	    });
 	}
+
+
 	
 	if (topicSlider.length) {
 		topicSlider.slick({
@@ -126,8 +145,6 @@ $(function(){
 		});
 	}
 
-});
-
 // File Upload with Dropzone
 
 var dropWrapper = document.getElementsByClassName("dzone");
@@ -141,13 +158,15 @@ if (dropWrapper.length) {
 		previewNode.parentNode.removeChild(previewNode);
 
 	var myDropzone = new Dropzone(document.body, {
-	  url: "/target-url", // Set the url
+	  url: "/uploadfile", // Set the url
 	  thumbnailWidth: 40,
 	  thumbnailHeight: 40,
-	  parallelUploads: 20,
+	  parallelUploads: 1,
 	  maxFilesize: 20, // MB
+	  addRemoveLinks: true,
 	  previewTemplate: previewTemplate,
-	  //autoQueue: false, // Make sure the files aren't queued until manually added
+	  maxFiles: 1,
+	  autoQueue: true, // Make sure the files aren't queued until manually added
 	  previewsContainer: "#previews", // Define the container to display the previews
 	  clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
 	});
@@ -158,8 +177,17 @@ if (dropWrapper.length) {
 		var alreadyUploadedTotalSize = getTotalPreviousUploadedFilesSize();
 
 	    if((alreadyUploadedTotalSize + bytesSent) > totalSizeLimit) {
-	      this.disable();
+	      jQuery(this).disable();
 	    }
+	});
+
+	myDropzone.on("complete", function(file) {
+	  jQuery('.uploaded-file').attr('value', file.name);
+	});
+
+	// Hide the total progress bar when nothing's uploading anymore
+	myDropzone.on("queuecomplete", function(progress) {
+	  document.querySelector(".progress").style.opacity = "0";
 	});
 
 	function getTotalPreviousUploadedFilesSize(){
@@ -167,7 +195,6 @@ if (dropWrapper.length) {
 	   myDropzone.getFilesWithStatus(Dropzone.SUCCESS).forEach(function(file){
 	      totalSize = totalSize + file.size;
 	   });
-	   console.log('TOTAL FILE SIZE', totalSize);
 	   return totalSize;
 	}
 	// 
@@ -239,3 +266,4 @@ if (dropWrapper.length) {
 	  	}
 	}
 
+})(window.jQuery, window.Drupal, window.Drupal.bootstrap);
