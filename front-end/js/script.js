@@ -9,15 +9,19 @@ var Drupal = Drupal || {};
 		parters = $('.logo-slider'),
 		bannerSlider= $('.banners'),
 		dropzone = $('#dropzone'),
+		quoteForm = $('#quote'),
 		topicSlider = $('.topics');
 
 	// Quote page validation -
-	$('#quote').validate({
-		rules: {
-			email: 'required',
-			entreprise: 'required'
-		}
-	});
+
+	if (quoteForm.length) {
+		quoteForm.validate({
+			rules: {
+				email: 'required',
+				entreprise: 'required'
+			}
+		});
+	}
 
 	$('#submit-quote').on('click', function(e){
 		$(this).attr('disabled', 'disabled');
@@ -108,7 +112,10 @@ var Drupal = Drupal || {};
 			slidesToShow: 1,
 			slidesToScroll: 1,
 			autoplay: true,
-  			autoplaySpeed: 3000
+			fade: true,
+			speed: 2000,
+			cssEase: 'linear',
+  			autoplaySpeed: 5000
 		});
 	}
 

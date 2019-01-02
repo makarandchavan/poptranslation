@@ -30,7 +30,7 @@
 
 </head>
 
-<body>
+<body class="home">
     <div class="dzone">
         <div class="inner">
             <h3>Drop it like it’s hot</h3>
@@ -78,95 +78,82 @@
 
     <div class="container-fluid hero-area quote">
         <div class="row inner">
-            <div class="col-lg-3 col-xs-12 col-md-4">
-                <div class="quote-form-wrapper">
-                    <form action="/file-upload" class="" id="quote">
-                        <!--  -->
-                        <div class="table table-striped" class="files" id="previews">
-                            <div id="template" class="file-row">
-                                <!-- This is used as the file preview template -->
-                                <div>
-                                    <span class="preview"><img data-dz-thumbnail /></span>
-                                </div>
-                                <div>
-                                    <p class="name" data-dz-name></p>
-                                    <strong class="error text-danger" data-dz-errormessage></strong>
-                                </div>
-                                <div>
-                                    <p class="size" data-dz-size></p>
-                                    <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                                        <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+            <div class="col-lg-12">
+                <div class="form-outer">
+                    <div class="quote-form-wrapper">
+                        <form action="/file-upload" class="" id="quote">
+                            <!--  -->
+                            <div class="table table-striped" class="files" id="previews">
+                                <div id="template" class="file-row">
+                                    <!-- This is used as the file preview template -->
+                                    <div>
+                                        <span class="preview"><img data-dz-thumbnail /></span>
+                                    </div>
+                                    <div>
+                                        <p class="name" data-dz-name></p>
+                                        <strong class="error text-danger" data-dz-errormessage></strong>
+                                    </div>
+                                    <div>
+                                        <p class="size" data-dz-size></p>
+                                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                            <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!--  -->
-                        
-                        <div class="file-attach">
-                            <span class="btn btn-info fileinput-button">
-                                <span class="ti-plus"></span>
-                                <!-- <input type="file" name="file" multiple=""> -->
-                            </span>
+                            <!--  -->
+                            
+                            <div class="file-attach">
+                                <span class="btn btn-info fileinput-button">
+                                    <span class="ti-plus"></span>
+                                    <!-- <input type="file" name="file" multiple=""> -->
+                                </span>
 
-                            <span class="attach-info">Ajoutez vos fichiers <span>(jusqu’à 20 Mo)</span></span>
-                        </div>
+                                <span class="attach-info">Ajoutez vos fichiers <span>(jusqu’à 20 Mo)</span></span>
+                            </div>
 
-                        <h4>DEMANDER UN DEVIS</h4>
+                            <h4>DEMANDER UN DEVIS</h4>
 
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Votre email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="entreprise" name="entreprise" placeholder="Votre entreprise">
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="3" placeholder="Donnez-nous plus d'informations sur votre projet"></textarea>
-                        </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Votre email">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="entreprise" name="entreprise" placeholder="Votre entreprise">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Donnez-nous plus d'informations sur votre projet"></textarea>
+                            </div>
 
-                        <div class="form-group">
-                            <button type="submit" class="btn btn-default" disabled="disabled" id="submit-quote">Envoyer</button>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default" disabled="disabled" id="submit-quote">Envoyer</button>
 
-                            <a tabindex="0" 
-                                class="btn btn-lg btn-info ti-more-alt submit-info" 
-                                role="button" 
-                                data-toggle="popover" 
-                                data-trigger="focus" 
-                                title="Info" 
-                                data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-                            </a>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <!-- <div class="col-lg-4 col-xs-12 col-md-4 text-center calc">
-                <img src="img/cal.png" class="img-responsive" alt="">
-            </div>
-            <div class="col-lg-4 col-xs-12 col-md-4">
-                <div class="banner">
-                    <p>
-                        <span>AGENCE DE</span>
-                        <span>TRADUCTION</span>
-                        <span>EXPERTE</span>
-                        <span>+33 1 46 42 01 43</span>
-                    </p>
-                </div>
-            </div> -->
-            <div class="col-lg-9">
-                <div class="banners">
-                    <div><img src="img/banner/1.png"></div>
-                    <div><img src="img/banner/2.png"></div>
-                    <div><img src="img/banner/3.png"></div>
-                    <div><img src="img/banner/4.png"></div>
-                    <div><img src="img/banner/5.png"></div>
+                                <a tabindex="0" 
+                                    class="btn btn-lg btn-info ti-more-alt submit-info" 
+                                    role="button" 
+                                    data-toggle="popover" 
+                                    data-trigger="focus" 
+                                    title="Info" 
+                                    data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+            
+                    <div class="banners">
+                        <div><img src="img/banner/1.png"></div>
+                        <div><img src="img/banner/2.png"></div>
+                        <div><img src="img/banner/3.png"></div>
+                        <div><img src="img/banner/4.png"></div>
+                        <div><img src="img/banner/5.png"></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- </div> -->
     </div>
 
     <div class="container-fluid white-area">
@@ -235,7 +222,7 @@
 
     <div class="container-fluid light-grey">
         <!-- <div class="container"> -->
-            <div class="row why-us inner">
+            <div class="row why-us inner footer-grey">
                 <div class="col-lg-4">
                     <div class="row">
                         <div class="col-lg-6 col-xs-5 col-sm-2"><img src="img/f1.png" class="img-responsive" alt=""></div>
@@ -262,7 +249,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row footer-grey">
                 <div class="col-lg-12 footer">
                     <div class="row inner">
                         <div class="col-lg-4 col-sm-4">

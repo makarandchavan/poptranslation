@@ -15,7 +15,7 @@ body {
     height: 100%;
     width: 250px;
     position: fixed;
-    z-index: 1;
+    z-index: 11;
     top: 0;
     left: -250px;
     background-color: #000;
@@ -88,11 +88,24 @@ a.closebtn:hover {
     background-color: #f8ce46;
 }
 
+.form-outer {
+    min-height: 932px;
+}
+
+.home .hero-area,
+.home .hero-area .inner {
+    padding: 0;
+}
+
 .dark-grey {
     background-color: #a9a9a9;
 }
 
-.light-grey {
+/*.light-grey {
+    background-color: #d6d6d6;
+}*/
+
+.footer-grey {
     background-color: #d6d6d6;
 }
 
@@ -115,6 +128,13 @@ a.closebtn:hover {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
     -moz-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
     box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
+
+    position: absolute;
+    z-index: 10;
+    /*top: 75px;*/
+    left: 4em;
+    top: 50%;
+    transform: perspective(1px) translateY(-50%);
 }
 
 .quote-form-wrapper form {
@@ -348,6 +368,10 @@ a.closebtn:hover {
 
 .banners {
     display: none;
+    /*margin-left: 525px;
+    margin-top: 95px;*/
+    top: 67px;
+    /*left: 31%;*/
 }
 
 .banner p {
@@ -496,9 +520,10 @@ a.closebtn:hover {
     color: #fff;
 }
 
-.slick-slide img {
+.banners.slick-slide img {
+    object-fit: cover;
     width: 100%;
-    height: auto;
+    height: 863px;
 }
 
 .legal {
@@ -1239,11 +1264,11 @@ div.error .ti-alert {
     .white-area,
     .light-grey,
     .dark-grey {
-        padding: 0 90px; 
+        padding: 0 200px; 
     }
 
     .services.white-area {
-        padding: 0 100px;
+        padding: 0 220px;
     }
 
     .circle_banner img {
