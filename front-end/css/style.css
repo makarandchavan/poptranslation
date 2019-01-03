@@ -93,7 +93,9 @@ a.closebtn:hover {
 }
 
 .home .hero-area,
-.home .hero-area .inner {
+.home .hero-area .inner,
+.free .hero-area,
+.free .hero-area .inner {
     padding: 0;
 }
 
@@ -124,7 +126,6 @@ a.closebtn:hover {
     -webkit-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
     -moz-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
     box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
-    min-height: 489px;
 
     position: absolute;
     z-index: 10;
@@ -134,7 +135,11 @@ a.closebtn:hover {
     transform: perspective(1px) translateY(-50%);
 }
 
-.tahnk-you img {
+.home .quote-form-wrapper {
+    min-height: 489px;
+}
+
+.thank-you img {
     width: 100%;
     height: auto;
     margin-top: 30%;
@@ -241,7 +246,7 @@ a.closebtn:hover {
 }
 
 .popover.right {
-    width: 70%;
+    width: 80%;
     background-color: #8acbee;
     color: #fff;
     border: none;
@@ -797,8 +802,8 @@ a.closebtn:hover {
 
 .freelancers {
     background: url(../img/freelancers.png) no-repeat center center;
-    background-size: 25%;
-    min-height: 350px;
+    /*background-size: 25%;
+    min-height: 350px;*/
 }
 
 .chat {
@@ -1148,8 +1153,8 @@ a.closebtn:hover {
 div.error {
     position: absolute;
     right: 0;
-    top: 0;
-    padding: 15px;
+    top: 40px;
+    padding: 10px;
     color: #fff;
     z-index: 99;
     background: #7c7c7c;

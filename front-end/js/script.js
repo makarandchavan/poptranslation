@@ -10,6 +10,7 @@ var Drupal = Drupal || {};
 		bannerSlider= $('.banners'),
 		dropzone = $('#dropzone'),
 		quoteForm = $('#quote'),
+		freelance = $('#freelance'),
 		topicSlider = $('.topics');
 
 	// Quote page validation -
@@ -21,11 +22,21 @@ var Drupal = Drupal || {};
 				entreprise: 'required'
 			}
 		});
+
+		$('.form-control').on("blur keyup", function(){
+			if ($('#quote').valid()) {
+				$('#submit-quote').removeAttr('disabled');
+			} else {
+				$('#submit-quote').attr("disabled", "disabled");
+				// $('<span class="ti-alert"></span>').prependTo('div.error');
+			}
+		});
 	}
 
 	$('#submit-quote').on('click', function(e){
-		$(this).attr('disabled', 'disabled');
 		e.preventDefault();
+		$(this).attr('disabled', 'disabled');
+
 		$.ajax({
 	        url: "/submit/quote",      // Url to which the request is send
 	        type: "POST",                   // Type of request to be send, called as method
@@ -33,20 +44,32 @@ var Drupal = Drupal || {};
 	        cache: false,
 	        success: function(data)         // A function to be called if request succeeds
 	        {
-	        	$('form#quote').html('<div class="tahnk-you">Thank You. Your message has been sent successfully.</div>');
+	        	$('form#quote').html('<div class="thank-you"><img src="img/thankyou.png" alt=""></div>');
 	        }
 	    });
 	    return false;
 	});
+	// 
 
-	$('.form-control').on("blur", function(){
-		if ($('#quote').valid()) {
-			$('#submit-quote').removeAttr('disabled');
-		} else {
-			$('#submit-quote').attr("disabled", "disabled");
-			$('<span class="ti-alert"></span>').prependTo('div.error');
-		}
-	 });
+	// Freelance page validation -
+
+	if (freelance.length) {
+		freelance.validate({
+			rules: {
+				email: 'required',
+				name: 'required',
+				firstname: 'required'
+			}
+		});
+
+		$('.form-control').on("blur keyup", function(){
+			if ($('#freelance').valid()) {
+				$('#freelaceSubmit').removeAttr('disabled');
+			} else {
+				$('#freelaceSubmit').attr("disabled", "disabled");
+			}
+		});
+	}
 	// 
 
 	$('[data-toggle="popover"]').popover();
