@@ -61,3 +61,17 @@ function photo_theme_suggestions_form_alter(array &$suggestions, array $variable
     $suggestions[] = 'form__' . 'contact';
   }
 }
+
+function photo_preprocess_region(&$vars) {
+  $current_path = \Drupal::service('path.current')->getPath(); // Gets internal path - for eg /node/29.
+  // Retrieve an array which contains the path pieces.
+  $pathArgs = explode('/', $current_path);
+  $vars['path_arg'] = $pathArgs[1];
+}
+
+function photo_preprocess_html(&$vars) {
+  $current_path = \Drupal::service('path.current')->getPath(); // Gets internal path - for eg /node/29.
+  // Retrieve an array which contains the path pieces.
+  $pathArgs = explode('/', $current_path);
+  $vars['path_arg'] = $pathArgs[1];
+}

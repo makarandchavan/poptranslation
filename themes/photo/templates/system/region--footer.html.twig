@@ -16,11 +16,7 @@
  */
 #}
 {% if content %}
-  <div class="row">
-    <div class="col-lg-12">
-      {{ content }}
-    </div>
-    {% set dateTime = date("now") %}
-    <div class="col-lg-12"><p class="copyright text-center">All rights reserved © Alexandre Morelli {{ dateTime|date("Y") }}-{{ dateTime|date_modify("+1 year")|date("Y") }}</p></div>
+  <div class="container-fluid light-grey">
+    {{ content }}
   </div>
 {% endif %}

@@ -45,3 +45,11 @@ function site_mail($key, &$message, $params) {
     break;
   }
 }
+
+function site_theme($existing, $type, $theme, $path) {
+  return [
+    'freelancers' => [
+      'variables' => ['site' => NULL],
+    ],
+  ];
+}

@@ -54,7 +54,7 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'quote_mail_admin';
-    $to = \Drupal::config('system.site')->get('mail');
+    $to = 'isarkar77@gmail.com';
     $params['subject'] = t('New Quote received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br> Email: @usrmail<br>Entreprise: @usrent<br>Information: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrmail' => $_POST['email'], '@usrent' => $_POST['entreprise'], '@usrinfo' => $_POST['information']));
     $attachment = array(
@@ -98,5 +98,15 @@ class SiteController extends ControllerBase {
         ];
       }
     }
+  }
+
+  /**
+   * Quote file handle.
+   */
+  public function freelancers() {
+    return [
+      '#theme' => 'freelancers',
+      '#site' => $this->t('site'),
+    ];
   }
 }

@@ -13,3 +13,11 @@ site.upload: # This is a route name.
     _title: ''
   requirements:
     _permission: 'access content'
+
+site.freelancers: # This is a route name.
+  path: '/freelancers'
+  defaults:
+    _controller: '\Drupal\site\Controller\SiteController::freelancers'
+    _title: ''
+  requirements:
+    _permission: 'access content'
