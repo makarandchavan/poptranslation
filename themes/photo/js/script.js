@@ -44,7 +44,7 @@ var Drupal = Drupal || {};
 	        cache: false,
 	        success: function(data)         // A function to be called if request succeeds
 	        {
-	        	$('form#quote').html('<div class="thank-you"><img src="img/thankyou.png" alt=""></div>');
+	        	$('form#quote').html('<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""></div>');
 	        }
 	    });
 	    return false;
@@ -98,10 +98,10 @@ var Drupal = Drupal || {};
 						previewNode.parentNode.removeChild(previewNode);
 
 					var myDropzone = new Dropzone(document.body, {
-					  url: "/target-url", // Set the url
+					  url: "/uploadfile", // Set the url
 					  thumbnailWidth: 40,
 					  thumbnailHeight: 40,
-					  parallelUploads: 20,
+					  parallelUploads: 1,
 					  maxFilesize: 20, // MB
 					  previewTemplate: previewTemplate,
 					  //autoQueue: false, // Make sure the files aren't queued until manually added
@@ -112,8 +112,20 @@ var Drupal = Drupal || {};
 
 		        if (currentIndex === 6) {
 		        	$('.actions').hide();
+		        	var mainFormData = $('#wizard').serializeArray();
+		        	var wizardFormData = $('#freelance').serializeArray();
+		        	$.ajax({
+				        url: "/submit/freelance",      // Url to which the request is send
+				        type: "POST",                   // Type of request to be send, called as method
+				        data:  {mainFormData, wizardFormData},
+				        cache: false,
+				        success: function(data)         // A function to be called if request succeeds
+				        {
+				        	console.log('done');
+				        }
+				    });
 		        }
-		    }
+		    },
 	    });
 	}
 
