@@ -11,6 +11,7 @@ var Drupal = Drupal || {};
 		dropzone = $('#dropzone'),
 		quoteForm = $('#quote'),
 		freelance = $('#freelance'),
+		contact = $('#contact'),
 		topicSlider = $('.topics');
 
 	// Quote page validation -
@@ -49,6 +50,22 @@ var Drupal = Drupal || {};
 	    });
 	    return false;
 	});
+
+	$('#submitContact').on('click', function(e){
+		e.preventDefault();
+		$(this).attr('disabled', 'disabled');
+		var contactFormData = $('#contact').serializeArray();
+		$.ajax({
+	        url: "/submit/contact",      // Url to which the request is send
+	        type: "POST",                   // Type of request to be send, called as method
+	        data:  {contactFormData},
+	        cache: false,
+	        success: function(data) {
+	        	$('form#contact').html('<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""></div>');
+	        }
+	    });
+	    return false;
+	});
 	// 
 
 	// Freelance page validation -
@@ -67,6 +84,28 @@ var Drupal = Drupal || {};
 				$('#freelaceSubmit').removeAttr('disabled');
 			} else {
 				$('#freelaceSubmit').attr("disabled", "disabled");
+			}
+		});
+	}
+	// 
+
+	// Contact page validation -
+
+	if (contact.length) {
+		contact.validate({
+			rules: {
+				email: 'required',
+				name: 'required',
+				entreprise: 'required',
+				message: 'required'
+			}
+		});
+
+		$('.form-control').on("blur keyup", function(){
+			if ($('#contact').valid()) {
+				$('#submitContact').removeAttr('disabled');
+			} else {
+				$('#submitContact').attr("disabled", "disabled");
 			}
 		});
 	}
@@ -108,12 +147,15 @@ var Drupal = Drupal || {};
 					  previewsContainer: "#previews" // Define the container to display the previews
 					  // clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
 					});
+					myDropzone.on("complete", function(file) {
+					  jQuery('.uploaded-file').attr('value', file.name);
+					});
 		        }
 
 		        if (currentIndex === 6) {
 		        	$('.actions').hide();
-		        	var mainFormData = $('#wizard').serializeArray();
-		        	var wizardFormData = $('#freelance').serializeArray();
+		        	var mainFormData = $('#freelance').serializeArray();
+		        	var wizardFormData = $('#wizard').serializeArray();
 		        	$.ajax({
 				        url: "/submit/freelance",      // Url to which the request is send
 				        type: "POST",                   // Type of request to be send, called as method

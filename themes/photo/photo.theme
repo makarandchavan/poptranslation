@@ -75,3 +75,10 @@ function photo_preprocess_html(&$vars) {
   $pathArgs = explode('/', $current_path);
   $vars['path_arg'] = $pathArgs[1];
 }
+
+function photo_preprocess_page(&$vars) {
+  $current_path = \Drupal::service('path.current')->getPath(); // Gets internal path - for eg /node/29.
+  // Retrieve an array which contains the path pieces.
+  $pathArgs = explode('/', $current_path);
+  $vars['path_arg'] = $pathArgs[1];
+}

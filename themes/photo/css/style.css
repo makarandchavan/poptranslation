@@ -95,8 +95,11 @@ a.closebtn:hover {
 .home .hero-area,
 .home .hero-area .inner,
 .free .hero-area,
-.free .hero-area .inner {
+.free .hero-area .inner,
+.cont .hero-area,
+.cont .hero-area .inner {
     padding: 0;
+    width: 100%;
 }
 
 .dark-grey {
@@ -566,7 +569,7 @@ a.closebtn:hover {
 
 .contact {
     background: url(../img/contact.png) no-repeat center center;
-    background-size: 30%;
+    /*background-size: 30%;*/
 }
 
 .about {

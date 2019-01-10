@@ -52,6 +52,14 @@
  */
 #}
 <div class="alert alert-info alert-dismissible privacy-alert" role="alert"><button aria-label="Close" class="close btn btn-default btn-sm" data-dismiss="alert" type="button">{{ "OK"|t }}</button>{{ "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequuntur."|t }}</div>
+{% if path_arg == 'freelancers' %}
+  <div class="cv-dzone">
+      <div class="inner">
+          <h3>Submit your CV</h3>
+          <h4>Add your file by dropping it in this window</h4>
+      </div>
+  </div>
+{% endif %}
 {# Main #}
 {% block main %}
   {# Header #}

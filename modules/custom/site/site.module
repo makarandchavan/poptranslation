@@ -62,6 +62,17 @@ function site_mail($key, &$message, $params) {
     if (isset($params['attachment'])) {
       $message['params']['attachments'][] = $params['attachment'];
     }
+    case 'contact_mail_admin':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['headers']['Reply-To'] = 'no-reply@poptranslation.com';
+      $message['subject'] = t('Contact recevied', array(), $options);
+      $message['body'][] = $params['message'];
+    break;
+    case 'contact_mail':
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['headers']['Reply-To'] = 'no-reply@poptranslation.com';
+      $message['subject'] = t('Thank you', array(), $options);
+      $message['body'][] = $params['message'];
     break;
   }
 }
