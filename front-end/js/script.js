@@ -11,6 +11,7 @@ var Drupal = Drupal || {};
 		dropzone = $('#dropzone'),
 		quoteForm = $('#quote'),
 		freelance = $('#freelance'),
+		contact = $('#contact'),
 		topicSlider = $('.topics');
 
 	// Quote page validation -
@@ -67,6 +68,28 @@ var Drupal = Drupal || {};
 				$('#freelaceSubmit').removeAttr('disabled');
 			} else {
 				$('#freelaceSubmit').attr("disabled", "disabled");
+			}
+		});
+	}
+	// 
+
+	// Contact page validation -
+
+	if (contact.length) {
+		contact.validate({
+			rules: {
+				email: 'required',
+				name: 'required',
+				entreprise: 'required',
+				message: 'required'
+			}
+		});
+
+		$('.form-control').on("blur keyup", function(){
+			if ($('#contact').valid()) {
+				$('#submitContact').removeAttr('disabled');
+			} else {
+				$('#submitContact').attr("disabled", "disabled");
 			}
 		});
 	}
