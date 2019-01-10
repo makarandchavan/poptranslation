@@ -99,6 +99,7 @@ a.closebtn:hover {
 .cont .hero-area,
 .cont .hero-area .inner {
     padding: 0;
+    width: 100%;
 }
 
 .dark-grey {
