@@ -65,19 +65,45 @@
  *   in different view modes.
  */
 #}
-<div class="page-content">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-title">- {{ content.field_display_title }} -</h1>
-            </div>
+{%
+  set classes = [
+    node.bundle|clean_class,
+    node.isPromoted() ? 'is-promoted',
+    node.isSticky() ? 'is-sticky',
+    not node.isPublished() ? 'is-unpublished',
+    view_mode ? view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+<div class="col-lg-9">
+    <div class="row blog">
+        <div class="col-lg-12">
+            <a href="{{ url }}">
+                <div class="type-1 mob-margin">
+                    {{ content.field_image }}
+                </div>
+            </a>
         </div>
-        <div class="row">
-            <div class="col-lg-12 content-copy text-center">
-                <a href="{{ content.field_file }}" class="press" target="_blank">
-                    <img src="/themes/photo/img/dossier_de_presentation.png" alt="">
-                </a>
-            </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-1 blog-social">
+            <ul class="list-group">
+                <li class="list-group-item"><a href="http://twitter.com/share?url={{ url('<front>') }}node/{{ node.id }}" target="_blank"><span class="ti-twitter-alt"></span></a></li>
+                <li class="list-group-item"><a href="https://www.facebook.com/sharer/sharer.php?u={{ url('<front>') }}node/{{ node.id }}" target="_blank"><span class="ti-facebook"></span></a></li>
+                <li class="list-group-item"><a href="https://plus.google.com/share?url={{ url('<front>') }}node/{{ node.id }}" target="_blank"><span class="ti-google"></span></a></li>
+                <li class="list-group-item"><a href="http://pinterest.com/pin/create/button/?url={{ url('<front>') }}node/{{ node.id }}" target="_blank"><span class="ti-pinterest"></span></a></li>
+            </ul>
+        </div>
+        <div class="col-lg-11 content">
+            <h6>{{ label }}</h6>
+            <h2>{{ label }}</h2>
+            <ul class="list-inline post-details">
+                <li><img src="https://via.placeholder.com/30" alt=""><span class="name">{{ author_name }},</span> <span class="time">{{ date }}</span></li>
+                <li>|</li>
+                <li><span class="ti-eye"></span> <span class="view">{{ node_stats }}</span></li>
+            </ul>
+            {{ content.body }}
         </div>
     </div>
 </div>

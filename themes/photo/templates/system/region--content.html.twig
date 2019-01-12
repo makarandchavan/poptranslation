@@ -61,6 +61,12 @@
       </div>
   </div>
 </div>
+{% elseif content and node_type == 'article' %}
+<div class="container details">
+  <div class="row">
+    {{ content }}
+  </div>
+</div>
 {% else %}
 <div class="container-fluid white-area">
   <div class="row inner">

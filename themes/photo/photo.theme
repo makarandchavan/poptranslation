@@ -67,6 +67,11 @@ function photo_preprocess_region(&$vars) {
   // Retrieve an array which contains the path pieces.
   $pathArgs = explode('/', $current_path);
   $vars['path_arg'] = $pathArgs[1];
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+    $vars['node_type'] = $node->getType();
+  }
 }
 
 function photo_preprocess_html(&$vars) {
@@ -81,4 +86,9 @@ function photo_preprocess_page(&$vars) {
   // Retrieve an array which contains the path pieces.
   $pathArgs = explode('/', $current_path);
   $vars['path_arg'] = $pathArgs[1];
+}
+
+function photo_preprocess_node(&$vars) {
+  $statistics = statistics_get($vars['node']->id());
+  $vars['node_stats'] = \Drupal::translation()->formatPlural($statistics['totalcount'], '1 view', '@count');
 }
