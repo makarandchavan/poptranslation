@@ -187,7 +187,7 @@ function magazine_lite_preprocess_page(&$variables) {
     }
   }
   if ($mt_display_fixed_logo) {
-    $variables['mt_logo'] = base_path() . drupal_get_path('theme','magazine_lite') . '/logo.svg';
+    $variables['mt_logo'] = base_path() . drupal_get_path('theme','magazine_lite') . '/img/logo.gif';
   }
 
   $slideout = $variables['page']['slideout'];

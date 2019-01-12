@@ -13,11 +13,11 @@
 .col-md-12 .logo-and-site-name-wrapper {
   display: inline-block;
 }
-.logo {
+/*.logo {
   float: left;
   margin-right: 10px;
   display: inline-block;
-}
+}*/
 .col-md-12 .logo {
   float: none;
   margin-right: 0;

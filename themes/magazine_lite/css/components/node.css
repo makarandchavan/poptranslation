@@ -44,7 +44,7 @@
 /*Post submitted info*/
 .node__header .profile {
   display: inline-block;
-  margin-right: 40px;
+  /*margin-right: 40px;*/
 }
 .node__header .profile img {
   max-width: 40px;

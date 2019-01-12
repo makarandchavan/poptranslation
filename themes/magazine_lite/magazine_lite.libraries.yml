@@ -27,11 +27,14 @@ global-styling:
   version: VERSION
   css:
     base:
+      https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900: {}
       css/base/elements.css: { weight: 1 }
       css/base/layout.css: {}
-      css/base/typography.css: {}
+      # css/base/typography.css: {}
+      css/themify-icons.css: { weight: 999 }
+      css/style.css: { weight: 1000 }
     component:
-      css/components/alert.css: {}
+      # css/components/alert.css: {}
       css/components/accordion.css: {}
       css/components/block.css: {}
       css/components/buttons.css: {}
@@ -61,7 +64,8 @@ global-styling:
       css/components/menu.css: {}
       css/components/username.css: {}
       css/components/views.css: {}
-
+  js:
+    js/script.js: {}
 to-top:
   version: VERSION
   css:
