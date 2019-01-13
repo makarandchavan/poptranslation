@@ -97,7 +97,15 @@ a.closebtn:hover {
 .free .hero-area,
 .free .hero-area .inner,
 .cont .hero-area,
-.cont .hero-area .inner {
+.cont .hero-area .inner,
+.abt .hero-area,
+.abt .hero-area .inner,
+.trs .hero-area,
+.trs .hero-area .inner,
+.swt .hero-area,
+.swt .hero-area .inner,
+.trc .hero-area,
+.trc .hero-area .inner {
     padding: 0;
     width: 100%;
 }
@@ -582,6 +590,14 @@ a.closebtn:hover {
     box-shadow: none;
 }
 
+.quick-link {
+    position: absolute;
+    z-index: 10;
+    left: 4em;
+    top: 10%;
+    transform: perspective(1px) translateY(-10%);
+}
+
 .quick-link a {
     width: 50px;
     height: 50px;
@@ -608,7 +624,7 @@ a.closebtn:hover {
 .ic-1,
 .ic-2 {
     padding: 30px;
-    height: 230px;
+    height: 400px;
 }
 
 .ic-1 div,
@@ -617,11 +633,11 @@ a.closebtn:hover {
 }
 
 .ic-1 {
-    background-color: #8bcaef;
+    /*background-color: #8bcaef;*/
 }
 
 .ic-2 {
-    background-color: #ffd401;
+    /*background-color: #ffd401;*/
 }
 
 .ic-1 img,
@@ -787,32 +803,28 @@ a.closebtn:hover {
 
 .transcription {
     background: url(../img/transcription.png) no-repeat center bottom;
-    background-size: 70%;
-    min-height: 350px; 
 }
 
 .translations {
     background: url(../img/translation.png) no-repeat center center;
-    background-size: 45%;
-    min-height: 350px;
 }
 
 .st {
     background: url(../img/st.png) no-repeat center center;
-    background-size: 65%;
-    min-height: 350px;
 }
 
 .freelancers {
     background: url(../img/freelancers.png) no-repeat center center;
-    /*background-size: 25%;
-    min-height: 350px;*/
+}
+
+.about {
+    background: url(../img/about.png) no-repeat center bottom;
 }
 
 .chat {
     position: absolute;
-    right: -303px;
-    top: 540px;
+    right: 20px;
+    bottom: 0;
 }
 
 .map {
@@ -1000,6 +1012,14 @@ a.closebtn:hover {
     text-align: center;
     position: relative;
     overflow: hidden;
+}
+
+.blog-main.blog-social {
+    padding-left: 0;
+}
+
+.blog-main.blog-social .list-group-item {
+    display: inline-block;
 }
 
 .blog {
