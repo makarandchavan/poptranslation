@@ -133,7 +133,7 @@ var Drupal = Drupal || {};
 					});
 		        }
 
-		        if (currentIndex === 6) {
+		        if (currentIndex === 5) {
 		        	$('.actions').hide();
 		        }
 		    }
