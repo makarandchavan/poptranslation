@@ -38,36 +38,19 @@
  * @see template_preprocess_field()
  */
 #}
-{%
-  set classes = [
-    'field',
-    'field--name-' ~ field_name|clean_class,
-    'field--type-' ~ field_type|clean_class,
-    'field--label-' ~ label_display,
-  ]
-%}
-{%
-  set title_classes = [
-    'field--label',
-    label_display == 'visually_hidden' ? 'sr-only',
-  ]
-%}
-
 {% if label_hidden %}
   {% if multiple %}
       {% for item in items %}
-        <img src="{{ item.content }}" alt=""></a>
+      <li class="list-group-item">{{ item.content }}</li>
       {% endfor %}
   {% else %}
     {% for item in items %}
-    <img src="{{ item.content }}" alt=""></a>
+      <li class="list-group-item">{{ item.content }}</li>
     {% endfor %}
   {% endif %}
 {% else %}
-  <div{{ attributes.addClass(classes) }}>
-    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+  <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% for item in items %}
-      <img src="{{ item.content }}" alt=""></a>
+    <li class="list-group-item">{{ item.content }}</li>
     {% endfor %}
-  </div>
 {% endif %}

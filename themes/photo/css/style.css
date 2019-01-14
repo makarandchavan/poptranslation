@@ -674,6 +674,10 @@ a.closebtn:hover {
     min-height: 55px;
 }
 
+.block-about .wrapper p {
+    text-align: left;
+}
+
 .hero-img img {
     margin: 0 auto; 
 }
@@ -842,13 +846,13 @@ a.closebtn:hover {
 
 .social a {
     display: block;
-    font-size: 23px;
+    font-size: 35px;
     color: #929292;
     border: 1px solid #929292;
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
     text-align: center;
-    padding-top: 7px;
+    padding-top: 15px;
     margin-bottom: 10px;
     border-radius: 50%;
 }
@@ -856,6 +860,12 @@ a.closebtn:hover {
 .social a:hover {
     color: #929292;
     text-decoration: none;
+}
+
+.wizard .content .col-sm-10,
+.wizard .content .col-sm-3,
+.wizard .content .col-sm-9 {
+    padding-left: 50px;
 }
 
 .wizard {
@@ -876,7 +886,7 @@ a.closebtn:hover {
 .wizard > .content {
     background: #fff;
     margin: 0;
-    min-height: 80em;
+    min-height: 90em;
 }
 
 .wizard > .content > .body {
@@ -892,6 +902,7 @@ a.closebtn:hover {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 50px;
+    margin-left: 50px;
 }
 
 .wizard > .content > #wizard-p-0 h2 {
@@ -923,7 +934,6 @@ a.closebtn:hover {
 }
 
 .wizard > .actions a, 
-.wizard > .actions a:hover, 
 .wizard > .actions a:active {
     background: #fff;
     border: 1px solid #929292;
@@ -931,12 +941,19 @@ a.closebtn:hover {
     color: #929292;
 }
 
+.wizard > .actions a:hover {
+    background: #89caf1;
+    border: 1px solid #89caf1;
+    color: #fff;
+    border-radius: 20px;
+}
+
 .cv-upload {
     padding: 50px 50px;
     border: 1px dashed #929292;
     border-radius: 20px;
     width: 50%;
-    margin-left: 26.5%;
+    margin-left: 29.7%;
     margin-top: 20px;
     text-align: center;
 }
@@ -1376,7 +1393,7 @@ div.error .ti-alert {
     }
 
     .wizard > .content {
-        min-height: 60em;
+        min-height: 70em;
     }
 
     .mob-margin {

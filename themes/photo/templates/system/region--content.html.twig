@@ -67,6 +67,12 @@
     {{ content }}
   </div>
 </div>
+{% elseif content and node_type == 'page' %}
+<div class="container-fluid dark-grey">
+  <div class="row inner legal">
+    {{ content }}
+  </div>
+</div>
 {% else %}
 <div class="container-fluid white-area">
   <div class="row inner">
