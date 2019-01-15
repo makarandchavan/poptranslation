@@ -12,6 +12,7 @@ var Drupal = Drupal || {};
 		quoteForm = $('#quote'),
 		freelance = $('#freelance'),
 		contact = $('#contact'),
+		freelanceForm = $('#wizard'),
 		topicSlider = $('.topics');
 
 	// Quote page validation -
@@ -52,7 +53,7 @@ var Drupal = Drupal || {};
 	});
 	// 
 
-	// Freelance page validation -
+	// Freelance page validation - 
 
 	if (freelance.length) {
 		freelance.validate({
@@ -107,13 +108,175 @@ var Drupal = Drupal || {};
 		$(navPanel).css('left', '-250px');
 	});
 
-	if ($('#wizard').length) {
-		$('#wizard').steps({
+	
+	// Step Form
+	freelanceForm.validate({
+	    errorPlacement: function errorPlacement(error, element) { element.before(error); },
+	    rules: {
+	        // dob: 'required',
+	        // address: 'required',
+	        // city: 'required',
+	        // zip: 'required',
+	        // country: 'required',
+	        // work: 'required',
+
+	        // 'services[]': {
+	        // 	required: true,
+	        // 	minlength: 1
+	        // },
+	        // 'support[]': {
+	        // 	required: true
+	        // },
+	        // language1: 'required',
+	        // language2: 'required',
+	        // language3: 'required',
+	        // language4: 'required',
+	        // 'translator[]': {
+	        // 	required: true,
+	        // 	minlength: 1
+	        // },
+	        // 'working[]': {
+	        // 	required: true,
+	        // 	minlength: 1
+	        // },
+
+	        // 'quality[]': {
+	        // 	required: true,
+	        // 	minlength: 1
+	        // },
+	        // 'procedures[]': {
+	        // 	required: true,
+	        // 	minlength: 1
+	        // },
+	        // 'involvement[]': {
+	        // 	required: true
+	        // },
+
+	        // 'professional[]': {
+	        // 	required: true,
+	        // 	minlength: 10
+	        // },
+	        // 'rating1': {
+	        // 	required: true
+	        // },
+	        // 'rating2': {
+	        // 	required: true
+	        // },
+	        // 'rating3': {
+	        // 	required: true
+	        // },
+	        // 'rating4': {
+	        // 	required: true
+	        // },
+	        // 'rating5': {
+	        // 	required: true
+	        // },
+	        // 'rating6': {
+	        // 	required: true
+	        // },
+	        // 'rating7': {
+	        // 	required: true
+	        // },
+	        // 'rating8': {
+	        // 	required: true
+	        // },
+	        // 'rating9': {
+	        // 	required: true
+	        // },
+	        // 'rating10': {
+	        // 	required: true
+	        // },
+	        // 'rating11': {
+	        // 	required: true
+	        // },
+	        // 'rating12': {
+	        // 	required: true
+	        // },
+	        // 'rating13': {
+	        // 	required: true
+	        // },
+	        // 'rating14': {
+	        // 	required: true
+	        // },
+	        // 'rating15': {
+	        // 	required: true
+	        // },
+	        // 'rating16': {
+	        // 	required: true
+	        // },
+	        // 'rating17': {
+	        // 	required: true
+	        // },
+	        // 'rating18': {
+	        // 	required: true
+	        // },
+	        // 'rating19': {
+	        // 	required: true
+	        // },
+	        // 'rating20': {
+	        // 	required: true
+	        // },
+	        // 'rating21': {
+	        // 	required: true
+	        // },
+	        // 'rating22': {
+	        // 	required: true
+	        // },
+	        // 'rating23': {
+	        // 	required: true
+	        // },
+	        // 'rating24': {
+	        // 	required: true
+	        // },
+
+	        'free': {
+	        	required: true
+	        },
+	        'transfer[]': {
+	        	required: true,
+	        	minlength: 1
+	        },
+	        profile: {
+	        	required: true,
+	        	url: true
+	        },
+	        company1: 'required',
+	        contact1: 'required',
+	        email1: 'required',
+	        company2: 'required',
+	        contact2: 'required',
+	        email2: 'required'
+	        
+	    }
+	});
+
+	if (freelanceForm.length) {
+		freelanceForm.steps({
 	        headerTag: 'h3',
 	        bodyTag: 'section',
 	        transitionEffect: 'slideLeft',
-	        onStepChanged: function (event, currentIndex, priorIndex){
-		        if (currentIndex === 5) {
+	        saveState: true,
+	        onStepChanging: function (event, currentIndex, newIndex){
+	        	freelanceForm.validate().settings.ignore = ":disabled,:hidden";
+        		return freelanceForm.valid();
+
+        		if (currentIndex > newIndex) {
+		            return true;
+		        }
+	        },
+	        onStepChanged: function (event, currentIndex, newIndex){
+
+	        	if (currentIndex === 3) {
+	        		$('.prof').click(function() {
+					    if($(this).is(':checked')) {
+					        $(this).closest('.form-group').find('input:radio').removeAttr('disabled');
+					    } else {
+					        $(this).closest('.form-group').find('input:radio').attr('disabled', 'disabled');
+					    }
+					}); 
+	        	}
+
+		        if (currentIndex === 4) {
 		        	var previewNode = document.querySelector("#template");
 						previewNode.id = "";
 
@@ -140,7 +303,7 @@ var Drupal = Drupal || {};
 	    });
 	}
 
-
+// 
 	
 	if (topicSlider.length) {
 		topicSlider.slick({

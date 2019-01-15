@@ -101,37 +101,37 @@
                                     <div class="form-group">
                                         <label for="dob" class="col-sm-2 control-label">Date of birth</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control input-lg" id="dob" name="dob" placeholder="Date of birth">
+                                          <input type="date" class="form-control input-lg" id="dob" name="dob" placeholder="DD/MM/YY">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="address" class="col-sm-2 control-label">Address</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control input-lg" id="address" placeholder="Address">
+                                          <input type="text" class="form-control input-lg" id="address" placeholder="Address" name="address">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="city" class="col-sm-2 control-label">City</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control input-lg" id="city" placeholder="City">
+                                          <input type="text" class="form-control input-lg" id="city" placeholder="City" name="city">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="zip" class="col-sm-2 control-label">Zip Code</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control input-lg" id="zip" placeholder="Zip Code">
+                                          <input type="text" class="form-control input-lg" id="zip" placeholder="Zip Code" name="zip">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="country" class="col-sm-2 control-label">Country</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control input-lg" id="country" placeholder="Country">
+                                          <input type="text" class="form-control input-lg" id="country" placeholder="Country" name="country">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="work" class="col-sm-2 control-label">Work phone</label>
                                         <div class="col-sm-10">
-                                          <input type="text" class="form-control input-lg" id="work" placeholder="Work phone">
+                                          <input type="text" class="form-control input-lg" id="work" placeholder="Work phone" name="work">
                                         </div>
                                     </div>
                                 </section>
@@ -143,7 +143,7 @@
                                         <div class="col-sm-2 control-label ex-label">I provide the following services:</div>
                                         <div class="col-sm-3">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="services[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Translation</label>
@@ -151,7 +151,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="services[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Transcription</label>
@@ -159,7 +159,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="services[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Content creation</label>
@@ -169,7 +169,7 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="services[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Project Management</label>
@@ -177,7 +177,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="services[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Proofread</label>
@@ -185,7 +185,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="services[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Interpreting</label>
@@ -198,7 +198,7 @@
                                         <div class="col-sm-2 control-label ex-label">I am able support the following cat tools:</div>
                                         <div class="col-sm-3">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="support[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>SDL Trados</label>
@@ -206,7 +206,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="support[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Memsource</label>
@@ -216,7 +216,7 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="support[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>MemoQ</label>
@@ -224,7 +224,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="support[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Other</label>
@@ -236,8 +236,8 @@
                                     <div class="form-group">
                                         <label for="inputEmail3" class="col-sm-2 control-label">Select known languages</label>
                                         <div class="col-sm-10">
-                                          <select class="form-control input-lg" id="lang1">
-                                                <option value="default">1st Language</option>
+                                          <select class="form-control input-lg" id="lang1" name="language1">
+                                                <option value="">1st Language</option>
                                                 <option value="Arabic">Arabic</option>
                                                 <option value="Bulgarian">Bulgarian</option>
                                                 <option value="Classical Arabic">Classical Arabic</option>
@@ -279,8 +279,8 @@
                                         <label class="col-sm-2 control-label"></label>
                                         <div class="col-sm-10">
                                           <!-- <input type="text" class="form-control input-lg" id="en" placeholder="English"> -->
-                                          <select class="form-control input-lg" id="lang1">
-                                                <option value="default">2nd Language</option>
+                                          <select class="form-control input-lg" id="lang1" name="language2">
+                                                <option value="">2nd Language</option>
                                                 <option value="Arabic">Arabic</option>
                                                 <option value="Bulgarian">Bulgarian</option>
                                                 <option value="Classical Arabic">Classical Arabic</option>
@@ -322,8 +322,8 @@
                                         <label class="col-sm-2 control-label"></label>
                                         <div class="col-sm-10">
                                           <!-- <input type="text" class="form-control input-lg" id="lang3" placeholder=" 3th language"> -->
-                                          <select class="form-control input-lg" id="lang1">
-                                                <option value="default">Select a language</option>
+                                          <select class="form-control input-lg" id="lang1" name="language3">
+                                                <option value="">Select a language</option>
                                                 <option value="Arabic">Arabic</option>
                                                 <option value="Bulgarian">Bulgarian</option>
                                                 <option value="Classical Arabic">Classical Arabic</option>
@@ -365,8 +365,8 @@
                                         <label class="col-sm-2 control-label"></label>
                                         <div class="col-sm-10">
                                           <!-- <input type="text" class="form-control input-lg" id="lang4" placeholder=" 4th language"> -->
-                                          <select class="form-control input-lg" id="lang1">
-                                                <option value="default">Select a language</option>
+                                          <select class="form-control input-lg" id="lang1" name="language4">
+                                                <option value="">Select a language</option>
                                                 <option value="Arabic">Arabic</option>
                                                 <option value="Bulgarian">Bulgarian</option>
                                                 <option value="Classical Arabic">Classical Arabic</option>
@@ -409,14 +409,14 @@
                                         <div class="col-sm-2 control-label ex-label">I have been working as freelance translator for:</div>
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="radio1">
+                                                <input type="radio" name="translator[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <label>1-2 years</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="radio1">
+                                                <input type="radio" name="translator[]">
                                                 <div class="state">
                                                     <label>5-10 years</label>
                                                 </div>
@@ -425,14 +425,14 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="radio1">
+                                                <input type="radio" name="translator[]">
                                                 <div class="state">
                                                     <label>3-5 years</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="radio1">
+                                                <input type="radio" name="translator[]">
                                                 <div class="state">
                                                     <label>More than 10 years</label>
                                                 </div>
@@ -444,7 +444,7 @@
                                         <div class="col-sm-2 control-label ex-label">My working hours:</div>
                                         <div class="col-sm-3">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="working[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Full-time</label>
@@ -452,7 +452,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="working[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Including weekend</label>
@@ -462,7 +462,7 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="working[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Part-time</label>
@@ -481,7 +481,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-3 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="quality[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Accuracy</label>
@@ -489,7 +489,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="quality[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Fluency</label>
@@ -499,7 +499,7 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="quality[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Completeness</label>
@@ -507,7 +507,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="quality[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Delivery on time</label>
@@ -521,7 +521,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-10 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="procedures[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Always reread after my translation has finished</label>
@@ -529,7 +529,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="procedures[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Run “MS spellchecker” through my translation</label>
@@ -537,7 +537,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="procedures[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Take advantage of “Quality Verification Tools” such XBench, Tag Editor F8 etc.</label>
@@ -545,7 +545,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="procedures[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Take advantage of Multiterm, term lists etc.</label>
@@ -553,7 +553,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="procedures[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Research on the web, reference files, previous translation memories</label>
@@ -561,7 +561,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="procedures[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Carefully follow the internal or external instructions</label>
@@ -575,21 +575,21 @@
                                     <div class="form-group">
                                         <div class="col-sm-10 col-sm-offset-2">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="involvement">
+                                                <input type="radio" name="involvement[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <label>I always carry out the translation myself</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="involvement">
+                                                <input type="radio" name="involvement[]">
                                                 <div class="state">
                                                     <label>I have the translation carried out by freelancer translators</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="involvement">
+                                                <input type="radio" name="involvement[]">
                                                 <div class="state">
                                                     <label>Sometimes I carry it out myself and sometimes it is completed by other freelancer translators</label>
                                                 </div>
@@ -608,7 +608,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof" data-msg-required="You must check minimum 10 boxes">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Law: codes, contracts, article of associations etc.</label>
@@ -618,21 +618,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating1" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating1" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating1" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -643,7 +643,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Commerce: economics, finance, banking, insurance etc.</label>
@@ -653,21 +653,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating2" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating2" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating2" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -678,7 +678,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Management: business admin, marketing, hr, crm, pr</label>
@@ -688,21 +688,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating3" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating3" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating3" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -713,7 +713,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: mechanical engineering, tools and machinery</label>
@@ -723,21 +723,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating4" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating4" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating4" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -748,7 +748,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: electrics, electronics, devices</label>
@@ -758,21 +758,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating5" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating5" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating5" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -783,7 +783,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: computer, telecommunication, hardware, devices</label>
@@ -793,21 +793,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating6" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating6" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating6" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -818,7 +818,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: internet technologies, software</label>
@@ -828,21 +828,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating7" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating7" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating7" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -853,7 +853,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: maritime business, ships, transportation</label>
@@ -863,21 +863,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating8" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating8" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating8" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -888,7 +888,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: infrastructure, construction, architecture</label>
@@ -898,21 +898,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating9" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating9" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating9" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -923,7 +923,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: land transportation means, logistics</label>
@@ -933,21 +933,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating10" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating10" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating10" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -958,7 +958,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Techniques: databases of the scopes specified herein</label>
@@ -968,21 +968,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating11" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating11" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating11" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -993,7 +993,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Localization: video, browser, mobile games</label>
@@ -1003,21 +1003,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating12" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating12" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating12" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1028,7 +1028,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Localization: software, script, help</label>
@@ -1038,21 +1038,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating13" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating13" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating13" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1063,7 +1063,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Localization: website, new generation websites</label>
@@ -1073,21 +1073,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating14" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating14" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating14" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1098,7 +1098,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Localization: brochures, white papers,</label>
@@ -1108,21 +1108,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating15" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating15" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating15" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1133,7 +1133,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Social sciences: history, sociology, politics etc.</label>
@@ -1143,21 +1143,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating16" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating16" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating16" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1168,7 +1168,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>International organs: EU, government, tenders,</label>
@@ -1178,21 +1178,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating17" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating17" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating17" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1203,7 +1203,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Chemistry: biochemistry, petro-chemicals etc</label>
@@ -1213,21 +1213,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating18" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating18" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating18" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1238,7 +1238,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Medicine: Med. technologies, pharmacology, dentistry</label>
@@ -1248,21 +1248,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating19" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating19" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating19" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1273,7 +1273,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Literature: Novel, story, scripts for cinema, theatre</label>
@@ -1283,21 +1283,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating20" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating20" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating20" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1308,7 +1308,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Patents of the scopes specified herein</label>
@@ -1318,21 +1318,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating21" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating21" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating21" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1343,7 +1343,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Scientific reports, studies, articles, text, news etc.</label>
@@ -1353,21 +1353,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating22" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating22" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating22" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1378,7 +1378,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Localization: Video Game</label>
@@ -1388,21 +1388,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating23" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating23" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating23" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1413,7 +1413,7 @@
                                     <div class="form-group">
                                         <div class="col-sm-7 col-sm-offset-2">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="professional[]" class="prof">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Subtitles</label>
@@ -1423,21 +1423,21 @@
 
                                         <div class="col-sm-3">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating24" disabled="disabled" data-msg-required="You must check at least 1 box">
                                                 <div class="state p-primary">
                                                     <label>1</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating24" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>2</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
+                                                <input type="radio" name="rating24" disabled="disabled">
                                                 <div class="state p-primary">
                                                     <label>3</label>
                                                 </div>
@@ -1447,219 +1447,6 @@
 
                                 </section>
 
-                                <!-- <h3>Fifth Step</h3>
-                                <section>
-                                    <div class="form-group">
-                                        <div class="col-sm-7 col-sm-offset-2">
-                                            <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
-                                                <div class="state">
-                                                    <i class="icon ti-close"></i>
-                                                    <label>Medicine: Med. technologies, pharmacology, dentistry</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-3">
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>1</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>2</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>3</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-7 col-sm-offset-2">
-                                            <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
-                                                <div class="state">
-                                                    <i class="icon ti-close"></i>
-                                                    <label>Literature: Novel, story, scripts for cinema, theatre</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-3">
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>1</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>2</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>3</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-7 col-sm-offset-2">
-                                            <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
-                                                <div class="state">
-                                                    <i class="icon ti-close"></i>
-                                                    <label>Patents of the scopes specified herein</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-3">
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>1</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>2</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>3</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-7 col-sm-offset-2">
-                                            <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
-                                                <div class="state">
-                                                    <i class="icon ti-close"></i>
-                                                    <label>Scientific reports, studies, articles, text, news etc.</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-3">
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>1</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>2</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>3</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-7 col-sm-offset-2">
-                                            <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
-                                                <div class="state">
-                                                    <i class="icon ti-close"></i>
-                                                    <label>Localization: Video Game</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-3">
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>1</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>2</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>3</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-7 col-sm-offset-2">
-                                            <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
-                                                <div class="state">
-                                                    <i class="icon ti-close"></i>
-                                                    <label>Subtitles</label>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-sm-3">
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>1</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>2</label>
-                                                </div>
-                                            </div>
-
-                                            <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="rating">
-                                                <div class="state p-primary">
-                                                    <label>3</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section> -->
-
                                 <h3>Sixth Step</h3>
                                 <section>
                                     <h2>Step 5</h2>
@@ -1668,14 +1455,14 @@
                                         <div class="col-sm-3 control-label ex-label">Short test translation free of charge?</div>
                                         <div class="col-sm-9">
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="radio1">
+                                                <input type="radio" name="free">
                                                 <div class="state">
                                                     <label>Yes</label>
                                                 </div>
                                             </div>
 
                                             <div class="pretty p-default p-round p-bigger">
-                                                <input type="radio" name="radio1">
+                                                <input type="radio" name="free">
                                                 <div class="state">
                                                     <label>No</label>
                                                 </div>
@@ -1687,7 +1474,7 @@
                                         <div class="col-sm-3 control-label ex-label">I accept:</div>
                                         <div class="col-sm-9">
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="transfer[]" data-msg-required="You must check at least 1 box">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Bank Transfer</label>
@@ -1695,7 +1482,7 @@
                                             </div>
 
                                             <div class="pretty p-icon p-curve p-bigger">
-                                                <input type="checkbox">
+                                                <input type="checkbox" name="transfer[]">
                                                 <div class="state">
                                                     <i class="icon ti-close"></i>
                                                     <label>Paypal</label>
@@ -1707,7 +1494,7 @@
                                     <div class="form-group">
                                         <label for="profile" class="col-sm-3 control-label">Your Proz profile</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control input-lg" id="profile" placeholder="Your Proz profile">
+                                          <input type="text" class="form-control input-lg" id="profile" placeholder="Your Proz profile" name="profile">
                                         </div>
                                     </div>
                                     
@@ -1742,19 +1529,19 @@
                                     <div class="form-group">
                                         <label for="company1" class="col-sm-3 control-label">Company#1</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control input-lg" id="company1" placeholder="Company#1">
+                                          <input type="text" class="form-control input-lg" id="company1" placeholder="Company#1" name="company1">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="contact1" class="col-sm-3 control-label">Contact#1</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control input-lg" id="contact1" placeholder="Contact#1">
+                                          <input type="text" class="form-control input-lg" id="contact1" placeholder="Contact#1" name="contact1">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="email1" class="col-sm-3 control-label">Email#1</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control input-lg" id="email1" placeholder="Email#1">
+                                          <input type="email" class="form-control input-lg" id="email1" placeholder="Email#1" name="email1">
                                         </div>
                                     </div>
                                     
@@ -1763,19 +1550,19 @@
                                     <div class="form-group">
                                         <label for="company2" class="col-sm-3 control-label">Company#2</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control input-lg" id="company2" placeholder="Company#1">
+                                          <input type="text" class="form-control input-lg" id="company2" placeholder="Company#1" name="company2">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="contact2" class="col-sm-3 control-label">Contact#2</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control input-lg" id="contact1" placeholder="Contact#2">
+                                          <input type="text" class="form-control input-lg" id="contact1" placeholder="Contact#2" name="contact2">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="email3" class="col-sm-3 control-label">Email#3</label>
                                         <div class="col-sm-9">
-                                          <input type="text" class="form-control input-lg" id="email1" placeholder="Email#3">
+                                          <input type="text" class="form-control input-lg" id="email1" placeholder="Email#3" name="email2">
                                         </div>
                                     </div>
                                 </section>
