@@ -113,122 +113,118 @@ var Drupal = Drupal || {};
 	freelanceForm.validate({
 	    errorPlacement: function errorPlacement(error, element) { element.before(error); },
 	    rules: {
-	        // dob: 'required',
-	        // address: 'required',
-	        // city: 'required',
-	        // zip: 'required',
-	        // country: 'required',
-	        // work: 'required',
-
-	        // 'services[]': {
-	        // 	required: true,
-	        // 	minlength: 1
-	        // },
-	        // 'support[]': {
-	        // 	required: true
-	        // },
-	        // language1: 'required',
-	        // language2: 'required',
-	        // language3: 'required',
-	        // language4: 'required',
-	        // 'translator[]': {
-	        // 	required: true,
-	        // 	minlength: 1
-	        // },
-	        // 'working[]': {
-	        // 	required: true,
-	        // 	minlength: 1
-	        // },
-
-	        // 'quality[]': {
-	        // 	required: true,
-	        // 	minlength: 1
-	        // },
-	        // 'procedures[]': {
-	        // 	required: true,
-	        // 	minlength: 1
-	        // },
-	        // 'involvement[]': {
-	        // 	required: true
-	        // },
-
-	        // 'professional[]': {
-	        // 	required: true,
-	        // 	minlength: 10
-	        // },
-	        // 'rating1': {
-	        // 	required: true
-	        // },
-	        // 'rating2': {
-	        // 	required: true
-	        // },
-	        // 'rating3': {
-	        // 	required: true
-	        // },
-	        // 'rating4': {
-	        // 	required: true
-	        // },
-	        // 'rating5': {
-	        // 	required: true
-	        // },
-	        // 'rating6': {
-	        // 	required: true
-	        // },
-	        // 'rating7': {
-	        // 	required: true
-	        // },
-	        // 'rating8': {
-	        // 	required: true
-	        // },
-	        // 'rating9': {
-	        // 	required: true
-	        // },
-	        // 'rating10': {
-	        // 	required: true
-	        // },
-	        // 'rating11': {
-	        // 	required: true
-	        // },
-	        // 'rating12': {
-	        // 	required: true
-	        // },
-	        // 'rating13': {
-	        // 	required: true
-	        // },
-	        // 'rating14': {
-	        // 	required: true
-	        // },
-	        // 'rating15': {
-	        // 	required: true
-	        // },
-	        // 'rating16': {
-	        // 	required: true
-	        // },
-	        // 'rating17': {
-	        // 	required: true
-	        // },
-	        // 'rating18': {
-	        // 	required: true
-	        // },
-	        // 'rating19': {
-	        // 	required: true
-	        // },
-	        // 'rating20': {
-	        // 	required: true
-	        // },
-	        // 'rating21': {
-	        // 	required: true
-	        // },
-	        // 'rating22': {
-	        // 	required: true
-	        // },
-	        // 'rating23': {
-	        // 	required: true
-	        // },
-	        // 'rating24': {
-	        // 	required: true
-	        // },
-
+	        dob: 'required',
+	        address: 'required',
+	        city: 'required',
+	        zip: 'required',
+	        country: 'required',
+	        work: 'required',
+	        'services[]': {
+	        	required: true,
+	        	minlength: 1
+	        },
+	        'support[]': {
+	        	required: true
+	        },
+	        language1: 'required',
+	        language2: 'required',
+	        language3: 'required',
+	        language4: 'required',
+	        'translator[]': {
+	        	required: true,
+	        	minlength: 1
+	        },
+	        'working[]': {
+	        	required: true,
+	        	minlength: 1
+	        },
+	        'quality[]': {
+	        	required: true,
+	        	minlength: 1
+	        },
+	        'procedures[]': {
+	        	required: true,
+	        	minlength: 1
+	        },
+	        'involvement[]': {
+	        	required: true
+	        },
+	        'professional[]': {
+	        	required: true,
+	        	minlength: 10
+	        },
+	        'rating1': {
+	        	required: true
+	        },
+	        'rating2': {
+	        	required: true
+	        },
+	        'rating3': {
+	        	required: true
+	        },
+	        'rating4': {
+	        	required: true
+	        },
+	        'rating5': {
+	        	required: true
+	        },
+	        'rating6': {
+	        	required: true
+	        },
+	        'rating7': {
+	        	required: true
+	        },
+	        'rating8': {
+	        	required: true
+	        },
+	        'rating9': {
+	        	required: true
+	        },
+	        'rating10': {
+	        	required: true
+	        },
+	        'rating11': {
+	        	required: true
+	        },
+	        'rating12': {
+	        	required: true
+	        },
+	        'rating13': {
+	        	required: true
+	        },
+	        'rating14': {
+	        	required: true
+	        },
+	        'rating15': {
+	        	required: true
+	        },
+	        'rating16': {
+	        	required: true
+	        },
+	        'rating17': {
+	        	required: true
+	        },
+	        'rating18': {
+	        	required: true
+	        },
+	        'rating19': {
+	        	required: true
+	        },
+	        'rating20': {
+	        	required: true
+	        },
+	        'rating21': {
+	        	required: true
+	        },
+	        'rating22': {
+	        	required: true
+	        },
+	        'rating23': {
+	        	required: true
+	        },
+	        'rating24': {
+	        	required: true
+	        },
 	        'free': {
 	        	required: true
 	        },
