@@ -908,7 +908,7 @@ a.closebtn:hover {
 }
 
 .wizard > .content > .body h4 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     margin-top: 50px;
     margin-left: 50px;
@@ -940,6 +940,10 @@ a.closebtn:hover {
 #wizard-p-5 .pretty {
     float: none;
     margin-bottom: 0;
+}
+
+#wizard-p-1 .form-group {
+    margin-bottom: 35px;
 }
 
 .wizard > .actions a, 

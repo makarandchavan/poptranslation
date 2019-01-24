@@ -110,6 +110,8 @@ var Drupal = Drupal || {};
 
 	
 	// Step Form
+if (freelanceForm.length) {
+
 	freelanceForm.validate({
 	    errorPlacement: function errorPlacement(error, element) { element.before(error); },
 	    rules: {
@@ -246,7 +248,7 @@ var Drupal = Drupal || {};
 	    }
 	});
 
-	if (freelanceForm.length) {
+
 		freelanceForm.steps({
 	        headerTag: 'h3',
 	        bodyTag: 'section',
