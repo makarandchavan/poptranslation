@@ -155,10 +155,10 @@ class SiteController extends ControllerBase {
       elseif($wizardform['name'] == 'work') {
         $field_work_phone = $wizardform['value'];
       }
-      elseif($wizardform['name'] == 'services') {
+      elseif($wizardform['name'] == 'services[]') {
         $field_i_provide_the_following_se .= $wizardform['value'] . ', ';
       }
-      elseif($wizardform['name'] == 'support') {
+      elseif($wizardform['name'] == 'support[]') {
         $field_i_am_able_to_support_the_f .= $wizardform['value'] . ', ';
       }
       elseif($wizardform['name'] == 'language1') {
@@ -173,22 +173,22 @@ class SiteController extends ControllerBase {
       elseif($wizardform['name'] == 'language4') {
         $field_select_known_languages .= $wizardform['value'];
       }
-      elseif($wizardform['name'] == 'radio1') {
+      elseif($wizardform['name'] == 'translator[]') {
         $field_i_have_been_working_as_fre = $wizardform['value'];
       }
-      elseif($wizardform['name'] == 'workinghours') {
+      elseif($wizardform['name'] == 'working[]') {
         $field_my_working_hours .= $wizardform['value'] . ', ';
       }
-      elseif($wizardform['name'] == 'quality') {
+      elseif($wizardform['name'] == 'quality[]') {
         $field_i_define_the_concept_of_qu .= $wizardform['value'] . ', ';
       }
-      elseif($wizardform['name'] == 'procedures') {
+      elseif($wizardform['name'] == 'procedures[]') {
         $field_i_consider_and_apply_the_f .= $wizardform['value'] . ', ';
       }
-      elseif($wizardform['name'] == 'involvement') {
+      elseif($wizardform['name'] == 'involvement[]') {
         $field_involvement = $wizardform['value'];
       }
-      elseif($wizardform['name'] == 'professional') {
+      elseif($wizardform['name'] == 'professional[]') {
         $field_collection_item->field_please_mark_only_10_boxes_->setValue($wizardform['value']);
       }
       elseif($wizardform['name'] == 'p1') {
