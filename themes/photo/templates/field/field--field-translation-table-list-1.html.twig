@@ -56,18 +56,18 @@
 {% if label_hidden %}
   {% if multiple %}
       {% for item in items %}
-        <img src="{{ item.content }}" class="about">
+        <li class="list-group-item">{{ item.content }}</li>
       {% endfor %}
   {% else %}
     {% for item in items %}
-    <img src="{{ item.content }}" class="about">
+      <li class="list-group-item">{{ item.content }}</li>
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ attributes.addClass(classes) }}>
     <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
     {% for item in items %}
-      <img src="{{ item.content }}" class="about">
+      {{ item.content }}
     {% endfor %}
   </div>
 {% endif %}

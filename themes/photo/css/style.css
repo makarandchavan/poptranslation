@@ -107,6 +107,7 @@ a.closebtn:hover {
 .trc .hero-area,
 .trc .hero-area .inner {
     padding: 0;
+    margin: 0;
     width: 100%;
 }
 
@@ -674,6 +675,14 @@ a.closebtn:hover {
     min-height: 55px;
 }
 
+.wizard > .content > .body select.error,
+.wizard > .content > .body input[type="checkbox"].error,
+.wizard > .content > .body input[type="radio"].error {
+    background: rgb(251, 227, 228);
+    border: 1px solid #fbc2c4;
+    color: #8a1f11;
+}
+
 .block-about .wrapper p {
     text-align: left;
 }
@@ -899,7 +908,7 @@ a.closebtn:hover {
 }
 
 .wizard > .content > .body h4 {
-    text-align: center;
+    text-align: left;
     margin-bottom: 30px;
     margin-top: 50px;
     margin-left: 50px;
@@ -931,6 +940,10 @@ a.closebtn:hover {
 #wizard-p-5 .pretty {
     float: none;
     margin-bottom: 0;
+}
+
+#wizard-p-1 .form-group {
+    margin-bottom: 35px;
 }
 
 .wizard > .actions a, 

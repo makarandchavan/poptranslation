@@ -73,6 +73,8 @@
     {{ content }}
   </div>
 </div>
+{% elseif content and node_type == 'about' %}
+  {{ content }}
 {% else %}
 <div class="container-fluid white-area">
   <div class="row inner">
