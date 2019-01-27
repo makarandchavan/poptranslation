@@ -132,6 +132,19 @@ class SiteController extends ControllerBase {
         $field_email_address = $mainform['value'];
       }
     }
+
+    if(!empty($field_email_address)) {
+      // Check if already submitted.
+      $query = \Drupal::entityQuery('node')
+        ->condition('type', 'freelancers')
+        ->condition('field_email_address', $field_email_address);
+      $result = $query->execute();
+      if (!empty($result)) {
+        echo '0';
+        exit;
+      }
+    }
+
     // Gather all wizard form data.
     foreach($_POST['wizardFormData'] as $wizardform) {
       if($wizardform['name'] == 'gender') {
@@ -191,82 +204,82 @@ class SiteController extends ControllerBase {
       elseif($wizardform['name'] == 'professional[]') {
         $field_collection_item->field_please_mark_only_10_boxes_->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p1') {
+      elseif($wizardform['name'] == 'rating1') {
         $field_collection_item->field_please_mark_only_10_boxes1->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p2') {
+      elseif($wizardform['name'] == 'rating2') {
         $field_collection_item->field_please_mark_only_10_boxes2->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p3') {
+      elseif($wizardform['name'] == 'rating3') {
         $field_collection_item->field_please_mark_only_10_boxes3->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p4') {
+      elseif($wizardform['name'] == 'rating4') {
         $field_collection_item->field_please_mark_only_10_boxes4->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p5') {
+      elseif($wizardform['name'] == 'rating5') {
         $field_collection_item->field_please_mark_only_10_boxes5->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p6') {
+      elseif($wizardform['name'] == 'rating6') {
         $field_collection_item->field_please_mark_only_10_boxes6->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p7') {
+      elseif($wizardform['name'] == 'rating7') {
         $field_collection_item->field_please_mark_only_10_boxes7->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p8') {
+      elseif($wizardform['name'] == 'rating8') {
         $field_collection_item->field_please_mark_only_10_boxes8->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p9') {
+      elseif($wizardform['name'] == 'rating9') {
         $field_collection_item->field_please_mark_only_10_boxes9->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p10') {
+      elseif($wizardform['name'] == 'rating10') {
         $field_collection_item->field_please_mark_only_10boxes10->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p11') {
+      elseif($wizardform['name'] == 'rating11') {
         $field_collection_item->field_please_mark_only_10boxes11->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p12') {
+      elseif($wizardform['name'] == 'rating12') {
         $field_collection_item->field_please_mark_only_10boxes12->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p13') {
+      elseif($wizardform['name'] == 'rating13') {
         $field_collection_item->field_please_mark_only_10boxes13->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p14') {
+      elseif($wizardform['name'] == 'rating14') {
         $field_collection_item->field_please_mark_only_10boxes14->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p15') {
+      elseif($wizardform['name'] == 'rating15') {
         $field_collection_item->field_please_mark_only_10boxes15->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p16') {
+      elseif($wizardform['name'] == 'rating16') {
         $field_collection_item->field_please_mark_only_10boxes16->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p17') {
+      elseif($wizardform['name'] == 'rating17') {
         $field_collection_item->field_please_mark_only_10boxes17->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p18') {
+      elseif($wizardform['name'] == 'rating18') {
         $field_collection_item->field_please_mark_only_10boxes18->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p19') {
+      elseif($wizardform['name'] == 'rating19') {
         $field_collection_item->field_please_mark_only_10boxes19->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p20') {
+      elseif($wizardform['name'] == 'rating20') {
         $field_collection_item->field_please_mark_only_10boxes20->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p21') {
+      elseif($wizardform['name'] == 'rating21') {
         $field_collection_item->field_please_mark_only_10boxes21->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p22') {
+      elseif($wizardform['name'] == 'rating22') {
         $field_collection_item->field_please_mark_only_10boxes22->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p23') {
+      elseif($wizardform['name'] == 'rating23') {
         $field_collection_item->field_please_mark_only_10boxes23->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'p24') {
+      elseif($wizardform['name'] == 'rating24') {
         $field_collection_item->field_please_mark_only_10boxes24->setValue($wizardform['value']);
       }
-      elseif($wizardform['name'] == 'freecharge') {
+      elseif($wizardform['name'] == 'free') {
         $field_short_test_translation_fre = $wizardform['value'];
       }
-      elseif($wizardform['name'] == 'accept') {
+      elseif($wizardform['name'] == 'transfer[]') {
         $field_i_accept .= $wizardform['value'] . ', ';
       }
       elseif($wizardform['name'] == 'profile') {
