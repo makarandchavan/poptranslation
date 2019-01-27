@@ -258,11 +258,29 @@
 	    }
 	  });
 
-	  freelanceForm.steps({
+	freelanceForm.steps({
       headerTag: 'h3',
       bodyTag: 'section',
       transitionEffect: 'slideLeft',
+      saveState: true,
+      onStepChanging: function (event, currentIndex, newIndex){
+	    freelanceForm.validate().settings.ignore = ":disabled,:hidden";
+		return freelanceForm.valid();
+
+	    if (currentIndex > newIndex) {
+	      return true;
+	    }
+	  },
       onStepChanged: function(event, currentIndex, priorIndex) {
+      	if (currentIndex === 3) {
+    		$('.prof').click(function() {
+			    if($(this).is(':checked')) {
+			        $(this).closest('.form-group').find('input:radio').removeAttr('disabled');
+			    } else {
+			        $(this).closest('.form-group').find('input:radio').attr('disabled', 'disabled');
+			    }
+			}); 
+    	}
         if (currentIndex === 4) {
           var previewNode = document.querySelector("#template");
           previewNode.id = "";
