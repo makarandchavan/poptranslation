@@ -36,3 +36,11 @@ site.freelancers: # This is a route name.
     _title: ''
   requirements:
     _permission: 'access content'
+
+site.validate_freelance: # This is a route name.
+  path: '/submit/validatefreelance'
+  defaults:
+    _controller: '\Drupal\site\Controller\SiteController::validateFreelance'
+    _title: 'Thank You'
+  requirements:
+    _permission: 'access content'

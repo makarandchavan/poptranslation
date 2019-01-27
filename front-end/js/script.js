@@ -262,7 +262,6 @@
       headerTag: 'h3',
       bodyTag: 'section',
       transitionEffect: 'slideLeft',
-      saveState: true,
       onStepChanging: function (event, currentIndex, newIndex){
 	    freelanceForm.validate().settings.ignore = ":disabled,:hidden";
 		return freelanceForm.valid();
@@ -272,6 +271,7 @@
 	    }
 	  },
       onStepChanged: function(event, currentIndex, priorIndex) {
+      	console.log(currentIndex);
       	if (currentIndex === 3) {
     		$('.prof').click(function() {
 			    if($(this).is(':checked')) {
@@ -286,20 +286,34 @@
           previewNode.id = "";
           var previewTemplate = previewNode.parentNode.innerHTML;
           previewNode.parentNode.removeChild(previewNode);
-          var myDropzone = new Dropzone(document.body, {
+          var myFreeDropzone = new Dropzone(document.body, {
             url: "/uploadfile", // Set the url
-            thumbnailWidth: 40,
-            thumbnailHeight: 40,
-            parallelUploads: 1,
-            maxFilesize: 20, // MB
-            previewTemplate: previewTemplate,
-            //autoQueue: false, // Make sure the files aren't queued until manually added
-            previewsContainer: "#previews" // Define the container to display the previews
-            // clickable: ".fileinput-button" // Define the element that should be used as click trigger to select files.
+		    thumbnailWidth: 40,
+		    thumbnailHeight: 40,
+		    parallelUploads: 1,
+		    maxFilesize: 20, // MB
+		    addRemoveLinks: true,
+		    previewTemplate: previewTemplate,
+		    maxFiles: 1,
+		    autoQueue: true, // Make sure the files aren't queued until manually added
+		    previewsContainer: "#previews", // Define the container to display the previews
+		    clickable: ".cv-upload" // Define the element that should be used as click trigger to select files.
           });
-          myDropzone.on("complete", function(file) {
-            jQuery('.uploaded-file').attr('value', file.name);
-          });
+          // File size -
+     	  var totalSizeLimit = 20 * 1024 * 1024; // 20MB
+		  myFreeDropzone.on("uploadprogress", function(file, progress, bytesSent) {
+			var alreadyUploadedTotalSize = getTotalPreviousUploadedFilesSize();
+			if ((alreadyUploadedTotalSize + bytesSent) > totalSizeLimit) {
+			  jQuery(this).disable();
+			}
+		  });
+		  myFreeDropzone.on("complete", function(file) {
+		    jQuery('.uploaded-file').attr('value', file.name);
+		  });
+		  // Hide the total progress bar when nothing's uploading anymore
+		  myFreeDropzone.on("queuecomplete", function(progress) {
+		    document.querySelector(".progress").style.opacity = "0";
+		  });
         }
         if (currentIndex === 5) {
           $('.actions').hide();
@@ -447,7 +461,25 @@
         // open panel when clicking on trigger btn
         panelTriggers[i].addEventListener('click', function(event) {
           event.preventDefault();
-          addClass(panel, 'cd-panel--is-visible');
+          var mainFormData = $('#freelance').serializeArray();
+          $.ajax({
+            url: "/submit/validatefreelance", // Url to which the request is send
+            type: "POST", // Type of request to be send, called as method
+            data: {
+              mainFormData
+            },
+            cache: false,
+            success: function(data) // A function to be called if request succeeds
+            {
+              if(data == '0') {
+	       	    $('#email-exists').show();
+	          }
+	          else {
+ 	            $('#email-exists').hide();
+	            addClass(panel, 'cd-panel--is-visible');
+	          }
+            }
+          });
         });
         //close panel when clicking on 'x' or outside the panel
         panel.addEventListener('click', function(event) {

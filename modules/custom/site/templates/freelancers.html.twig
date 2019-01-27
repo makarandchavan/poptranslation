@@ -13,9 +13,9 @@
                 </p>'|t }}
             </div>
             <div class="col-lg-1 social">
-                <a href="{{ url('<current>') }}" class="ti-linkedin"></a>
-                <a href="{{ url('<current>') }}" class="ti-instagram"></a>
-                <a href="{{ url('<current>') }}" class="ti-youtube"></a>
+                <a href="https://www.linkedin.com/company/pop-translation/" target="_blank" class="ti-linkedin"></a>
+                <a href="https://www.instagram.com/poptranslation/" target="_blank" class="ti-instagram"></a>
+                <a href="{{ url('<current>') }}" target="_blank" class="ti-youtube"></a>
             </div>
         </div>
 
@@ -178,7 +178,7 @@
             <label for="inputEmail3" class="col-sm-2 control-label">{{'Select known languages'|t}}</label>
             <div class="col-sm-10">
               <select class="form-control input-lg" id="lang1" name="language1">
-                <option value="">1st Language</option>
+                <option value="">Native Language</option>
                 <option value="Arabic">Arabic</option>
                 <option value="Bulgarian">Bulgarian</option>
                 <option value="Classical Arabic">Classical Arabic</option>
@@ -581,7 +581,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Commerce: economics, finance, banking, insurance etc.'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Commerce: economics, finance, banking, insurance etc.'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Commerce: economics, finance, banking, insurance etc.'|t}}</label>
@@ -616,7 +616,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Management: business admin, marketing, hr, crm, pr'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Management: business admin, marketing, hr, crm, pr'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Management: business admin, marketing, hr, crm, pr'|t}}</label>
@@ -651,7 +651,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: mechanical engineering, tools and machinery'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: mechanical engineering, tools and machinery'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: mechanical engineering, tools and machinery'|t}}</label>
@@ -686,7 +686,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: electrics, electronics, devices'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: electrics, electronics, devices'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: electrics, electronics, devices'|t}}</label>
@@ -721,7 +721,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: computer, telecommunication, hardware, devices'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: computer, telecommunication, hardware, devices'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: computer, telecommunication, hardware, devices'|t}}</label>
@@ -756,7 +756,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: internet technologies, software'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: internet technologies, software'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: internet technologies, software'|t}}</label>
@@ -791,7 +791,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: maritime business, ships, transportation'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: maritime business, ships, transportation'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: maritime business, ships, transportation'|t}}</label>
@@ -826,7 +826,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: infrastructure, construction, architecture'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: infrastructure, construction, architecture'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: infrastructure, construction, architecture'|t}}</label>
@@ -861,7 +861,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: land transportation means, logistics'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: land transportation means, logistics'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: land transportation means, logistics'|t}}</label>
@@ -896,7 +896,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Techniques: databases of the scopes specified herein'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Techniques: databases of the scopes specified herein'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Techniques: databases of the scopes specified herein'|t}}</label>
@@ -931,7 +931,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Localization: video, browser, mobile games'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Localization: video, browser, mobile games'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Localization: video, browser, mobile games'|t}}</label>
@@ -966,7 +966,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Localization: software, script, help'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Localization: software, script, help'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Localization: software, script, help'|t}}</label>
@@ -1001,7 +1001,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Localization: website, new generation websites'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Localization: website, new generation websites'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Localization: website, new generation websites'|t}}</label>
@@ -1036,7 +1036,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Localization: brochures, white papers,'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Localization: brochures, white papers,'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Localization: brochures, white papers,'|t}}</label>
@@ -1071,7 +1071,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Social sciences: history, sociology, politics etc.'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Social sciences: history, sociology, politics etc.'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Social sciences: history, sociology, politics etc.'|t}}</label>
@@ -1106,7 +1106,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'International organs: EU, government, tenders,'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'International organs: EU, government, tenders,'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'International organs: EU, government, tenders,'|t}}</label>
@@ -1141,7 +1141,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Chemistry: biochemistry, petro-chemicals etc'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Chemistry: biochemistry, petro-chemicals etc'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Chemistry: biochemistry, petro-chemicals etc'|t}}</label>
@@ -1175,7 +1175,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Medicine: Med. technologies, pharmacology, dentistry'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Medicine: Med. technologies, pharmacology, dentistry'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Medicine: Med. technologies, pharmacology, dentistry'|t}}</label>
@@ -1210,7 +1210,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Literature: Novel, story, scripts for cinema, theatre'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Literature: Novel, story, scripts for cinema, theatre'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Literature: Novel, story, scripts for cinema, theatre'|t}}</label>
@@ -1245,7 +1245,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Patents of the scopes specified herein'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Patents of the scopes specified herein'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Patents of the scopes specified herein'|t}}</label>
@@ -1280,7 +1280,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Scientific reports, studies, articles, text, news etc.'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Scientific reports, studies, articles, text, news etc.'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Scientific reports, studies, articles, text, news etc.'|t}}</label>
@@ -1315,7 +1315,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Localization: Video Game'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Localization: Video Game'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Localization: Video Game'|t}}</label>
@@ -1350,7 +1350,7 @@
         <div class="form-group">
             <div class="col-sm-7 col-sm-offset-2">
                 <div class="pretty p-icon p-curve p-bigger">
-                    <input type="checkbox" name="professional[]" value="{{'Subtitles'|t}}">
+                    <input type="checkbox" name="professional[]" class="prof" value="{{'Subtitles'|t}}">
                     <div class="state">
                         <i class="icon ti-close"></i>
                         <label>{{'Subtitles'|t}}</label>
@@ -1454,9 +1454,9 @@
                                 <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
                             </div>
                         </div>
-                        <input type="hidden" class="uploaded-file" name="uploadedfile" value="">
                     </div>
                 </div>
+                <input type="hidden" class="uploaded-file" name="uploadedfile" value="">
                 <!--  -->
             </div>
         </div>
@@ -1497,9 +1497,9 @@
             </div>
         </div>
         <div class="form-group">
-            <label for="email3" class="col-sm-3 control-label">{{'Email#3'|t}}</label>
+            <label for="email2" class="col-sm-3 control-label">{{'Email#2'|t}}</label>
             <div class="col-sm-9">
-              <input type="email" class="form-control input-lg" name="email2" id="email1" placeholder="{{'Email#2'|t}}">
+              <input type="email" class="form-control input-lg" name="email2" id="email2" placeholder="{{'Email#2'|t}}">
             </div>
         </div>
     </section>
@@ -1508,7 +1508,14 @@
     <section>
         <div class="thankyou">
             <img src="/themes/photo/img/hand2.png" alt="">
-            {{'<p>We are happy to say that you have already been included to our private vendor database, but not classified as Active Member yet.</p><p>Hopefully, we will contact to go even further if any project comes on board with best match of your rates and <p>qualifications!</p><p>Time to time, you may receive group e-mails sent to limited number of vendors for opportunity projects.</p><p>Note that you cannot modify your data once entered herein.</p><p>Good Luck and Best Wishes,</p><p>Pop translation team</p>'|t}}
+            {{'<p>We are happy to say that you have already been included to our private vendor database, but not classified as Active Member yet.</p><p>Hopefully, we will contact to go even further if any project comes on board with best match of your rates and qualifications!</p><p>Time to time, you may receive group e-mails sent to limited number of vendors for opportunity projects.</p><p>Note that you cannot modify your data once entered herein.</p><p>Good Luck and Best Wishes,</p><p class="pt-team">Pop translation team</p>'|t}}
+            <div class="row">
+                <div class="col-lg-12 social">
+                    <a href="https://www.linkedin.com/company/pop-translation/" target="_blank" class="ti-linkedin"></a>
+                    <a href="https://www.instagram.com/poptranslation/" target="_blank" class="ti-instagram"></a>
+                    <a href="{{ url('<current>') }}" target="_blank" class="ti-youtube"></a>
+                </div>
+            </div>
         </div>
     </section>
 </form>

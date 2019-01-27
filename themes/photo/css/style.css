@@ -866,6 +866,10 @@ a.closebtn:hover {
     border-radius: 50%;
 }
 
+.thankyou .social a {
+    display: inline-block;
+}
+
 .social a:hover {
     color: #929292;
     text-decoration: none;
@@ -990,7 +994,7 @@ a.closebtn:hover {
     margin: 10px 0;
 }
 
-.thankyou p:last-child {
+.thankyou p.pt-team {
     margin-top: 50px;
     text-align: right;
 }

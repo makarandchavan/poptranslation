@@ -55,11 +55,11 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'quote_mail_admin';
-    $to = 'isarkar77@gmail.com';
+    $to = 'cmak2007@gmail.com'; //\Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Quote received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br> Email: @usrmail<br>Entreprise: @usrent<br>Information: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrmail' => $_POST['email'], '@usrent' => $_POST['entreprise'], '@usrinfo' => $_POST['information']));
     $attachment = array(
-      'filepath' => $filepath, // or $uri
+      'filepath' => $file->uri, // or $uri
     );
     $params['attachment'] = $attachment;
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
@@ -75,6 +75,40 @@ class SiteController extends ControllerBase {
       return [
         '#markup' => $this->t('Thank You. Your message has been sent successfully.'),
       ];
+    }
+  }
+
+  /**
+   * Freelance form handle.
+   */
+  public function validateFreelance() {
+    //Gather all main form data.
+    foreach($_POST['mainFormData'] as $mainform) {
+      if($mainform['name'] == 'firstname') {
+        $field_first_name = $mainform['value'];
+      }
+      elseif($mainform['name'] == 'name') {
+        $field_name = $mainform['value'];
+      }
+      elseif($mainform['name'] == 'email') {
+        $field_email_address = $mainform['value'];
+      }
+    }
+
+    if(!empty($field_email_address)) {
+      // Check if already submitted.
+      $query = \Drupal::entityQuery('node')
+        ->condition('type', 'freelancers')
+        ->condition('field_email_address', $field_email_address);
+      $result = $query->execute();
+      if (!empty($result)) {
+        echo '0';
+        exit;
+      }
+      else {
+        echo '1';
+        exit;
+      }
     }
   }
 
@@ -350,11 +384,11 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'free_mail_admin';
-    $to = 'isarkar77@gmail.com';
+    $to = 'cmak2007@gmail.com'; //\Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Freelancer received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br> First Name: @fname<br>Name: @name<br>Email: @email<br><br><br>Regards,<br>Poptranslation.', array('@fname' => $field_first_name, '@name' => $field_name, '@email' => $field_email_address));
     $attachment = array(
-      'filepath' => $filepath, // or $uri
+      'filepath' => $file->uri, // or $uri
     );
     $params['attachment'] = $attachment;
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
@@ -445,13 +479,9 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'contact_mail_admin';
-    $to = 'isarkar77@gmail.com';
+    $to = 'cmak2007@gmail.com'; //\Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Contact received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br>Name: @usrname<br>Email: @usrmail<br>Entreprise: @usrent<br>Message: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrname' => $name, '@usrmail' => $email, '@usrent' => $enterprise, '@usrinfo' => $cmessage));
-    $attachment = array(
-      'filepath' => $filepath, // or $uri
-    );
-    $params['attachment'] = $attachment;
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
     $send = true;
     $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
