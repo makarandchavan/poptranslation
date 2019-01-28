@@ -18,7 +18,7 @@ body {
     z-index: 11;
     top: 0;
     left: -250px;
-    background-color: #000;
+    background-color: #89caf1;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -28,18 +28,18 @@ body {
     padding: 15px 30px;
     text-decoration: none;
     font-size: 15px;
-    color: #fff;
+    color: #000;
     display: block;
     transition: 0.5s;
     text-transform: capitalize;
-    border-left: 2px solid #000;
+    /*border-left: 2px solid #000;*/
 }
 
 .sidenav a:hover,
 .sidenav a.active {
     color: #fff;
-    background-color: #4f4f4f;
-    border-left: 2px solid #fff;
+    /*background-color: #4f4f4f;*/
+    /*border-left: 2px solid #fff;*/
 }
 
 .sidenav .closebtn {
@@ -600,8 +600,8 @@ a.closebtn:hover {
 }
 
 .quick-link a {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     display: inline-block;
     color: #000;
     margin-right: 15px;
@@ -610,7 +610,7 @@ a.closebtn:hover {
 .quick-link span {
     display: block;
     text-align: center;
-    font-size: 11px;
+    font-size: 13px;
     margin-top: 10px;
 }
 
@@ -633,6 +633,11 @@ a.closebtn:hover {
     text-align: center;
 }
 
+.ic-1 a,
+.ic-2 a {
+    color: #000;
+}
+
 .ic-1 {
     /*background-color: #8bcaef;*/
 }
@@ -645,16 +650,17 @@ a.closebtn:hover {
 .ic-2 img {
     display: block;
     margin: 0 auto;
+    width: 100%;
 }
 
 .ic-1 span,
 .ic-2 span {
     display: block;
-    font-size: 14px;
+    font-size: 20px;
     text-transform: uppercase;
     margin-top: 15px;
     position: absolute;
-    bottom: 30px;
+    bottom: 80px;
     left: 0;
     right: 0;
 }
@@ -662,6 +668,8 @@ a.closebtn:hover {
 .block-about .wrapper {
     text-align: center;
     padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .block-about .wrapper.last {
@@ -673,6 +681,7 @@ a.closebtn:hover {
     text-transform: uppercase;
     margin-bottom: 30px;
     min-height: 55px;
+    font-size: 27px;
 }
 
 .wizard > .content > .body select.error,
@@ -685,6 +694,7 @@ a.closebtn:hover {
 
 .block-about .wrapper p {
     text-align: left;
+    font-size: 18px;
 }
 
 .hero-img img {
@@ -768,8 +778,8 @@ a.closebtn:hover {
 
 .block-4 {
     background-color: #ffd401;
-    padding: 50px 30px;
-    border-radius: 20px 0 0 20px;
+    padding: 50px;
+    border-radius: 20px;
 }
 
 .block-4 p {
@@ -1337,7 +1347,7 @@ div.error .ti-alert {
     }
 
     .services.white-area {
-        padding: 0 220px;
+        padding: 0 263px;
     }
 
     .circle_banner img {
@@ -1397,6 +1407,7 @@ div.error .ti-alert {
     
     .block-2 {
         margin-bottom: 0;
+        margin-top: 30px;
     }
 
     .transcription,
