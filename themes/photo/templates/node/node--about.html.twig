@@ -126,32 +126,59 @@
         </div>
 
         <div class="row">
-            <div class="col-lg-4">
-                <div class="wrapper">
-                    <img src="{{ content.field_block_image_3|field_value }}" alt="">
-                    {% set title = content.field_block_image_3|field_raw('title') %}
-                    <h3>{{ title|raw }}</h3>
-                    {{ content.field_block_body_3|field_value }}
-                </div>
-            </div>
+        	{% if content.field_translation_3rd_block.0 %}
+	            <div class="col-lg-4">
+	                <div class="wrapper">
+	                    <img src="{{ content.field_block_image_2|field_value }}" alt="">
+	                    {% set title = content.field_block_image_2|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_2|field_value }}
+	                </div>
+	            </div>
+	            <div class="col-lg-4">
+	                <div class="wrapper">
+	                    <img src="{{ content.field_block_image_3|field_value }}" alt="">
+	                    {% set title = content.field_block_image_3|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_3|field_value }}
+	                </div>
+	            </div>
 
-            <div class="col-lg-4">
-                <div class="wrapper">
-                    <img src="{{ content.field_block_image_4|field_value }}" alt="">
-                    {% set title = content.field_block_image_4|field_raw('title') %}
-                    <h3>{{ title|raw }}</h3>
-                    {{ content.field_block_body_4|field_value }}
-                </div>
-            </div>
+	            <div class="col-lg-4">
+	                <div class="wrapper">
+	                    <img src="{{ content.field_block_image_4|field_value }}" alt="">
+	                    {% set title = content.field_block_image_4|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_4|field_value }}
+	                </div>
+	            </div>
+	        {% else %}
+	        	<div class="col-lg-4">
+	                <div class="wrapper">
+	                    <img src="{{ content.field_block_image_3|field_value }}" alt="">
+	                    {% set title = content.field_block_image_3|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_3|field_value }}
+	                </div>
+	            </div>
+	            <div class="col-lg-4">
+	                <div class="wrapper">
+	                    <img src="{{ content.field_block_image_4|field_value }}" alt="">
+	                    {% set title = content.field_block_image_4|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_4|field_value }}
+	                </div>
+	            </div>
 
-            <div class="col-lg-4">
-                <div class="wrapper">
-                    <img src="{{ content.field_block_image_5|field_value }}" alt="">
-                    {% set title = content.field_block_image_5|field_raw('title') %}
-                    <h3>{{ title|raw }}</h3>
-                    {{ content.field_block_body_5|field_value }}
-                </div>
-            </div>
+	            <div class="col-lg-4">
+	                <div class="wrapper">
+	                    <img src="{{ content.field_block_image_5|field_value }}" alt="">
+	                    {% set title = content.field_block_image_5|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_5|field_value }}
+	                </div>
+	            </div>
+	        {% endif %}
         </div>
 
         {% if content.field_table_1_title.0 %}
@@ -198,23 +225,43 @@
         {% endif %}
 
         <div class="row">
-            <div class="col-lg-4">
-                <div class="wrapper last">
-                    <img src="{{ content.field_block_image_6|field_value }}" alt="">
-                    {% set title = content.field_block_image_6|field_raw('title') %}
-                    <h3>{{ title|raw }}</h3>
-                    {{ content.field_block_body_6|field_value }}
-                </div>
-            </div>
+        	{% if content.field_translation_3rd_block.0 %}
+	            <div class="col-lg-4">
+	                <div class="wrapper last">
+	                    <img src="{{ content.field_block_image_5|field_value }}" alt="">
+	                    {% set title = content.field_block_image_5|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_5|field_value }}
+	                </div>
+	            </div>
 
-            <div class="col-lg-4">
-                <div class="wrapper last">
-                    <img src="{{ content.field_block_image_7|field_value }}" alt="">
-                    {% set title = content.field_block_image_7|field_raw('title') %}
-                    <h3>{{ title|raw }}</h3>
-                    {{ content.field_block_body_7|field_value }}
-                </div>
-            </div>
+	            <div class="col-lg-4">
+	                <div class="wrapper last">
+	                    <img src="{{ content.field_block_image_6|field_value }}" alt="">
+	                    {% set title = content.field_block_image_6|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_6|field_value }}
+	                </div>
+	            </div>
+	        {% else %}
+	        	<div class="col-lg-4">
+	                <div class="wrapper last">
+	                    <img src="{{ content.field_block_image_6|field_value }}" alt="">
+	                    {% set title = content.field_block_image_6|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_6|field_value }}
+	                </div>
+	            </div>
+
+	            <div class="col-lg-4">
+	                <div class="wrapper last">
+	                    <img src="{{ content.field_block_image_7|field_value }}" alt="">
+	                    {% set title = content.field_block_image_7|field_raw('title') %}
+	                    <h3>{{ title|raw }}</h3>
+	                    {{ content.field_block_body_7|field_value }}
+	                </div>
+	            </div>
+	        {% endif %}
 
             {% if content.field_translation_para_block.0 %}
                 <div class="col-lg-4">
@@ -225,79 +272,152 @@
                     </div>
                 </div>
             {% else %}
-                <div class="col-lg-4">
-                    <div class="wrapper last">
-                        <img src="{{ content.field_block_image_8|field_value }}" alt="">
-                        {% set title = content.field_block_image_8|field_raw('title') %}
-                        <h3>{{ title|raw }}</h3>
-                        {{ content.field_block_body_8|field_value }}
-                    </div>
-                </div>
+            	{% if content.field_translation_3rd_block.0 %}
+	                <div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <img src="{{ content.field_block_image_7|field_value }}" alt="">
+	                        {% set title = content.field_block_image_7|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_7|field_value }}
+	                    </div>
+	                </div>
+	            {% else %}
+	            	<div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <img src="{{ content.field_block_image_8|field_value }}" alt="">
+	                        {% set title = content.field_block_image_8|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_8|field_value }}
+	                    </div>
+	                </div>
+	            {% endif %}
             {% endif %}
         </div>
 
         {% if content.field_translation_para_block.0 %}
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="wrapper">
-                        <img src="{{ content.field_block_image_8|field_value }}" alt="">
-                        {% set title = content.field_block_image_8|field_raw('title') %}
-                        <h3>{{ title|raw }}</h3>
-                        {{ content.field_block_body_8|field_value }}
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="wrapper">
-                        <img src="{{ content.field_block_image_extra|field_value }}" alt="">
-                        {% set title = content.field_block_image_extra|field_raw('title') %}
-                        <h3>{{ title|raw }}</h3>
-                        {{ content.field_block_body_extra_1|field_value }}
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="wrapper">
-                        <img src="{{ content.field_block_image_extra_2|field_value }}" alt="">
-                        {% set title = content.field_block_image_extra_2|field_raw('title') %}
-                        <h3>{{ title|raw }}</h3>
-                        {{ content.field_block_body_extra_2|field_value }}
-                    </div>
-                </div>
+            	{% if content.field_translation_3rd_block.0 %}
+	                <div class="col-lg-4">
+	                    <div class="wrapper">
+	                        <img src="{{ content.field_block_image_7|field_value }}" alt="">
+	                        {% set title = content.field_block_image_7|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_7|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper">
+	                        <img src="{{ content.field_block_image_8|field_value }}" alt="">
+	                        {% set title = content.field_block_image_8|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_8|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper">
+	                        <img src="{{ content.field_block_image_extra|field_value }}" alt="">
+	                        {% set title = content.field_block_image_extra|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_extra_1|field_value }}
+	                    </div>
+	                </div>
+	            {% else %}
+		            <div class="col-lg-4">
+	                    <div class="wrapper">
+	                        <img src="{{ content.field_block_image_8|field_value }}" alt="">
+	                        {% set title = content.field_block_image_8|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_8|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper">
+	                        <img src="{{ content.field_block_image_extra|field_value }}" alt="">
+	                        {% set title = content.field_block_image_extra|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_extra_1|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper">
+	                        <img src="{{ content.field_block_image_extra_2|field_value }}" alt="">
+	                        {% set title = content.field_block_image_extra_2|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_extra_2|field_value }}
+	                    </div>
+	                </div>
+
+	    		{% endif %}        
             </div>
         {% endif %}
 
         {% if content.field_translation_para_block.0 %}
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="wrapper last">
-                        <img src="{{ content.field_block_image_extra_3|field_value }}" alt="">
-                        {% set title = content.field_block_image_extra_3|field_raw('title') %}
-                        <h3>{{ title|raw }}</h3>
-                        {{ content.field_block_body_extra_3|field_value }}
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="wrapper last">
-                        <img src="{{ content.field_block_image_extra_4|field_value }}" alt="">
-                        {% set title = content.field_block_image_extra_4|field_raw('title') %}
-                        <h3>{{ title|raw }}</h3>
-                        {{ content.field_block_body_extra_4|field_value }}
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="wrapper last">
-                        <div class="block-3">
-                            {% set title = content.field_translation_table_title|field_value %}
-                            <h3>{{ title|raw }}</h3>
-                            <ul class="list-group">
-                                {{ content.field_translation_table_list }}
-                            </ul>
+            	{% if content.field_translation_para_block.0 %}
+            		<div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <img src="{{ content.field_block_image_extra_2|field_value }}" alt="">
+	                        {% set title = content.field_block_image_extra_2|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_extra_2|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <img src="{{ content.field_block_image_extra_3|field_value }}" alt="">
+	                        {% set title = content.field_block_image_extra_3|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_extra_3|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <div class="block-3">
+	                            {% set title = content.field_translation_table_title|field_value %}
+	                            <h3>{{ title|raw }}</h3>
+	                            <ul class="list-group">
+	                                {{ content.field_translation_table_list }}
+	                            </ul>
 
-                            <ul class="list-group">
-                                {{ content.field_translation_table_list_1 }}
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+	                            <ul class="list-group">
+	                                {{ content.field_translation_table_list_1 }}
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+            	{% else %}
+	                <div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <img src="{{ content.field_block_image_extra_3|field_value }}" alt="">
+	                        {% set title = content.field_block_image_extra_3|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_extra_3|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <img src="{{ content.field_block_image_extra_4|field_value }}" alt="">
+	                        {% set title = content.field_block_image_extra_4|field_raw('title') %}
+	                        <h3>{{ title|raw }}</h3>
+	                        {{ content.field_block_body_extra_4|field_value }}
+	                    </div>
+	                </div>
+	                <div class="col-lg-4">
+	                    <div class="wrapper last">
+	                        <div class="block-3">
+	                            {% set title = content.field_translation_table_title|field_value %}
+	                            <h3>{{ title|raw }}</h3>
+	                            <ul class="list-group">
+	                                {{ content.field_translation_table_list }}
+	                            </ul>
+
+	                            <ul class="list-group">
+	                                {{ content.field_translation_table_list_1 }}
+	                            </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	            {% endif %} 
             </div>
         {% endif %}
 
@@ -341,23 +461,23 @@
     </div>
     {% endif %}
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="col-lg-3 ic-1">
                 {% set title = content.field_bottom_image_1|field_raw('title') %}
-                <div><img src="{{ content.field_bottom_image_1|field_value }}" alt=""><span>{{ title|raw }}</span></div>
+                <div><a href="{{ url('<front>') }}"><img src="{{ content.field_bottom_image_1|field_value }}" alt=""><span>{{ title|raw }}</span></a></div>
             </div>
             <div class="col-lg-3 ic-2">
                 {% set title = content.field_bottom_image_2|field_raw('title') %}
-                <div><img src="{{ content.field_bottom_image_2|field_value }}" alt=""><span>{{ title|raw }}</span></div>
+                <div><a href="{{ url('contact.site_page') }}"><img src="{{ content.field_bottom_image_2|field_value }}" alt=""><span>{{ title|raw }}</span></a></div>
             </div>
             <div class="col-lg-3 ic-1">
                 {% set title = content.field_bottom_image_3|field_raw('title') %}
-                <div><img src="{{ content.field_bottom_image_3|field_value }}" alt=""><span>{{ title|raw }}</span></div>
+                <div><a href="{{ url('contact.site_page') }}"><img src="{{ content.field_bottom_image_3|field_value }}" alt=""><span>{{ title|raw }}</span></a></div>
             </div>
             <div class="col-lg-3 ic-2">
                 {% set title = content.field_bottom_image_4|field_raw('title') %}
-                <div><img src="{{ content.field_bottom_image_4|field_value }}" alt=""><span>{{ title|raw }}</span></div>
+                <div><a href="{{ url('site.freelancers') }}"><img src="{{ content.field_bottom_image_4|field_value }}" alt=""><span>{{ title|raw }}</span></a></div>
             </div>
         </div>
     </div>

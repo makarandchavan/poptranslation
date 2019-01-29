@@ -18,7 +18,7 @@ body {
     z-index: 11;
     top: 0;
     left: -250px;
-    background-color: #89caf1;
+    background-color: #000;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -28,18 +28,18 @@ body {
     padding: 15px 30px;
     text-decoration: none;
     font-size: 15px;
-    color: #000;
+    color: #fff;
     display: block;
     transition: 0.5s;
     text-transform: capitalize;
-    /*border-left: 2px solid #000;*/
+    border-left: 2px solid #000;
 }
 
 .sidenav a:hover,
 .sidenav a.active {
     color: #fff;
-    /*background-color: #4f4f4f;*/
-    /*border-left: 2px solid #fff;*/
+    background-color: #4f4f4f;
+    border-left: 2px solid #fff;
 }
 
 .sidenav .closebtn {
@@ -97,17 +97,8 @@ a.closebtn:hover {
 .free .hero-area,
 .free .hero-area .inner,
 .cont .hero-area,
-.cont .hero-area .inner,
-.abt .hero-area,
-.abt .hero-area .inner,
-.trs .hero-area,
-.trs .hero-area .inner,
-.swt .hero-area,
-.swt .hero-area .inner,
-.trc .hero-area,
-.trc .hero-area .inner {
+.cont .hero-area .inner {
     padding: 0;
-    margin: 0;
     width: 100%;
 }
 
@@ -591,17 +582,9 @@ a.closebtn:hover {
     box-shadow: none;
 }
 
-.quick-link {
-    position: absolute;
-    z-index: 10;
-    left: 4em;
-    top: 10%;
-    transform: perspective(1px) translateY(-10%);
-}
-
 .quick-link a {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     display: inline-block;
     color: #000;
     margin-right: 15px;
@@ -610,7 +593,7 @@ a.closebtn:hover {
 .quick-link span {
     display: block;
     text-align: center;
-    font-size: 13px;
+    font-size: 11px;
     margin-top: 10px;
 }
 
@@ -625,7 +608,7 @@ a.closebtn:hover {
 .ic-1,
 .ic-2 {
     padding: 30px;
-    height: 400px;
+    height: 230px;
 }
 
 .ic-1 div,
@@ -633,34 +616,28 @@ a.closebtn:hover {
     text-align: center;
 }
 
-.ic-1 a,
-.ic-2 a {
-    color: #000;
-}
-
 .ic-1 {
-    /*background-color: #8bcaef;*/
+    background-color: #8bcaef;
 }
 
 .ic-2 {
-    /*background-color: #ffd401;*/
+    background-color: #ffd401;
 }
 
 .ic-1 img,
 .ic-2 img {
     display: block;
     margin: 0 auto;
-    width: 100%;
 }
 
 .ic-1 span,
 .ic-2 span {
     display: block;
-    font-size: 20px;
+    font-size: 14px;
     text-transform: uppercase;
     margin-top: 15px;
     position: absolute;
-    bottom: 80px;
+    bottom: 30px;
     left: 0;
     right: 0;
 }
@@ -668,8 +645,6 @@ a.closebtn:hover {
 .block-about .wrapper {
     text-align: center;
     padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
 }
 
 .block-about .wrapper.last {
@@ -681,20 +656,6 @@ a.closebtn:hover {
     text-transform: uppercase;
     margin-bottom: 30px;
     min-height: 55px;
-    font-size: 27px;
-}
-
-.wizard > .content > .body select.error,
-.wizard > .content > .body input[type="checkbox"].error,
-.wizard > .content > .body input[type="radio"].error {
-    background: rgb(251, 227, 228);
-    border: 1px solid #fbc2c4;
-    color: #8a1f11;
-}
-
-.block-about .wrapper p {
-    text-align: left;
-    font-size: 18px;
 }
 
 .hero-img img {
@@ -778,8 +739,8 @@ a.closebtn:hover {
 
 .block-4 {
     background-color: #ffd401;
-    padding: 50px;
-    border-radius: 20px;
+    padding: 50px 30px;
+    border-radius: 20px 0 0 20px;
 }
 
 .block-4 p {
@@ -826,28 +787,32 @@ a.closebtn:hover {
 
 .transcription {
     background: url(../img/transcription.png) no-repeat center bottom;
+    background-size: 70%;
+    min-height: 350px; 
 }
 
 .translations {
     background: url(../img/translation.png) no-repeat center center;
+    background-size: 45%;
+    min-height: 350px;
 }
 
 .st {
     background: url(../img/st.png) no-repeat center center;
+    background-size: 65%;
+    min-height: 350px;
 }
 
 .freelancers {
     background: url(../img/freelancers.png) no-repeat center center;
-}
-
-.about {
-    background: url(../img/about.png) no-repeat center bottom;
+    /*background-size: 25%;
+    min-height: 350px;*/
 }
 
 .chat {
     position: absolute;
-    right: 20px;
-    bottom: 0;
+    right: -303px;
+    top: 540px;
 }
 
 .map {
@@ -865,30 +830,20 @@ a.closebtn:hover {
 
 .social a {
     display: block;
-    font-size: 35px;
+    font-size: 23px;
     color: #929292;
     border: 1px solid #929292;
-    width: 70px;
-    height: 70px;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 7px;
     margin-bottom: 10px;
     border-radius: 50%;
-}
-
-.thankyou .social a {
-    display: inline-block;
 }
 
 .social a:hover {
     color: #929292;
     text-decoration: none;
-}
-
-.wizard .content .col-sm-10,
-.wizard .content .col-sm-3,
-.wizard .content .col-sm-9 {
-    padding-left: 50px;
 }
 
 .wizard {
@@ -909,7 +864,7 @@ a.closebtn:hover {
 .wizard > .content {
     background: #fff;
     margin: 0;
-    min-height: 90em;
+    min-height: 80em;
 }
 
 .wizard > .content > .body {
@@ -922,10 +877,9 @@ a.closebtn:hover {
 }
 
 .wizard > .content > .body h4 {
-    text-align: left;
+    text-align: center;
     margin-bottom: 30px;
     margin-top: 50px;
-    margin-left: 50px;
 }
 
 .wizard > .content > #wizard-p-0 h2 {
@@ -956,11 +910,8 @@ a.closebtn:hover {
     margin-bottom: 0;
 }
 
-#wizard-p-1 .form-group {
-    margin-bottom: 35px;
-}
-
 .wizard > .actions a, 
+.wizard > .actions a:hover, 
 .wizard > .actions a:active {
     background: #fff;
     border: 1px solid #929292;
@@ -968,19 +919,12 @@ a.closebtn:hover {
     color: #929292;
 }
 
-.wizard > .actions a:hover {
-    background: #89caf1;
-    border: 1px solid #89caf1;
-    color: #fff;
-    border-radius: 20px;
-}
-
 .cv-upload {
     padding: 50px 50px;
     border: 1px dashed #929292;
     border-radius: 20px;
     width: 50%;
-    margin-left: 29.7%;
+    margin-left: 26.5%;
     margin-top: 20px;
     text-align: center;
 }
@@ -1004,7 +948,7 @@ a.closebtn:hover {
     margin: 10px 0;
 }
 
-.thankyou p.pt-team {
+.thankyou p:last-child {
     margin-top: 50px;
     text-align: right;
 }
@@ -1059,11 +1003,11 @@ a.closebtn:hover {
 }
 
 .blog-main.blog-social {
-    padding-left: 0;
+padding-left: 0;
 }
 
 .blog-main.blog-social .list-group-item {
-    display: inline-block;
+display: inline-block;
 }
 
 .blog {
@@ -1347,7 +1291,7 @@ div.error .ti-alert {
     }
 
     .services.white-area {
-        padding: 0 263px;
+        padding: 0 220px;
     }
 
     .circle_banner img {
@@ -1407,7 +1351,6 @@ div.error .ti-alert {
     
     .block-2 {
         margin-bottom: 0;
-        margin-top: 30px;
     }
 
     .transcription,
@@ -1421,7 +1364,7 @@ div.error .ti-alert {
     }
 
     .wizard > .content {
-        min-height: 70em;
+        min-height: 60em;
     }
 
     .mob-margin {
