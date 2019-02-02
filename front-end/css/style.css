@@ -80,6 +80,10 @@ a.closebtn:hover {
     padding: 5px 15px;
 }
 
+.blog-logo {
+    padding: 30px 0;
+}
+
 .inner {
     padding: 30px 15px;
 }
@@ -90,6 +94,11 @@ a.closebtn:hover {
 
 .form-outer {
     min-height: 932px;
+}
+
+html:lang(en) .sidenav a:nth-child(8),
+html:lang(it) .sidenav a:nth-child(8) { 
+    display: none;
 }
 
 .home .hero-area,
@@ -1139,12 +1148,12 @@ a.closebtn:hover {
     margin-top: 10px;
 }
 
-.details .content p:first-of-type:first-letter {
+/*.details .content p:first-of-type:first-letter {
     font-size: 3em;
     font-weight: bold;
     padding: 10px 30px;
     float: left;
-}
+}*/
 
 .details .content h5 {
     margin: 15px 0;
@@ -1215,6 +1224,17 @@ a.closebtn:hover {
 
 .quote-form-wrapper .form-group {
     position: relative;
+}
+
+.pretty div.error {
+    right: auto;
+    left: -206px;
+}
+
+#wizard-p-3 .pretty.p-curve div.error {
+    right: auto;
+    left: -144px;
+    top: -35px;
 }
 
 div.error {

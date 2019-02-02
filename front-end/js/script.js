@@ -152,8 +152,7 @@ if (freelanceForm.length) {
             required: true
           },
           'professional[]': {
-            required: true,
-            minlength: 10
+            maxlength: 10
           },
           'rating1': {
             required: true
