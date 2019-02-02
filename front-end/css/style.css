@@ -97,7 +97,9 @@ a.closebtn:hover {
 }
 
 html:lang(en) .sidenav a:nth-child(8),
-html:lang(it) .sidenav a:nth-child(8) { 
+html:lang(it) .sidenav a:nth-child(8),
+html:lang(en) .footer ul:first-child li:nth-child(3),
+html:lang(it) .footer ul:first-child li:nth-child(3) { 
     display: none;
 }
 
