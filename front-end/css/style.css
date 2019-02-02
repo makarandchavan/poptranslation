@@ -1213,6 +1213,7 @@ html:lang(it) .sidenav a:nth-child(8) {
 .hot-topic .slick-slide img {
     width: 80px;
     height: 80px;
+    max-width: 80px;
     border-radius: 8px;
 }
 
