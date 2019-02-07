@@ -40,17 +40,17 @@
 #}
 {% if label_hidden %}
   {% if multiple %}
-      {% for item in items %}
-      <li class="list-group-item">{{ item.content }}</li>
+      {% for key, item in items %}
+      <li class="list-group-item"><a href="#{{ key }}">{{ item.content }}</a></li>
       {% endfor %}
   {% else %}
-    {% for item in items %}
-      <li class="list-group-item">{{ item.content }}</li>
+    {% for key, item in items %}
+      <li class="list-group-item"><a href="#{{ key }}">{{ item.content }}</a></li>
     {% endfor %}
   {% endif %}
 {% else %}
   <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
-    {% for item in items %}
-    <li class="list-group-item">{{ item.content }}</li>
+    {% for key, item in items %}
+    <li class="list-group-item"><a href="#{{ key }}">{{ item.content }}</a></li>
     {% endfor %}
 {% endif %}

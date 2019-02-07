@@ -80,6 +80,10 @@ a.closebtn:hover {
     padding: 5px 15px;
 }
 
+.blog-logo {
+    padding: 30px 0;
+}
+
 .inner {
     padding: 30px 15px;
 }
@@ -90,6 +94,22 @@ a.closebtn:hover {
 
 .form-outer {
     min-height: 932px;
+}
+
+html:lang(en) .sidenav a:nth-child(8),
+html:lang(it) .sidenav a:nth-child(8),
+html:lang(en) .footer ul:first-child li:nth-child(3),
+html:lang(it) .footer ul:first-child li:nth-child(3),
+html:lang(it) .sidenav a:nth-child(5) { 
+    display: none;
+}
+
+html:lang(en) .lang .en,
+html:lang(fr) .lang .fr,
+html:lang(it) .lang .it,
+.lang .active {
+    border: 1px solid #5bc0de;
+    border-radius: 10px;
 }
 
 .home .hero-area,
@@ -154,7 +174,8 @@ a.closebtn:hover {
 .thank-you img {
     width: 100%;
     height: auto;
-    margin-top: 30%;
+    margin-top: 5%;
+    display: block;
 }
 
 .quote-form-wrapper form {
@@ -189,6 +210,7 @@ a.closebtn:hover {
 
 .lang {
     text-align: left;
+    margin-top: 5px;
 }
 
 .lang img{
@@ -361,7 +383,8 @@ a.closebtn:hover {
     text-align: left;
 }
 
-.quote-form-wrapper .btn[type='submit'] {
+.quote-form-wrapper .btn[type='submit'],
+.quote-form-wrapper .btn[type='button'] {
     padding: 10px 30px;
     border-radius: 30px;
     border-width: 2px;
@@ -540,6 +563,10 @@ a.closebtn:hover {
     color: #fff;
 }
 
+.banners .slick-slide img {
+    margin: 0 auto;
+}
+
 .banners.slick-slide img {
     object-fit: cover;
     width: 100%;
@@ -607,6 +634,15 @@ a.closebtn:hover {
     margin-right: 15px;
 }
 
+.quick-link a img {
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+}
+
+.quick-link a img:hover {
+    opacity: .6;
+}
+
 .quick-link span {
     display: block;
     text-align: center;
@@ -651,6 +687,13 @@ a.closebtn:hover {
     display: block;
     margin: 0 auto;
     width: 100%;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+}
+
+.ic-1 img:hover,
+.ic-2 img:hover {
+    opacity: .6;
 }
 
 .ic-1 span,
@@ -665,11 +708,16 @@ a.closebtn:hover {
     right: 0;
 }
 
+.quote-form-wrapper .thank-you p {
+    margin-top: 20px;
+}
+
 .block-about .wrapper {
     text-align: center;
     padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+    /*padding-left: 30px;
+    padding-right: 30px;*/
+    /* Fix alighment */
 }
 
 .block-about .wrapper.last {
@@ -1136,15 +1184,23 @@ a.closebtn:hover {
 
 .details .content h2 {
     font-weight: 100;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
-.details .content p:first-of-type:first-letter {
+.legal .left a {
+    color: #fff;
+}
+
+.legal .left a:hover {
+    color: #fff;
+}
+
+/*.details .content p:first-of-type:first-letter {
     font-size: 3em;
     font-weight: bold;
     padding: 10px 30px;
     float: left;
-}
+}*/
 
 .details .content h5 {
     margin: 15px 0;
@@ -1204,6 +1260,7 @@ a.closebtn:hover {
 .hot-topic .slick-slide img {
     width: 80px;
     height: 80px;
+    max-width: 80px;
     border-radius: 8px;
 }
 
@@ -1215,6 +1272,17 @@ a.closebtn:hover {
 
 .quote-form-wrapper .form-group {
     position: relative;
+}
+
+.pretty div.error {
+    right: auto;
+    left: -206px;
+}
+
+#wizard-p-3 .pretty.p-curve div.error {
+    right: auto;
+    left: -144px;
+    top: -35px;
 }
 
 div.error {
@@ -1343,11 +1411,13 @@ div.error .ti-alert {
     .white-area,
     .light-grey,
     .dark-grey {
-        padding: 0 200px; 
+        /*padding: 0 200px; */ 
+        /* Fix alighment */
     }
 
     .services.white-area {
-        padding: 0 263px;
+        /*padding: 0 263px;*/
+        /* Fix alighment */
     }
 
     .circle_banner img {

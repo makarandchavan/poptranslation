@@ -46,6 +46,9 @@
                           <input type="email" class="form-control" id="email" name="email" placeholder="{{ 'Votre email'|t }}">
                       </div>
                       <div class="form-group">
+                          <input type="text" class="form-control" id="" name="phone" placeholder="{{ 'Your Phone Number'|t }}">
+                      </div>
+                      <div class="form-group">
                           <input type="text" class="form-control" id="entreprise" name="entreprise" placeholder="{{ 'Votre entreprise'|t }}">
                       </div>
                       <div class="form-group">
@@ -69,14 +72,16 @@
 </div>
 {% elseif content and node_type == 'page' %}
 <div class="container-fluid dark-grey">
-  <div class="row inner legal">
-    {{ content }}
+  <div class="container">
+    <div class="row inner legal">
+      {{ content }}
+    </div>
   </div>
 </div>
 {% elseif content and node_type == 'about' %}
   {{ content }}
 {% else %}
-<div class="container-fluid white-area">
+<div class="container white-area">
   <div class="row inner">
   	{{ content }}
   </div>

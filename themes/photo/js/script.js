@@ -9,8 +9,19 @@
     quoteForm = $('#quote'),
     freelance = $('#freelance'),
     freelanceForm = $('#wizard'),
+    en = window.location.origin + '/',
+    it = window.location.origin + '/it',
+    fr = window.location.origin + '/fr',
     contact = $('#contact'),
     topicSlider = $('.topics');
+
+    // Language 
+    if ($('.lang').length) {
+        $('.en').attr('href', en);
+        $('.it').attr('href', it);
+        $('.fr').attr('href', fr);
+    }
+
   // Quote page validation -
   if (quoteForm.length) {
     quoteForm.validate({
@@ -43,9 +54,8 @@
       cache: false,
       success: function(data) // A function to be called if request succeeds
       {
-        $('form#quote').html(
-          '<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""></div>'
-        );
+        $('form#quote').html('<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""><p class="qoute-congrats">' + Drupal.t('Congratulations! The email has been sent successfully.') + '</p></div><div class="form-group"><a href="/"><button type="button" class="btn btn-default" id="congrats-quote">' + Drupal.t('Another?') + '</button></div></div>');
+        // <a tabindex="0" class="btn btn-lg btn-info ti-more-alt submit-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="' + Drupal.t('By submitting this form, you agree to receive information from the Pop translation website. My information will not be disclosed to third parties. Pop translation will only use your data to reply to you and offer you content related to your interests. For more information, consult Pop translation\'s privacy policy.') + '" data-original-title="Info"></a>
       }
     });
     return false;
@@ -63,7 +73,7 @@
       cache: false,
       success: function(data) {
         $('form#contact').html(
-          '<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""></div>'
+          '<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""><p class="qoute-congrats">' + Drupal.t('Congratulations! The email has been sent successfully.') + '</p></div><div class="form-group"><a href="/contact"><button type="button" class="btn btn-default" id="congrats-quote">' + Drupal.t('Another?') + '</button></div></div>'
         );
       }
     });
@@ -93,6 +103,10 @@
     contact.validate({
       rules: {
         email: 'required',
+        phone: {
+          required: true,
+          number: true
+        },
         name: 'required',
         entreprise: 'required',
         message: 'required'
@@ -160,8 +174,7 @@ if (freelanceForm.length) {
             required: true
           },
           'professional[]': {
-            required: true,
-            minlength: 10
+            maxlength: 10
           },
           'rating1': {
             required: true

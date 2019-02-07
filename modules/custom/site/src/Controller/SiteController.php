@@ -456,6 +456,9 @@ class SiteController extends ControllerBase {
       elseif($mainform['name'] == 'email') {
         $email = $mainform['value'];
       }
+      elseif($mainform['name'] == 'phone') {
+        $phone = $mainform['value'];
+      }
       elseif($mainform['name'] == 'entreprise') {
         $enterprise = $mainform['value'];
       }
@@ -481,7 +484,7 @@ class SiteController extends ControllerBase {
     $key = 'contact_mail_admin';
     $to = 'cmak2007@gmail.com'; //\Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Contact received');
-    $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br>Name: @usrname<br>Email: @usrmail<br>Entreprise: @usrent<br>Message: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrname' => $name, '@usrmail' => $email, '@usrent' => $enterprise, '@usrinfo' => $cmessage));
+    $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br>Name: @usrname<br>Email: @usrmail<br>Phone: @phone<br>Entreprise: @usrent<br>Message: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrname' => $name, '@phone' => $phone, '@usrmail' => $email, '@usrent' => $enterprise, '@usrinfo' => $cmessage));
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
     $send = true;
     $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
