@@ -13,7 +13,18 @@ var Drupal = Drupal || {};
     freelance = $('#freelance'),
     contact = $('#contact'),
     freelanceForm = $('#wizard'),
+    en = window.location.origin + '/',
+    it = window.location.origin + '/it',
+    fr = window.location.origin + '/fr',
     topicSlider = $('.topics');
+
+
+    // Language 
+    if ($('.lang').length) {
+        $('.en').attr('href', en);
+        $('.it').attr('href', it);
+        $('.fr').attr('href', fr);
+    }
 
   // Quote page validation -
 
@@ -80,6 +91,10 @@ var Drupal = Drupal || {};
     contact.validate({
       rules: {
         email: 'required',
+        phone: {
+          required: true,
+          number: true
+        },
         name: 'required',
         entreprise: 'required',
         message: 'required'

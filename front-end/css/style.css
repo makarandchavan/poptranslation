@@ -103,6 +103,14 @@ html:lang(it) .footer ul:first-child li:nth-child(3) {
     display: none;
 }
 
+html:lang(en) .lang .en,
+html:lang(fr) .lang .fr,
+html:lang(it) .lang .it,
+.lang .active {
+    border: 1px solid #5bc0de;
+    border-radius: 10px;
+}
+
 .home .hero-area,
 .home .hero-area .inner,
 .free .hero-area,
@@ -200,6 +208,7 @@ html:lang(it) .footer ul:first-child li:nth-child(3) {
 
 .lang {
     text-align: left;
+    margin-top: 5px;
 }
 
 .lang img{
@@ -551,6 +560,10 @@ html:lang(it) .footer ul:first-child li:nth-child(3) {
     color: #fff;
 }
 
+.banners .slick-slide img {
+    margin: 0 auto;
+}
+
 .banners.slick-slide img {
     object-fit: cover;
     width: 100%;
@@ -662,6 +675,13 @@ html:lang(it) .footer ul:first-child li:nth-child(3) {
     display: block;
     margin: 0 auto;
     width: 100%;
+    transition: opacity 0.3s;
+    -webkit-transition: opacity 0.3s;
+}
+
+.ic-1 img:hover,
+.ic-2 img:hover {
+    opacity: .6;
 }
 
 .ic-1 span,
@@ -679,8 +699,9 @@ html:lang(it) .footer ul:first-child li:nth-child(3) {
 .block-about .wrapper {
     text-align: center;
     padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+    /*padding-left: 30px;
+    padding-right: 30px;*/
+    /* Fix alighment */
 }
 
 .block-about .wrapper.last {
@@ -1366,11 +1387,13 @@ div.error .ti-alert {
     .white-area,
     .light-grey,
     .dark-grey {
-        padding: 0 200px; 
+        /*padding: 0 200px; */ 
+        /* Fix alighment */
     }
 
     .services.white-area {
-        padding: 0 263px;
+        /*padding: 0 263px;*/
+        /* Fix alighment */
     }
 
     .circle_banner img {
