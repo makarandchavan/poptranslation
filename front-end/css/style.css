@@ -349,6 +349,29 @@ html:lang(it) .lang .it,
     background-image: url(../img/banner/free/8_en.jpeg);
 }
 
+/* About */
+
+.abt .background-cover, 
+.abt .slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/banner/about/1_en.jpeg);
+}
+.abt .slide {
+    height: calc(100vh - 105px);
+    background-attachment: fixed;
+}
+.abt .slide--1 {
+    background-image: url(../img/banner/about/1_en.jpeg);
+}
+.abt .slide--2 {
+    background-image: url(../img/banner/about/2_en.jpeg);
+}
+.abt .slide--3 {
+    background-image: url(../img/banner/about/3_en.jpeg);
+}
+
 /**************/
 
 .accept-privacy {
