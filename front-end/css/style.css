@@ -372,7 +372,41 @@ html:lang(it) .lang .it,
     background-image: url(../img/banner/about/3_en.jpeg);
 }
 
+/* Contact */
+
+.cont .background-cover, 
+.cont .slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/banner/cont/1_en.jpeg);
+}
+.cont .slide {
+    height: calc(100vh - 105px);
+    background-attachment: fixed;
+}
+.cont .slide--1 {
+    background-image: url(../img/banner/cont/1_en.jpeg);
+}
+.cont .slide--2 {
+    background-image: url(../img/banner/cont/2_en.jpeg);
+}
+.cont .slide--3 {
+    background-image: url(../img/banner/cont/3_en.jpeg);
+}
+
 /**************/
+
+.page-node-type-article .main {
+    margin-top: 170px;
+}
+
+.path-blog .header-top {
+    box-shadow: none;
+}
+.path-blog .main-content{
+    margin-top: 400px;
+}
 
 .accept-privacy {
     width: 100%;
