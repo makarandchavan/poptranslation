@@ -18,7 +18,37 @@ var Drupal = Drupal || {};
     it = window.location.origin + '/it',
     fr = window.location.origin + '/fr',
     htmlLang = $('html').attr('lang'),
+    accept = $('.accept'),
     topicSlider = $('.topics');
+
+    // Cookies
+    if (Cookies.get('quote')) {
+      $('.home .accept-privacy').hide();
+      $('body.home ').removeClass('noscroll');
+    } else {
+      $('.home  .accept-privacy').removeClass('hidden');
+      $('body.home ').addClass('noscroll');
+    }
+
+    if (Cookies.get('free')) {
+      $('.free .accept-privacy').hide();
+      $('body.free ').removeClass('noscroll');
+    } else {
+      $('.free  .accept-privacy').removeClass('hidden');
+      $('body.free ').addClass('noscroll');
+    }
+
+    $('.accept1').on('click', function(){
+      Cookies.set('quote', 'accepted');
+      $('.home .accept-privacy').addClass('hidden');
+      $('body.home ').removeClass('noscroll');
+    })
+
+    $('.accept2').on('click', function(){
+      Cookies.set('free', 'accepted');
+      $('.free .accept-privacy').addClass('hidden');
+      $('body.free ').removeClass('noscroll');
+    })
 
 
     // Language 
@@ -57,6 +87,7 @@ var Drupal = Drupal || {};
           }
         }, 300);
     }
+
 
   // Quote page validation -
 
