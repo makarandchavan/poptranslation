@@ -395,6 +395,29 @@ html:lang(it) .lang .it,
     background-image: url(../img/banner/cont/3_en.jpeg);
 }
 
+/* Sw */
+
+.swt .background-cover, 
+.swt .slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/banner/sw/1_en.jpeg);
+}
+.swt .slide {
+    height: calc(100vh - 105px);
+    background-attachment: fixed;
+}
+.swt .slide--1 {
+    background-image: url(../img/banner/sw/1_en.jpeg);
+}
+.swt .slide--2 {
+    background-image: url(../img/banner/sw/2_en.jpeg);
+}
+.swt .slide--3 {
+    background-image: url(../img/banner/sw/3_en.jpeg);
+}
+
 /**************/
 
 .page-node-type-article .main {
