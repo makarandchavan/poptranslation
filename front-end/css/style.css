@@ -351,6 +351,22 @@ html:lang(it) .lang .it,
 
 /**************/
 
+.accept-privacy {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+body.noscroll {
+    overflow-y: hidden;
+}
+
 .why-us .row {
     margin-bottom: 30px;
 }
@@ -897,6 +913,30 @@ html:lang(it) .lang .it,
     font-weight: bold;
 }
 
+.privacy-wrapper {
+    color: #fff;
+    margin: 0 auto;
+    width: 22%;
+    margin-top: 10%;
+}
+
+.privacy-wrapper .list-group-item {
+    padding-left: 0;
+    font-weight: normal;
+}
+
+.privacy-wrapper .list-group-item span {
+    margin-right: 10px;
+}
+
+.privacy-wrapper p {
+    font-size: 12px;
+}
+
+.privacy-wrapper button {
+    margin-top: 30px;
+}
+
 .block-3 .list-group-item {
     background: url(../img/ic_tick.png) no-repeat right center;
     padding-left: 20px;
@@ -966,23 +1006,23 @@ html:lang(it) .lang .it,
 }
 
 .transcription {
-    background: url(../img/transcription.png) no-repeat center bottom;
+    /*background: url(../img/transcription.png) no-repeat center bottom;*/
 }
 
 .translations {
-    background: url(../img/translation.png) no-repeat center center;
+    /*background: url(../img/translation.png) no-repeat center center;*/
 }
 
 .st {
-    background: url(../img/st.png) no-repeat center center;
+    /*background: url(../img/st.png) no-repeat center center;*/
 }
 
 .freelancers {
-    background: url(../img/freelancers.png) no-repeat center center;
+    /*background: url(../img/freelancers.png) no-repeat center center;*/
 }
 
 .about {
-    background: url(../img/about.png) no-repeat center bottom;
+    /*background: url(../img/about.png) no-repeat center bottom;*/
 }
 
 .chat {
