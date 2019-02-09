@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
     <link rel="stylesheet" href="css/themify-icons.css">
     <link href="css/dropzone.css" type="text/css" rel="stylesheet">
+    <link href="css/bootstrap-select.css" type="text/css" rel="stylesheet">
     <link href="css/style.css" type="text/css" rel="stylesheet">
     
 
@@ -57,7 +58,7 @@
                         <a href="contact.html">Contact</a>
                     </div>
 
-                    <div class="open">
+                    <div class="open-nav">
                         <span></span>
                         <span></span>
                         <span></span>
@@ -68,227 +69,233 @@
                     <a href="index.html" class="logo"><img src="img/logo.gif" alt="POP Translation"></a>
                 </div>
                 <div class="col-lg-2 col-xs-3 lang">
-                    <a href="#" class="en"><img src="img/flag_us.gif" alt="US"></a>
+                    <!-- <a href="#" class="en"><img src="img/flag_us.gif" alt="US"></a>
                     <a href="#" class="it"><img src="img/flag_it.gif" alt="Italy"></a>
-                    <a href="#" class="fr"><img src="img/flag_fr.gif" alt="France"></a>
+                    <a href="#" class="fr"><img src="img/flag_fr.gif" alt="France"></a> -->
+
+                    <select class="lang-select" data-width="fit">
+                        <option value="en">English</option>
+                        <option value="fr">French</option>
+                        <option value="it">Italian</option>
+                    </select>
                 </div>
             </div>
         <!-- </div> -->
     </div>
-
-    <div class="container-fluid hero-area quote">
-        <div class="row inner">
-            <div class="col-lg-12">
-                <div class="form-outer">
-                    <div class="quote-form-wrapper">
-                        <form action="/file-upload" class="" id="quote">
-                            <!--  -->
-                            <div class="table table-striped" class="files" id="previews">
-                                <div id="template" class="file-row">
-                                    <!-- This is used as the file preview template -->
-                                    <div>
-                                        <span class="preview"><img data-dz-thumbnail /></span>
-                                    </div>
-                                    <div>
-                                        <p class="name" data-dz-name></p>
-                                        <strong class="error text-danger" data-dz-errormessage></strong>
-                                    </div>
-                                    <div>
-                                        <p class="size" data-dz-size></p>
-                                        <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
-                                            <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+    <div class="masthead">
+        <div class="container-fluid hero-area quote">
+            <div class="row inner">
+                <div class="col-lg-12">
+                    <div class="form-outer">
+                        <div class="quote-form-wrapper">
+                            <form action="/file-upload" class="" id="quote">
+                                <!--  -->
+                                <div class="table table-striped" class="files" id="previews">
+                                    <div id="template" class="file-row">
+                                        <!-- This is used as the file preview template -->
+                                        <div>
+                                            <span class="preview"><img data-dz-thumbnail /></span>
+                                        </div>
+                                        <div>
+                                            <p class="name" data-dz-name></p>
+                                            <strong class="error text-danger" data-dz-errormessage></strong>
+                                        </div>
+                                        <div>
+                                            <p class="size" data-dz-size></p>
+                                            <div class="progress progress-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                                                <div class="progress-bar progress-bar-success" style="width:0%;" data-dz-uploadprogress></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--  -->
-                            
-                            <div class="file-attach">
-                                <span class="btn btn-info fileinput-button">
-                                    <span class="ti-plus"></span>
-                                    <!-- <input type="file" name="file" multiple=""> -->
-                                </span>
+                                <!--  -->
+                                
+                                <div class="file-attach">
+                                    <span class="btn btn-info fileinput-button">
+                                        <span class="ti-plus"></span>
+                                        <!-- <input type="file" name="file" multiple=""> -->
+                                    </span>
 
-                                <span class="attach-info">Ajoutez vos fichiers <span>(jusqu’à 20 Mo)</span></span>
-                            </div>
+                                    <span class="attach-info">Ajoutez vos fichiers <span>(jusqu’à 20 Mo)</span></span>
+                                </div>
 
-                            <h4>DEMANDER UN DEVIS</h4>
+                                <h4>DEMANDER UN DEVIS</h4>
 
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Votre email">
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="entreprise" name="entreprise" placeholder="Votre entreprise">
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control" rows="3" placeholder="Donnez-nous plus d'informations sur votre projet"></textarea>
-                            </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="Votre email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="entreprise" name="entreprise" placeholder="Votre entreprise">
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="3" placeholder="Donnez-nous plus d'informations sur votre projet"></textarea>
+                                </div>
 
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-default" disabled="disabled" id="submit-quote">Envoyer</button>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-default" disabled="disabled" id="submit-quote">Envoyer</button>
 
-                                <a tabindex="0" 
-                                    class="btn btn-lg btn-info ti-more-alt submit-info" 
-                                    role="button" 
-                                    data-toggle="popover" 
-                                    data-trigger="focus" 
-                                    title="Info" 
-                                    data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-                                </a>
-                            </div>
+                                    <a tabindex="0" 
+                                        class="btn btn-lg btn-info ti-more-alt submit-info" 
+                                        role="button" 
+                                        data-toggle="popover" 
+                                        data-trigger="focus" 
+                                        title="Info" 
+                                        data-content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                        cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
+                                    </a>
+                                </div>
 
-                            <!-- <div class="tahnk-you"><img src="img/thankyou.png" alt=""></div> -->
-                        </form>
-                    </div>
-            
-                    <div class="banners">
-                        <div><img src="img/banner/1.png"></div>
-                        <div><img src="img/banner/2.png"></div>
-                        <div><img src="img/banner/3.png"></div>
-                        <div><img src="img/banner/4.png"></div>
+                                <!-- <div class="tahnk-you"><img src="img/thankyou.png" alt=""></div> -->
+                            </form>
+                        </div>
+                
+                        <div class="background-cover hero-slider">
+                            <div class="slide slide--1"></div>
+                            <div class="slide slide--2"></div>
+                            <div class="slide slide--3"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="container white-area">
-        <!-- <div class="container"> -->
+    <div class="main">
+        <div class="container white-area">
+            <!-- <div class="container"> -->
+                <div class="row inner">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="features native">
+                            <p>
+                                <span class="t1">ONLY</span>
+                                <span class="t1">NATIVE</span>
+                                <span class="t2">TRANSLATORS</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="features delivery-on">
+                            <p>
+                                <span class="t1">99%</span>
+                                <span class="t2">DELIVERED</span>
+                                <span class="t2">ON TIME</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="features delivery">
+                            <p>
+                                <span class="t1">DAY</span>
+                                <span class="t1">AFTER</span>
+                                <span class="t2">DELIVERY</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="features rates">
+                            <p>
+                                <span class="t1">5 STARS</span>
+                                <span class="t2">RATING</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+        
+        <div class="container white-area services">
             <div class="row inner">
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features native">
-                        <p>
-                            <span class="t1">ONLY</span>
-                            <span class="t1">NATIVE</span>
-                            <span class="t2">TRANSLATORS</span>
-                        </p>
-                    </div>
+                <div class="col-lg-4">
+                    <h2>QUI D'AUTRE <br> BÉNÉFICIE DE <br> NOS SERVICES ?</h2>
+                    <p>Les marques nous font confiance. Nous leur en sommes infiniment reconnaissants. Elles nous offrent au quotidien l’opportunité de prouver nos talents.</p>
                 </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features delivery-on">
-                        <p>
-                            <span class="t1">99%</span>
-                            <span class="t2">DELIVERED</span>
-                            <span class="t2">ON TIME</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features delivery">
-                        <p>
-                            <span class="t1">DAY</span>
-                            <span class="t1">AFTER</span>
-                            <span class="t2">DELIVERY</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6">
-                    <div class="features rates">
-                        <p>
-                            <span class="t1">5 STARS</span>
-                            <span class="t2">RATING</span>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        <!-- </div> -->
-    </div>
-    
-    <div class="container white-area services">
-        <div class="row inner">
-            <div class="col-lg-4">
-                <h2>QUI D'AUTRE <br> BÉNÉFICIE DE <br> NOS SERVICES ?</h2>
-                <p>Les marques nous font confiance. Nous leur en sommes infiniment reconnaissants. Elles nous offrent au quotidien l’opportunité de prouver nos talents.</p>
-            </div>
-            <div class="col-lg-8">
-                <div class="partners">
-                    <div class="logo-slider">
-                        <div><img src="img/partners/accor.png"></div>
-                        <div><img src="img/partners/bandai.png"></div>
-                        <div><img src="img/partners/benq.png"></div>
-                        <div><img src="img/partners/bfm.png"></div>
-                        <div><img src="img/partners/campanile.png"></div>
-                        <div><img src="img/partners/golden-tulip.png"></div>
-                        <div><img src="img/partners/plugin.png"></div>
+                <div class="col-lg-8">
+                    <div class="partners">
+                        <div class="logo-slider">
+                            <div><img src="img/partners/accor.png"></div>
+                            <div><img src="img/partners/bandai.png"></div>
+                            <div><img src="img/partners/benq.png"></div>
+                            <div><img src="img/partners/bfm.png"></div>
+                            <div><img src="img/partners/campanile.png"></div>
+                            <div><img src="img/partners/golden-tulip.png"></div>
+                            <div><img src="img/partners/plugin.png"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container-fluid light-grey">
-        <div class="container">
-            <div class="row why-us inner">
-                <div class="col-lg-4">
-                    <div class="row">
-                        <div class="col-lg-5 col-xs-5 col-sm-2"><img src="img/f1.png" class="img-responsive" alt=""></div>
-                        <div class="col-lg-7 col-xs-7 col-sm-10 no-padding-left">
-                            <p>Nous accusons immédiatement réception de votre demande : vous êtes assuré de la prise en charge de votre projet.</p>
+        <div class="container-fluid light-grey">
+            <div class="container">
+                <div class="row why-us inner">
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-lg-5 col-xs-5 col-sm-2"><img src="img/f1.png" class="img-responsive" alt=""></div>
+                            <div class="col-lg-7 col-xs-7 col-sm-10 no-padding-left">
+                                <p>Nous accusons immédiatement réception de votre demande : vous êtes assuré de la prise en charge de votre projet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-lg-5 col-xs-5 col-sm-2"><img src="img/f2.png" class="img-responsive" alt=""></div>
+                            <div class="col-lg-7 col-xs-7 col-sm-10 no-padding-left">
+                                <p>Nous vous livrons dans les meilleurs délais possibles. Votre délai est notre délai.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="row">
+                            <div class="col-lg-5 col-xs-5 col-sm-2"><img src="img/f3.png" class="img-responsive" alt=""></div>
+                            <div class="col-lg-7 col-xs-7 col-sm-10 no-padding-left">
+                                <p>Beaucoup de nos clients nous trouvent bon marché. Nous faisons tout pour le rester.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="row">
-                        <div class="col-lg-5 col-xs-5 col-sm-2"><img src="img/f2.png" class="img-responsive" alt=""></div>
-                        <div class="col-lg-7 col-xs-7 col-sm-10 no-padding-left">
-                            <p>Nous vous livrons dans les meilleurs délais possibles. Votre délai est notre délai.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="row">
-                        <div class="col-lg-5 col-xs-5 col-sm-2"><img src="img/f3.png" class="img-responsive" alt=""></div>
-                        <div class="col-lg-7 col-xs-7 col-sm-10 no-padding-left">
-                            <p>Beaucoup de nos clients nous trouvent bon marché. Nous faisons tout pour le rester.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-lg-12 footer">
-                    <div class="row inner">
-                        <div class="col-lg-4 col-sm-4">
-                            <ul class="list-group">
-                                <li class="list-group-item">Société</li>
-                                <li class="list-group-item"><a href="about.html">à propos</a></li>
-                                <li class="list-group-item"><a href="blog.html">blog</a></li>
-                                <li class="list-group-item"><a href="cgv.html">CGV</a></li>
-                                <li class="list-group-item"><a href="#">Instagram</a></li>
-                                <li class="list-group-item"><a href="#">linkedin</a></li>
-                                <li class="list-group-item"><a href="#">youtube</a></li>
-                                <li class="list-group-item"><a href="#">nous contacter</a></li>
-                                <li class="list-group-item"><a href="legal_notices.html">mentions légales</a></li>
-                                <li class="list-group-item"><a href="#">politique de confidentialité</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <ul class="list-group">
-                                <li class="list-group-item">Services</li>
-                                <li class="list-group-item"><a href="#">traduction</a></li>
-                                <li class="list-group-item"><a href="#">traduction assermentée</a></li>
-                                <li class="list-group-item"><a href="privacy_policy.html">transcription</a></li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <ul class="list-group">
-                                <li class="list-group-item">Ressources</li>
-                                <li class="list-group-item"><a href="#">Plan du site</a></li>
-                                <li class="list-group-item"><a href="#">Espace traducteurs</a></li>
-                            </ul>
+                <div class="row">
+                    <div class="col-lg-12 footer">
+                        <div class="row inner">
+                            <div class="col-lg-4 col-sm-4">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Société</li>
+                                    <li class="list-group-item"><a href="about.html">à propos</a></li>
+                                    <li class="list-group-item"><a href="blog.html">blog</a></li>
+                                    <li class="list-group-item"><a href="cgv.html">CGV</a></li>
+                                    <li class="list-group-item"><a href="#">Instagram</a></li>
+                                    <li class="list-group-item"><a href="#">linkedin</a></li>
+                                    <li class="list-group-item"><a href="#">youtube</a></li>
+                                    <li class="list-group-item"><a href="#">nous contacter</a></li>
+                                    <li class="list-group-item"><a href="legal_notices.html">mentions légales</a></li>
+                                    <li class="list-group-item"><a href="#">politique de confidentialité</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Services</li>
+                                    <li class="list-group-item"><a href="#">traduction</a></li>
+                                    <li class="list-group-item"><a href="#">traduction assermentée</a></li>
+                                    <li class="list-group-item"><a href="privacy_policy.html">transcription</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-4 col-sm-4">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Ressources</li>
+                                    <li class="list-group-item"><a href="#">Plan du site</a></li>
+                                    <li class="list-group-item"><a href="#">Espace traducteurs</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-lg-12"><p class="copyright">Tous droits réservés @2011-2019 L’oeil pop</p></div>
                 </div>
-                <div class="col-lg-12"><p class="copyright">Tous droits réservés @2011-2019 L’oeil pop</p></div>
             </div>
         </div>
     </div>
-
 
     <!-- jQuery Version 1.11.1 -->
     <script src="js/jquery.min.js"></script>
@@ -298,6 +305,7 @@
     <script src="js/jquery.validate.js"></script>
     <script src="js/slick.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/dropzone.js"></script>
+    <script src="js/bootstrap-select.js"></script>
     <script src="js/script.js"></script>
 
 </body>

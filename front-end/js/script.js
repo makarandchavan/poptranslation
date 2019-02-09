@@ -3,11 +3,12 @@ var Drupal = Drupal || {};
 (function ($, Drupal, Bootstrap) {
   "use strict";
 
-  var openNav = $('.open'),
+  var openNav = $('.open-nav'),
     closeNav = $('.closebtn'),
     navPanel = $('#mySidenav'),
     parters = $('.logo-slider'),
     bannerSlider= $('.banners'),
+    heroSlider = $('.hero-slider'),
     dropzone = $('#dropzone'),
     quoteForm = $('#quote'),
     freelance = $('#freelance'),
@@ -16,6 +17,7 @@ var Drupal = Drupal || {};
     en = window.location.origin + '/',
     it = window.location.origin + '/it',
     fr = window.location.origin + '/fr',
+    htmlLang = $('html').attr('lang'),
     topicSlider = $('.topics');
 
 
@@ -24,6 +26,36 @@ var Drupal = Drupal || {};
         $('.en').attr('href', en);
         $('.it').attr('href', it);
         $('.fr').attr('href', fr);
+
+        $('.lang-select').selectpicker();
+
+        $('.lang-select').on('changed.bs.select', function(e) {
+          var self = $('.lang-select option:selected').text();
+        
+          if (self === 'English') {
+            window.location = en;
+          }
+          if (self === 'French') {
+            window.location = fr;
+          }
+          if (self === 'Italian') {
+            window.location = it;
+          }
+        })
+
+        setTimeout(function() { 
+          if (htmlLang === 'en') {
+            $('.lang-select').val('en').selectpicker('refresh');
+          }
+
+          if (htmlLang === 'fr') {
+            $('.lang-select').val('fr').selectpicker('refresh');
+          }
+
+          if (htmlLang === 'it') {
+            $('.lang-select').val('it').selectpicker('refresh');
+          }
+        }, 300);
     }
 
   // Quote page validation -
@@ -327,8 +359,21 @@ if (freelanceForm.length) {
     });
   }
 
-  if (bannerSlider.length) {
-    bannerSlider.slick({
+  // if (bannerSlider.length) {
+  //   bannerSlider.slick({
+  //     arrows: false,
+  //     slidesToShow: 1,
+  //     slidesToScroll: 1,
+  //     autoplay: true,
+  //     fade: true,
+  //     speed: 2000,
+  //     cssEase: 'linear',
+  //       autoplaySpeed: 5000
+  //   });
+  // }
+
+  if (heroSlider.length) {
+    heroSlider.slick({
       arrows: false,
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -337,6 +382,10 @@ if (freelanceForm.length) {
       speed: 2000,
       cssEase: 'linear',
         autoplaySpeed: 5000
+    });
+
+    $(window).on('resize orientationchange', function() {
+      heroSlider.slick('resize');
     });
   }
 

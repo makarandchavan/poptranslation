@@ -61,14 +61,26 @@ a.closebtn:hover {
     border-left: none;
 }
 
-.open {
+.lang-select .inner {
+    padding: 0;
+}
+
+.lang .lang-select a {
+    margin-left: 0;
+}
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    background-color: #5bc0de;
+}
+
+.open-nav {
     font-size:50px;
     cursor:pointer;
     max-width: 45px;
     margin-left: 15px;
 }
 
-.open span {
+.open-nav span {
     width: 35px;
     height: 2px;
     background-color: #000;
@@ -78,6 +90,14 @@ a.closebtn:hover {
 
 .header-top {
     padding: 5px 15px;
+    position: fixed;
+    z-index: 99;
+    background: #fff;
+    width: 100%;
+    top: 0;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
+    -moz-box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
+    box-shadow: 0px 0px 5px 0px rgba(94,94,94,0.5);
 }
 
 .blog-logo {
@@ -92,8 +112,18 @@ a.closebtn:hover {
     background-color: #fed401;
 }
 
+.masthead {
+    /*position: fixed;*/
+    margin-top: 105px;
+}
+
+.main {
+    position: relative;
+    background: white;
+}
+
 .form-outer {
-    min-height: 932px;
+    /*min-height: 932px;*/
 }
 
 html:lang(en) .sidenav a:nth-child(8),
@@ -108,8 +138,8 @@ html:lang(en) .lang .en,
 html:lang(fr) .lang .fr,
 html:lang(it) .lang .it,
 .lang .active {
-    border: 1px solid #5bc0de;
-    border-radius: 10px;
+    /*border: 1px solid #5bc0de;
+    border-radius: 10px;*/
 }
 
 .home .hero-area,
@@ -258,6 +288,31 @@ html:lang(it) .lang .it,
 .banner {
     text-align: center;
 }
+
+/* Hero Banner */
+.background-cover, 
+.slide {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url(../img/banner/home/1_en.jpeg);
+}
+.slide {
+    height: calc(100vh - 105px);
+    background-attachment: fixed;
+}
+.slide--1 {
+    background-image: url(../img/banner/home/1_en.jpeg);
+}
+.slide--2 {
+    background-image: url(../img/banner/home/2_en.jpeg);
+}
+.slide--3 {
+    background-image: url(../img/banner/home/3_en.jpeg);
+}
+
+
+/**************/
 
 .why-us .row {
     margin-bottom: 30px;
@@ -1321,6 +1376,10 @@ div.error .ti-alert {
     padding-left: 0;
 }
 
+.hero-area .col-lg-12 {
+    padding: 0;
+}
+
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -1357,16 +1416,16 @@ div.error .ti-alert {
         width: 140px;
     }
 
-    .open {
+    .open-nav {
         margin-left: 0;
     }
 
-    .open span {
+    .open-nav span {
         width: 45px;
         margin: 8px 0;
     }
 
-    .open span:last-child {
+    .open-nav span:last-child {
         margin-bottom: 0;
     }
 
