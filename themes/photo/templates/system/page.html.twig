@@ -52,12 +52,38 @@
  */
 #}
 {% if path_arg == 'freelancers' %}
+  <div class="accept-privacy">
+      <!-- <div class="privacy-wrapper">
+          <h3>Linguists, welcome <br> aboard!</h3>
+          <ul class="list-group">
+              <li class="list-group-item"><span class="ti-check-box"></span>1st European network of certified translators</li>
+              <li class="list-group-item"><span class="ti-check-box"></span>Fast registration process</li>
+              <li class="list-group-item"><span class="ti-check-box"></span>Regular updates on ongoing projects</li>
+          </ul>
+          <p>Please accept our Freelancer Conditions and Privacy Policy.</p>
+          <button type="button" class="btn btn-default">I accept</button>
+      </div> -->
+  </div>
   <div class="cv-dzone">
       <div class="inner">
           <h3>Submit your CV</h3>
           <h4>Add your file by dropping it in this window</h4>
       </div>
   </div>
+{% endif %}
+{% if is_front %}
+  <!-- <div class="accept-privacy">
+      <div class="privacy-wrapper">
+          <h3>Linguists, welcome <br> aboard!</h3>
+          <ul class="list-group">
+              <li class="list-group-item"><span class="ti-check-box"></span>1st European network of certified translators</li>
+              <li class="list-group-item"><span class="ti-check-box"></span>Fast registration process</li>
+              <li class="list-group-item"><span class="ti-check-box"></span>Regular updates on ongoing projects</li>
+          </ul>
+          <p>Please accept our Freelancer Conditions and Privacy Policy.</p>
+          <button type="button" class="btn btn-default">I accept</button>
+      </div>
+  </div> -->
 {% endif %}
 {# Main #}
 {% block main %}
