@@ -298,6 +298,7 @@ html:lang(en) .home .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/home/1_en.jpeg);
+    background-attachment: fixed;
 }
 html:lang(en) .home .slide {
     height: calc(100vh - 105px);
@@ -321,6 +322,7 @@ html:lang(fr) .home .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/home/1_fr.jpeg);
+    background-attachment: fixed;
 }
 html:lang(fr) .home .slide {
     height: calc(100vh - 105px);
@@ -344,6 +346,7 @@ html:lang(it) .home .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/home/1_it.jpeg);
+    background-attachment: fixed;
 }
 html:lang(it) .home .slide {
     height: calc(100vh - 105px);
@@ -369,6 +372,7 @@ html:lang(it) .home .slide--3 {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/free/1_en.jpeg);
+    background-attachment: fixed;
 }
 .free .slide {
     height: calc(100vh - 105px);
@@ -409,6 +413,7 @@ html:lang(en) .abt .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/about/1_en.jpeg);
+    background-attachment: fixed;
 }
 html:lang(en) .abt .slide {
     height: calc(100vh - 105px);
@@ -432,6 +437,7 @@ html:lang(fr) .abt .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/about/1_fr.jpeg);
+    background-attachment: fixed;
 }
 html:lang(fr) .abt .slide {
     height: calc(100vh - 105px);
@@ -455,6 +461,7 @@ html:lang(it) .abt .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/about/1_it.jpeg);
+    background-attachment: fixed;
 }
 html:lang(it) .abt .slide {
     height: calc(100vh - 105px);
@@ -480,6 +487,7 @@ html:lang(en) .cont .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/cont/1_en.jpeg);
+    background-attachment: fixed;
 }
 html:lang(en) .cont .slide {
     height: calc(100vh - 105px);
@@ -503,6 +511,7 @@ html:lang(fr) .cont .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/cont/1_fr.jpeg);
+    background-attachment: fixed;
 }
 html:lang(fr) .cont .slide {
     height: calc(100vh - 105px);
@@ -526,6 +535,7 @@ html:lang(it) .cont .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/cont/1_it.jpeg);
+    background-attachment: fixed;
 }
 html:lang(it) .cont .slide {
     height: calc(100vh - 105px);
@@ -552,6 +562,7 @@ html:lang(en) .swt .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/sw/1_en.jpeg);
+    background-attachment: fixed;
 }
 html:lang(en) .swt .slide {
     height: calc(100vh - 105px);
@@ -575,6 +586,7 @@ html:lang(fr) .swt .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/sw/1_fr.jpeg);
+    background-attachment: fixed;
 }
 html:lang(fr) .swt .slide {
     height: calc(100vh - 105px);
@@ -598,6 +610,7 @@ html:lang(it) .swt .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/sw/1_it.jpeg);
+    background-attachment: fixed;
 }
 html:lang(it) .swt .slide {
     height: calc(100vh - 105px);
@@ -623,6 +636,7 @@ html:lang(en) .trs .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/tc/1_en.jpeg);
+    background-attachment: fixed;
 }
 html:lang(en) .trs .slide {
     height: calc(100vh - 105px);
@@ -646,6 +660,7 @@ html:lang(fr) .trs .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/tc/1_fr.jpeg);
+    background-attachment: fixed;
 }
 html:lang(fr) .trs .slide {
     height: calc(100vh - 105px);
@@ -669,6 +684,7 @@ html:lang(it) .trs .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/tc/1_it.jpeg);
+    background-attachment: fixed;
 }
 html:lang(it) .trs .slide {
     height: calc(100vh - 105px);
@@ -694,6 +710,7 @@ html:lang(en) .trc .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/ts/1_en.jpeg);
+    background-attachment: fixed;
 }
 html:lang(en) .trc .slide {
     height: calc(100vh - 105px);
@@ -717,6 +734,7 @@ html:lang(fr) .trc .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/ts/1_fr.jpeg);
+    background-attachment: fixed;
 }
 html:lang(fr) .trc .slide {
     height: calc(100vh - 105px);
@@ -740,6 +758,7 @@ html:lang(it) .trc .slide {
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/ts/1_it.jpeg);
+    background-attachment: fixed;
 }
 html:lang(it) .trc .slide {
     height: calc(100vh - 105px);
