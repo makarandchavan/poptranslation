@@ -812,6 +812,10 @@ body.noscroll {
     padding: 15px;
 }
 
+.t-c .main {
+    margin-top: 100px;
+}
+
 .popover.right>.arrow:after {
     border-right-color: #8acbee;
 }
