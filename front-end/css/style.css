@@ -1339,8 +1339,10 @@ body.noscroll {
 }
 
 .privacy-wrapper .list-group-item {
-    padding-left: 0;
     font-weight: normal;
+    background: url(../img/p_tick.png) no-repeat left center;
+    background-size: 6%;
+    padding-left: 30px;
 }
 
 .privacy-wrapper .list-group-item span {
