@@ -192,7 +192,8 @@ html:lang(it) .lang .it,
     position: absolute;
     z-index: 10;
     /*top: 75px;*/
-    left: 4em;
+    left: 0;
+    right: 0;
     top: 50%;
     transform: perspective(1px) translateY(-50%);
 }
@@ -1899,6 +1900,11 @@ div.error .ti-alert {
     .quick-link {
         display: block;
     }
+
+    .quote-form-wrapper {
+        left: 4em;
+        right: auto;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -2002,6 +2008,11 @@ div.error .ti-alert {
     .mob-margin {
         margin-bottom: 0;
     }
+
+    .quote-form-wrapper {
+        left: 4em;
+        right: auto;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -2062,5 +2073,10 @@ div.error .ti-alert {
 
     .quick-link {
         display: block;
+    }
+
+    .quote-form-wrapper {
+        left: 4em;
+        right: auto;
     }
 }
