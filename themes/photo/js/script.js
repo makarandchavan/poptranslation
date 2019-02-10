@@ -10,12 +10,42 @@
     quoteForm = $('#quote'),
     freelance = $('#freelance'),
     freelanceForm = $('#wizard'),
-    en = window.location.origin + '/',
+    en = window.location.origin + '/en',
     it = window.location.origin + '/it',
     fr = window.location.origin + '/fr',
     htmlLang = $('html').attr('lang'),
+    accept = $('.accept'),
     contact = $('#contact'),
     topicSlider = $('.topics');
+
+    // Cookies
+    if (Cookies.get('quote')) {
+      $('.home .accept-privacy').hide();
+      $('body.home ').removeClass('noscroll');
+    } else {
+      $('.home  .accept-privacy').removeClass('hidden');
+      $('body.home ').addClass('noscroll');
+    }
+
+    if (Cookies.get('free')) {
+      $('.free .accept-privacy').hide();
+      $('body.free ').removeClass('noscroll');
+    } else {
+      $('.free  .accept-privacy').removeClass('hidden');
+      $('body.free ').addClass('noscroll');
+    }
+
+    $('.accept1').on('click', function(){
+      Cookies.set('quote', 'accepted');
+      $('.home .accept-privacy').addClass('hidden');
+      $('body.home ').removeClass('noscroll');
+    })
+
+    $('.accept2').on('click', function(){
+      Cookies.set('free', 'accepted');
+      $('.free .accept-privacy').addClass('hidden');
+      $('body.free ').removeClass('noscroll');
+    })
 
     // Language 
     if ($('.lang').length) {
@@ -85,7 +115,7 @@
       cache: false,
       success: function(data) // A function to be called if request succeeds
       {
-        $('form#quote').html('<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""><p class="qoute-congrats">' + Drupal.t('Congratulations! The email has been sent successfully.') + '</p></div><div class="form-group"><a href="/"><button type="button" class="btn btn-default" id="congrats-quote">' + Drupal.t('Another?') + '</button></div></div>');
+        $('form#quote').html('<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""><p class="qoute-congrats">' + Drupal.t('Congratulations! The email has been sent successfully.') + '</p></div><div class="form-group"><a href="/'+ htmlLang +'"><button type="button" class="btn btn-default" id="congrats-quote">' + Drupal.t('Another?') + '</button></div></div>');
         // <a tabindex="0" class="btn btn-lg btn-info ti-more-alt submit-info" role="button" data-toggle="popover" data-trigger="focus" title="" data-content="' + Drupal.t('By submitting this form, you agree to receive information from the Pop translation website. My information will not be disclosed to third parties. Pop translation will only use your data to reply to you and offer you content related to your interests. For more information, consult Pop translation\'s privacy policy.') + '" data-original-title="Info"></a>
       }
     });
@@ -104,7 +134,7 @@
       cache: false,
       success: function(data) {
         $('form#contact').html(
-          '<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""><p class="qoute-congrats">' + Drupal.t('Congratulations! The email has been sent successfully.') + '</p></div><div class="form-group"><a href="/contact"><button type="button" class="btn btn-default" id="congrats-quote">' + Drupal.t('Another?') + '</button></div></div>'
+          '<div class="thank-you"><img src="/themes/photo/img/thankyou.png" alt=""><p class="qoute-congrats">' + Drupal.t('Congratulations! The email has been sent successfully.') + '</p></div><div class="form-group"><a href="/'+ htmlLang +'/contact"><button type="button" class="btn btn-default" id="congrats-quote">' + Drupal.t('Another?') + '</button></div></div>'
         );
       }
     });

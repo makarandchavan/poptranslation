@@ -14,7 +14,7 @@
  * @see template_preprocess_region()
  */
 #}
-{% if content and path_arg != 'freelancers' and path_arg != 'contact' and path_arg != 'article' and path_arg != 'page' and path_arg != 'about' %}
+{% if content and path_arg != 'freelancers' and path_arg != 'contact' and node_type != 'article' and node_type != 'page' and node_type != 'about' %}
 <div class="main">
 {% endif %}
   {% if content and path_arg == 'freelancers' %}

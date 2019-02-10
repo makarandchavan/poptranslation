@@ -47,6 +47,18 @@
 #}
 {% block content %}
 <div class="quote-form-wrapper">
+	<div class="accept-privacy hidden">
+	    <div class="privacy-wrapper">
+	      <h3>{{ 'What’s Pop translation?'|t }}</h3>
+	      <ul class="list-group">
+	        <li class="list-group-item">{{ 'Free quote'|t }}</li>
+	        <li class="list-group-item">{{ '750 professional translators'|t }}</li>
+	        <li class="list-group-item">{{ 'Day after delivery'|t }}</li>
+	      </ul>
+	      <p>{{ 'Please accept our Terms and Conditions and Privacy Policy.'|t }}</p>
+	      <button type="button" class="btn btn-default accept1">{{ 'I accept'|t }}</button>
+	    </div>
+	  </div>
 	{{ content }}
 </div>
 {% endblock %}

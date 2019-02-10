@@ -3,7 +3,7 @@ var Drupal = Drupal || {};
 (function ($, Drupal, Bootstrap) {
 	"use strict";
 
-	var openNav = $('.open'),
+	var openNav = $('.open-nav'),
 		closeNav = $('.closebtn'),
 		navPanel = $('#mySidenav');
 

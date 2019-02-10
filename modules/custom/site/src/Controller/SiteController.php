@@ -55,7 +55,7 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'quote_mail_admin';
-    $to = 'cmak2007@gmail.com'; //\Drupal::config('system.site')->get('mail');
+    $to = \Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Quote received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br> Email: @usrmail<br>Entreprise: @usrent<br>Information: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrmail' => $_POST['email'], '@usrent' => $_POST['entreprise'], '@usrinfo' => $_POST['information']));
     $attachment = array(
@@ -361,7 +361,15 @@ class SiteController extends ControllerBase {
       'field_i_define_the_concept_of_qu' => $field_i_define_the_concept_of_qu,
       'field_i_consider_and_apply_the_f' => $field_i_consider_and_apply_the_f,
       'field_involvement' => $field_involvement,
-      'field_involvement' => $field_involvement,
+      'field_short_test_translation_fre' => $field_short_test_translation_fre,
+      'field_i_accept' => $field_i_accept,
+      'field_your_proz_profile' => $field_your_proz_profile,
+      'field_company_1' => $field_company_1,
+      'field_contact_1' => $field_contact_1,
+      'field_email_1' => $field_email_1,
+      'field_company_2' => $field_company_2,
+      'field_contact_2' => $field_contact_2,
+      'field_email_3' => $field_email_3,
       'field_attached_files' => ['target_id' => (!empty($file) ? $file->id() : '')],
     ]);
     $node->save();
@@ -384,7 +392,7 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'free_mail_admin';
-    $to = 'cmak2007@gmail.com'; //\Drupal::config('system.site')->get('mail');
+    $to = \Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Freelancer received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br> First Name: @fname<br>Name: @name<br>Email: @email<br><br><br>Regards,<br>Poptranslation.', array('@fname' => $field_first_name, '@name' => $field_name, '@email' => $field_email_address));
     $attachment = array(
@@ -482,7 +490,7 @@ class SiteController extends ControllerBase {
     // send mail to admin.
     $module = 'site';
     $key = 'contact_mail_admin';
-    $to = 'cmak2007@gmail.com'; //\Drupal::config('system.site')->get('mail');
+    $to = \Drupal::config('system.site')->get('mail');
     $params['subject'] = t('New Contact received');
     $params['message'] = t('Dear admin,<br><br><br>Please find below details<br><br>Name: @usrname<br>Email: @usrmail<br>Phone: @phone<br>Entreprise: @usrent<br>Message: @usrinfo<br><br><br>Regards,<br>Poptranslation.', array('@usrname' => $name, '@phone' => $phone, '@usrmail' => $email, '@usrent' => $enterprise, '@usrinfo' => $cmessage));
     $langcode = \Drupal::currentUser()->getPreferredLangcode();
