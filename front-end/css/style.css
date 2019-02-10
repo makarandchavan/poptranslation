@@ -363,39 +363,39 @@ html:lang(it) .home .slide--3 {
 
 /* EN */
 
-html:lang(en) .free .background-cover, 
-html:lang(en).free .slide {
+.free .background-cover, 
+.free .slide {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url(../img/banner/free/1_en.jpeg);
 }
-html:lang(en) .free .slide {
+.free .slide {
     height: calc(100vh - 105px);
     background-attachment: fixed;
 }
-html:lang(en) .free .slide--1 {
+.free .slide--1 {
     background-image: url(../img/banner/free/1_en.jpeg);
 }
-html:lang(en) .free .slide--2 {
+.free .slide--2 {
     background-image: url(../img/banner/free/2_en.jpeg);
 }
-html:lang(en) .free .slide--3 {
+.free .slide--3 {
     background-image: url(../img/banner/free/3_en.jpeg);
 }
-html:lang(en) .free .slide--4 {
+.free .slide--4 {
     background-image: url(../img/banner/free/4_en.jpeg);
 }
-html:lang(en) .free .slide--5 {
+.free .slide--5 {
     background-image: url(../img/banner/free/5_en.jpeg);
 }
-html:lang(en) .free .slide--6 {
+.free .slide--6 {
     background-image: url(../img/banner/free/6_en.jpeg);
 }
-html:lang(en) .free .slide--7 {
+.free .slide--7 {
     background-image: url(../img/banner/free/6_en.jpeg);
 }
-html:lang(en) .free .slide--8 {
+.free .slide--8 {
     background-image: url(../img/banner/free/8_en.jpeg);
 }
 
