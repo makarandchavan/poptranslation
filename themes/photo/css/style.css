@@ -202,6 +202,10 @@ html:lang(it) .lang .it,
     min-height: 489px;
 }
 
+.free .quote-form-wrapper {
+    min-height: 400px;
+}
+
 .thank-you img {
     width: 100%;
     height: auto;
@@ -780,6 +784,11 @@ html:lang(it) .trc .slide--3 {
     margin-top: 170px;
 }
 
+.page-node-type-article .content p {
+    text-align: justify;
+    font-size: 18px;
+}
+
 .path-blog .header-top {
     box-shadow: none;
 }
@@ -829,6 +838,7 @@ body.noscroll {
     color: #fff;
     border: none;
     padding: 15px;
+    text-align: justify;
 }
 
 .t-c .main {
@@ -1236,7 +1246,7 @@ body.noscroll {
 .ic-2 img {
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 75%;
     transition: opacity 0.3s;
     -webkit-transition: opacity 0.3s;
 }
@@ -1361,9 +1371,18 @@ body.noscroll {
     margin-top: 10%;*/
 }
 
+.privacy-wrapper a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.privacy-wrapper a:hover {
+    text-decoration: none;
+}
+
 .privacy-wrapper .list-group-item {
     font-weight: normal;
-    background: url(../img/p_tick.png) no-repeat left center;
+    background: url(../img/p_tick.png) no-repeat left 9px;
     background-size: 6%;
     padding-left: 30px;
     padding-top: 5px;
@@ -1374,8 +1393,13 @@ body.noscroll {
     margin-right: 10px;
 }
 
+.accept-privacy .btn[type='button'] {
+    color: #fff;
+}
+
 .privacy-wrapper p {
     font-size: 12px;
+    margin-left: 30px;
 }
 
 .privacy-wrapper h3 {
@@ -1384,6 +1408,7 @@ body.noscroll {
 
 .privacy-wrapper button {
     margin-top: 20px;
+    margin-left: 30px;
 }
 
 .block-3 .list-group-item {
@@ -1639,7 +1664,8 @@ body.noscroll {
     text-align: right;
 }
 
-#wizard-p-6 .actions {
+#wizard-p-6 .actions,
+.page-node-type-article .lang-select {
     display: none;
 }
 
@@ -1940,6 +1966,11 @@ div.error .ti-alert {
     .masthead {
         margin-top: 78px;
     }
+
+    .ic-1 img,
+    .ic-2 img {
+        width: 35%;
+    }
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -2052,6 +2083,11 @@ div.error .ti-alert {
     .masthead {
         margin-top: 105px;
     }
+
+    .ic-1 img,
+    .ic-2 img {
+        width: 25%;
+    }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -2121,5 +2157,10 @@ div.error .ti-alert {
 
     .masthead {
         margin-top: 105px;
+    }
+
+    .ic-1 img,
+    .ic-2 img {
+        width: 100%;
     }
 }
